@@ -8,7 +8,7 @@ Dashboard | Tutorago Admin
   <div class="col-sm-12"> 
     <ol class="breadcrumb">
   <li><a href="{{url('/admin/dashboard') }}">Home</a></li>
-  <li><a href="#">Dashboard</a></li>
+  <li><a href="#">Dashboard</a></li>q
 </ol>
    </div>
 </div>
@@ -83,6 +83,7 @@ Dashboard | Tutorago Admin
 </thead>
 
 <tbody> 
+@if (isset($students))
 @if(!empty($students))
 @foreach( $students as $student)
 <tr> <td> {{ $student->id }} </td><td> {{ $student->firstname }}</td>   <td> {{ $student->lastname }}</td> <td> {{ $student->email }} </td> <td> {{ $student->created_at }}</td> <td>  <a href="{{ url('/admin/student/'.$student->id) }}"><i class="fa fa-edit"> </i> </td> </tr>
@@ -94,6 +95,10 @@ Dashboard | Tutorago Admin
 <tr> <td colspan="6"> No Student found</td></tr>
 
   
+  @endif
+  @else
+  <tr> <td colspan="6"> No Student found</td></tr>
+
   @endif
 </tbody>
 
@@ -120,7 +125,7 @@ Dashboard | Tutorago Admin
 <tbody> 
 @if(!empty($tutors))
 @foreach( $tutors as $tutor)
-<tr> <td> {{ $tutor->id }} </td><td> {{ $tutor->firstname }}</td>   <td> {{ $tutor->lastname }}</td> <td> {{ $tutor->email }} </td> <td> {{ $tutor->created_at }}</td> <td>  <a href="{{ url('/admin/tutor/'.$student->id) }}"><i class="fa fa-edit"> </i> </td></tr>
+<tr> <td> {{ $tutor->id }} </td><td> {{ $tutor->firstname }}</td>   <td> {{ $tutor->lastname }}</td> <td> {{ $tutor->email }} </td> <td> {{ $tutor->created_at }}</td> <td>  <a href="{{ url('/admin/tutor/'.$tutor->id) }}"><i class="fa fa-edit"> </i> </td></tr>
 
 @endforeach
 

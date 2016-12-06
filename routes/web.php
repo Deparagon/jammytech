@@ -67,11 +67,11 @@ Route::get('admin/dashboard', 'AdminController@index');
 
 // CATEGORY GET
 Route::get('admin/category', 'CategoryController@index');
-Route::get('admin/addcategory', 'CategoryController@show');
+Route::get('admin/add-category', 'CategoryController@show');
 Route::get('admin/category/{category}', 'CategoryController@edit');
 
 //CATEGORY POST
-Route::post('admin/addcategory', 'CategoryController@add');
+Route::post('admin/add-category', 'CategoryController@add');
 Route::post('admin/category/{category}', 'CategoryController@update');
 
 Route::post('admin/delete/cat', 'CategoryController@delete');

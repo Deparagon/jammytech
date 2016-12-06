@@ -13,9 +13,13 @@ use Auth;
 use App\Referral;
 use Mail;
 use App\Mail\NewUserEmail;
+use TTools;
 
 class AuthController extends Controller
 {
+
+    protected $secretkey = '6LfRDA4UAAAAAFu7bdvJP_19exIuMwbMcx7bwGij';
+
     /*
     |--------------------------------------------------------------------------
     | Registration & Login Controller
@@ -71,8 +75,49 @@ class AuthController extends Controller
             }
 
     }
+
+       public function httpRequest($string)
+    {
+        $headers = array();
+        //$headers[] = 'Content-type: application/json';
+        if (function_exists('curl_init')) {
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+            curl_setopt($ch, CURLOPT_URL, $this->url);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $string);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            $base_response = curl_exec($ch);
+            curl_close($ch);
+
+            return $base_response;
+        } else {
+            return 'Curl offline';
+        }
+    }
+
+    public function checkCaptchaStatus($response)
+    {
+        $this->url = 'https://www.google.com/recaptcha/api/siteverify';
+        $data = 'secret='.$this->secretkey.'&response='.$response.'&remoteip='.TTools::getIP();
+
+        return $this->httpRequest($data);
+
+    }
+
     protected function validator(array $data)
     {
+             $grecaptcharesponse = $data['g-recaptcha-response'];
+
+             $response = $this->checkCaptchaStatus($grecaptcharesponse);
+             if($response->success !=1){
+                return response()->json(['response' => ' Captcha validation failed, confirm that you are human']);
+             }
+
         return Validator::make($data, [
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',

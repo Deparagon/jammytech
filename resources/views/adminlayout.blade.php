@@ -171,7 +171,7 @@
         <h4 class="panel-title"><i class="fa fa-folder"> </i> Manage Categories </h4>
     </div>
       <ul class="list-group">
-      <li class="list-group-item"> <a href="{{ url('/admin/addcategory') }}"> <i class="fa fa-list-ol"> </i> Add Category </a></li>
+      <li class="list-group-item"> <a href="{{ url('/admin/add-category') }}"> <i class="fa fa-list-ol"> </i> Add Category </a></li>
        <li class="list-group-item"> <a href="{{ url('/admin/category') }}"> <i class="fa fa-list-ol"> </i> List Categories </a></li>
           
       </ul> 

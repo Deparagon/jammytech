@@ -36,7 +36,7 @@ Contact us to get Private Home Tutors from your area | Tutorago.Com
     <p class="lead"><strong>Mobile </strong> </p>
        <p> +234 816 708 2704</p>
    <p class="lead"><strong>Partnership </strong> </p>
-      <p> Want to partner with us? Kindly contact us via: <br> partner@tutorago.com <br> or call us via +2348167082704. <br> 
+      <p> Want to partner with us? Kindly contact us via: <br> info@tutorago.com <br> or call us via +2348167082704. <br> 
 Thank you.</p>
 
         </div>
