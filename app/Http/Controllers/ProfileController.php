@@ -43,7 +43,7 @@ class ProfileController extends Controller
     {
         $userdata = User::find(Auth::user()->id);
         $month = '00';
-        $year = '00';
+        $year = '0000';
         $day = '00';
         
             if($userdata->birthday !='0000-00-00'){

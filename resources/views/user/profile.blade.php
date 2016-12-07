@@ -95,8 +95,8 @@
                <option value="05" @if ( $month == 05) selected @endif> May </option>
                <option value="06" @if ( $month == 06) selected @endif> June </option>
                <option value="07" @if ( $month == 07) selected @endif> July </option>
-               <option value="08" @if ( $month == 08) selected @endif> August </option>
-               <option value="09" @if ( $month == 09) selected @endif> September </option>
+               <option value="8" @if ( $month == 8) selected @endif> August </option>
+               <option value="9" @if ( $month == 9) selected @endif> September </option>
                <option value="10" @if ( $month == 10) selected @endif> October</option>
                <option value="11" @if ( $month == 11) selected @endif> November </option>
                <option value="12" @if ( $month == 12) selected @endif> December </option>

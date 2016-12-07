@@ -35,7 +35,7 @@ protected function validateCategory($data)
         // echo '<hr>';
         // print_r($request);
         if ($request->hasFile('imageurl')) {
-            $categoryimage = date('YmdHis').$this->request->name.'.jpg';
+            $categoryimage = date('YmdHis').$request->name.'.jpg';
 
             Image::make($request->file('imageurl'))->save('uploads/'.$categoryimage);
         } else {
