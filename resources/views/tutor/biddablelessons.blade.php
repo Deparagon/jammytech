@@ -37,6 +37,8 @@
 
 @endforeach
   
+  @else 
+  <tr> <td colspan="7"> We are currently waiting for new lesson request from our students</td></tr>
   @endif
 </tbody>
 

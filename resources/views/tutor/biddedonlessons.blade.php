@@ -37,6 +37,8 @@
 
 @endforeach
   
+  @else
+  <tr> <td colspan="7"> It seems no lesson is waiting for your application at the moment, check back in later</td></tr>
   @endif
 </tbody>
 

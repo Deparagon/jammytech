@@ -106,6 +106,7 @@ return [
      'whattutorsget' => 75,
      'referralcommision' => 5,
      'withcharge' => 100,
+     'email' =>'support@tutorago.com',
 	 
     /*
     |--------------------------------------------------------------------------

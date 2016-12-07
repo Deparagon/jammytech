@@ -359,8 +359,8 @@ h4.base-hr {
 	height: 500px;
 }
 
-@media only screen 
-  and (min-device-width: 768px)  { 
+/*@media only screen 
+  and (max-device-width: 768px)  { 
 .top-faq {
 	background:url('/img/faq.png');
 	background-repeat: no-repeat;
@@ -370,12 +370,14 @@ h4.base-hr {
 	
 
 }
+
+
 .top-contactus {
-	background:url('/img/contact.png');
-	background-repeat: no-repeat;
-	background-size:contain;
-	background-position:center;
-	background-size: cover;
+background:url('/img/contact.png')  no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
 
 }
 
@@ -393,9 +395,9 @@ h4.base-hr {
 	background-size:contain;
 	background-position:center;
 	background-size: cover;
-	/*min-height: 500px;*/
 
-}
+
+
 .top-terms {
 	background:url('/img/terms.jpg');
 	background-repeat: no-repeat;
@@ -405,7 +407,61 @@ h4.base-hr {
 }
 
 
+}*/
+
+
+.top-faq {
+	background:url('/img/faq.png');
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: cover;
+	
+
 }
+
+
+.top-contactus {
+background:url('/img/contact.png');
+background-repeat: no-repeat;
+-webkit-background-size: 100% 100%;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+
+.top-privacy {
+	background:url('/img/privacy.jpg');
+background-repeat: no-repeat;
+-webkit-background-size: 100% 100%;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+.top-blog {
+	background:url('/img/blog.jpg');
+	background-repeat: no-repeat;
+background-repeat: no-repeat;
+-webkit-background-size: 100% 100%;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+
+}
+.top-terms {
+	background:url('/img/terms.jpg');
+	background-repeat: no-repeat;
+background-repeat: no-repeat;
+-webkit-background-size: 100% 100%;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+
+
+
 
 
 

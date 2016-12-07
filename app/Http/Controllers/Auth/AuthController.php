@@ -105,7 +105,7 @@ class AuthController extends Controller
         $this->url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = 'secret='.$this->secretkey.'&response='.$response.'&remoteip='.TTools::getIP();
 
-        return $this->httpRequest($data);
+        return json_decode($this->httpRequest($data));
 
     }
 
@@ -115,7 +115,16 @@ class AuthController extends Controller
 
              $response = $this->checkCaptchaStatus($grecaptcharesponse);
              if($response->success !=1){
-                return response()->json(['response' => ' Captcha validation failed, confirm that you are human']);
+                return Validator::make($data, [
+            'firstname' => 'required|max:255',
+            'lastname' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|min:6',
+            'referralemail' => 'email',
+             'Captcha' => 'required',
+        ]);
+                //echo  json_encode(['response' => ' Captcha validation failed, confirm that you are human']);
+                //exit;
              }
 
         return Validator::make($data, [

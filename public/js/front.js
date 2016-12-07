@@ -49,6 +49,9 @@ $('body').on('submit', '#tutorregistrationformele', function(ev){
              if(report['lastname']){
             $('#reportajaxregistrationstate').html('<div class="alert alert-danger" role="alert">'+report['lastname'][0]+'</div>');  
             }
+        if(report['Captcha']){
+            $('#reportajaxregistrationstate').html('<div class="alert alert-danger" role="alert">'+report['Captcha'][0]+'</div>');  
+            }
   if(report['response']){
             $('#reportajaxregistrationstate').html('<div class="alert alert-success" role="alert">Welcome to Tutorago, Please Login and Update your profile</div>');  
                  var i = 1;

@@ -156,20 +156,20 @@
 
           <ul class="list-group">
            <li class="separate"> Manage Classes </li>
-       <li class="list-group-item"> <i class="fa fa-file-text"> </i> <a href="{{ url('/user/myclasses') }}"> &nbsp; &nbsp;My Classes </a></li>
+       <li class="list-group-item"> <i class="fa fa-file-text"> </i> <a href="{{ url('/user/my-classes') }}"> &nbsp; &nbsp;My Classes </a></li>
 
       </ul>
 
            <ul class="list-group">
            <li class="separate"> Manage Subject </li>
-       <li class="list-group-item"> <i class="fa fa-file-text"> </i> <a href="{{ url('/user/mysubjects') }}"> &nbsp; &nbsp;Subjects I Can Teach </a></li>
-       <li class="list-group-item"> <i class="fa fa-file-text-o"> </i> <a href="{{ url('/user/createsubjects') }}"> &nbsp; &nbsp;Create New Subjects </a></li>
+       <li class="list-group-item"> <i class="fa fa-file-text"> </i> <a href="{{ url('/user/my-subjects') }}"> &nbsp; &nbsp;Subjects I Can Teach </a></li>
+       <li class="list-group-item"> <i class="fa fa-file-text-o"> </i> <a href="{{ url('/user/create-subjects') }}"> &nbsp; &nbsp;Create New Subjects </a></li>
       </ul>
 
           <ul class="list-group">
                <li class="separate"> Requests </li>
 
-       <li class="list-group-item"> <i class="fa fa-user-plus"> </i>&nbsp;  <a href="{{ url('/user/jointutorrequest') }}">  Join Tutor Request </a></li>
+       <li class="list-group-item"> <i class="fa fa-user-plus"> </i>&nbsp;  <a href="{{ url('/user/join-tutor-request') }}">  Join Tutor Request </a></li>
   </ul>
 
 
@@ -178,15 +178,15 @@
  @if (UserBouncer::isTutor())
        <li class="list-group-item"> <i class="fa fa-hand-o-right"> </i>&nbsp;  <a href="{{ url('/user/biddablelessons') }}"> Apply to a Lesson </a></li>
 
-    <li class="list-group-item"> <i class="fa fa-sticky-note-o"> </i>&nbsp;  <a href="{{ url('/user/mybids') }}"> Ongoing Lesson Applications </a></li>
+    <li class="list-group-item"> <i class="fa fa-sticky-note-o"> </i>&nbsp;  <a href="{{ url('/user/my-bids') }}"> Ongoing Lesson Applications </a></li>
 @endif
   </ul>
 
        <ul class="list-group">
                       <li class="separate"> Credentials </li>
 
-       <li class="list-group-item"> <i class="fa fa-file-text-o"> </i> &nbsp;  <a href="{{ url('/user/credential') }}"> Credentials </a></li>
-       <li class="list-group-item"> <i class="fa fa-thumbs-up"> </i> &nbsp;  <a href="{{ url('/user/guarantor') }}"> Guarantor </a></li>
+       <li class="list-group-item"> <i class="fa fa-file-text-o"> </i> &nbsp;  <a href="{{ url('/user/credentials') }}"> Credentials </a></li>
+       <li class="list-group-item"> <i class="fa fa-thumbs-up"> </i> &nbsp;  <a href="{{ url('/user/guarantors') }}"> Guarantor </a></li>
         <li class="list-group-item"> <i class="fa fa-slideshare"> </i> &nbsp;  <a href="{{ url('/user/teaching') }}"> Teaching Experience </a></li>
           
       </ul> 
@@ -206,9 +206,9 @@
     <ul class="list-group">
     <li class="separate"> Lessons </li>
        <li class="list-group-item"> <i class="fa fa-book"> </i>&nbsp;  <a href="{{ url('/user/lessons') }}"> &nbsp; &nbsp; My Lessons </a></li>
-       <li class="list-group-item"> <i class="fa fa-photo"> </i>&nbsp;  <a href="{{ url('/user/newlesson') }}"> &nbsp; &nbsp; Start New Lesson </a></li>
+       <li class="list-group-item"> <i class="fa fa-photo"> </i>&nbsp;  <a href="{{ url('/user/new-lesson') }}"> &nbsp; &nbsp; Start New Lesson </a></li>
 
-        <li class="list-group-item"> <i class="fa fa-bars"> </i>&nbsp;  <a href="{{ url('/user/bidsonmylesson') }}"> &nbsp; &nbsp; Tutors' Bids on My Lesson </a></li>
+        <li class="list-group-item"> <i class="fa fa-bars"> </i>&nbsp;  <a href="{{ url('/user/bids-on-my-lesson') }}"> &nbsp; &nbsp; Tutors' Bids on My Lesson </a></li>
           
       </ul>  
 
@@ -221,9 +221,9 @@
         <h4 class="panel-title"> <i class="fa fa-folder"> </i> Earnings & Bank </h4>
     </div>
      <ul class="list-group">
-      <li class="list-group-item"> <i class="fa fa-money"> </i>  <a href="{{ url('/user/payoutrequest') }}"> &nbsp; &nbsp; Request Payment </a></li>
+      <li class="list-group-item"> <i class="fa fa-money"> </i>  <a href="{{ url('/user/payout-request') }}"> &nbsp; &nbsp; Request Payment </a></li>
 
-      <li class="list-group-item"> <i class="fa fa-photo"> </i>  <a href="{{ url('/user/bank') }}"> &nbsp; &nbsp; Bank </a></li>          
+      <li class="list-group-item"> <i class="fa fa-photo"> </i>  <a href="{{ url('/user/bank') }}"> &nbsp; &nbsp; Add Bank Account </a></li>          
       </ul> 
 
    </div>

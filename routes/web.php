@@ -35,7 +35,7 @@ Route::get('/contact', 'ExternalController@contact');
 Route::get('/search', 'ExternalController@search');
 Route::post('/contact', 'ExternalController@contactSave');
 
-Route::post('/contact', 'ExternalController@contactSave');
+//Route::post('/contact', 'ExternalController@contactSave');
 // blog
 Route::get('/blog', 'ExternalController@blogPost');
 Route::get('/blog/{post}', 'ExternalController@singlePost');
@@ -185,25 +185,25 @@ Route::get('user/password', 'SecurityController@index');
 Route::get('user/referral', 'ReferralController@show');
 
 
-Route::get('user/credential', 'CredentialController@show');
-Route::get('user/guarantor', 'GuarantorController@show');
+Route::get('user/credentials', 'CredentialController@show');
+Route::get('user/guarantors', 'GuarantorController@show');
 Route::get('user/teaching', 'CredentialController@teachingShow');
-Route::get('user/mysubjects', 'CredentialController@icanteachShow');
-Route::get('user/createsubjects', 'CredentialController@createNewSubjects');
-Route::get('user/jointutorrequest', 'JoinTutorController@show');
+Route::get('user/my-subjects', 'CredentialController@icanteachShow');
+Route::get('user/create-subjects', 'CredentialController@createNewSubjects');
+Route::get('user/join-tutor-request', 'JoinTutorController@show');
 
 
 //LESSON
 Route::get('user/lessons', 'LessonController@show');
+Route::get('user/new-lesson', 'LessonController@lessonStepOne');
 Route::get('user/newlesson', 'LessonController@lessonStepOne');
-
  //LESSON
 Route::get('user/lessonstepthree', 'LessonController@lessonStepThree');
 
 Route::get('user/lessonsubmit', 'LessonController@lessonSubmit');
 
 Route::post('user/searchcourse', 'CourseController@searchCourse');
-Route::post('user/newlesson', 'LessonController@lessonStepTwo');
+Route::post('user/new-lesson', 'LessonController@lessonStepTwo');
 Route::post('user/lessonstepthree', 'LessonController@lessonStepFour');
 Route::post('user/lessonsubmit', 'LessonController@lessonPayment');
 
@@ -216,7 +216,7 @@ Route::post('user/topsearch', 'SearchController@index');
 
 
 //  TUTOR CLASSES
-Route::get('/user/myclasses', 'TutorClassController@index');
+Route::get('/user/my-classes', 'TutorClassController@index');
 Route::get('/user/lessoncomplete/{lesson}', 'TutorClassController@lessonComplete');
 
 Route::post('/user/lessoncomplete/{lesson}', 'TutorClassController@tutorMarkComplete');
@@ -250,19 +250,19 @@ Route::get('/user/tutor/{tutor}', 'TutorController@show');
 // BIDDING FOR LESSONS
 Route::get('user/biddablelessons', 'BidsController@fetchBiddables');
 Route::get('user/biddable/{lesson}', 'BidsController@singleBiddable');
-Route::get('user/mybids/', 'BidsController@allBids');
-Route::get('user/mybids/{bidded}', 'BidsController@singleBid');
+Route::get('user/my-bids/', 'BidsController@allBids');
+Route::get('user/my-bids/{bidded}', 'BidsController@singleBid');
 
 
 // BIDDING LESSON POST
 //Route::get('user/mybids/', 'LessonController@allBids');
 Route::post('user/biddable/{lesson}', 'BidsController@saveBid');
-Route::post('user/mybids/{bidded}', 'BidsController@saveTutorChat');
+Route::post('user/my-bids/{bidded}', 'BidsController@saveTutorChat');
 
 
 // STUDENT SIDE BIDDING LESSON
 Route::get('user/lessonchat/{bid}', 'BidsController@lessonChat');
-Route::get('user/bidsonmylesson/', 'BidsController@bidsOnMyLesson');
+Route::get('user/bids-on-my-lesson/', 'BidsController@bidsOnMyLesson');
 
 
 Route::post('user/lessonchat/{bid}', 'BidsController@saveStudentChat');

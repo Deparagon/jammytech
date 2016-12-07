@@ -8,7 +8,7 @@ Dashboard | Tutorago Admin
   <div class="col-sm-12"> 
     <ol class="breadcrumb">
   <li><a href="{{url('/admin/dashboard') }}">Home</a></li>
-  <li><a href="#">Dashboard</a></li>q
+  <li><a href="#">Dashboard</a></li>
 </ol>
    </div>
 </div>

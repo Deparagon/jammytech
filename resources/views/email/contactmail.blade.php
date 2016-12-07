@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
-<title>message.html-inline</title>
+<title>Contact Tutorago </title>
 <link href="http://fonts.googleapis.com/css?family=Playfair+Display:400italic|Montserrat:400,700" rel="stylesheet" type="text/css">
 <style type="text/css">
 /*
@@ -20,21 +20,21 @@
 body { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -webkit-font-smoothing:antialiased;}
 .yshortcuts, .yshortcuts a, .yshortcuts a:link, .yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { text-decoration:none !important; border-bottom:none !important; background:none !important;}
 /*link styles & hover*/
-a { color:#3291db; text-decoration:none; outline:none;}
+a { color:#e54d24; text-decoration:none; outline:none;}
 a:hover { text-decoration:underline !important;}
 /*media query*/
-@media only screen and (max-width: 649px) {
-
+/*startMedia@media only screen and (max-width: 649px) {/*endMedia*/
+/*start640MediaNeiStart
 table[class~=wrap], td[class~=wrap], table[class~=divider] { width:100% !important;}
 table[class~=cw4] { width:88px !important;}
 table[class~=cw1].a { width:295px !important;}
 table[class~=cw2].a { width:320px !important;}
 table[class~=cw3] { width:40px !important;}
 table[class~=cw5] { width:95px !important;}
-
-}
-@media only screen and (max-width: 629px) {
-
+/*MediaNeiEnd*/
+/*startMedia}/*endMedia*/
+/*startMedia@media only screen and (max-width: 629px) {/*endMedia*/
+/*start480MediaNeiStart
 table[class~=wrap], td[class~=wrap], table[class~=divider] { width:440px !important;}
 table[class~=row], td[class~=row] { width:400px !important;}
 table[class~=col2], table[class~=col3] { width:100% !important;}
@@ -72,10 +72,10 @@ td[class~=border-t], table[class~=border-t] { border-top-width:1px !important;}
 td[class~=border-l], table[class~=border-l] { border-left-width:1px !important;}
 td[class~=border-r], table[class~=border-r] { border-right-width:1px !important;}
 td[class~=border-b], table[class~=border-b] { border-bottom-width:1px !important;}
-
-}
-@media only screen and (max-width: 439px) {
-
+/*MediaNeiEnd*/
+/*startMedia}/*endMedia*/
+/*startMedia@media only screen and (max-width: 439px) {/*endMedia*/
+/*start360MediaNeiStart
 table[class~=wrap], td[class~=wrap], table[class~=divider] { width:360px !important;}
 table[class~=row] { width:330px !important;}
 table[class~=cw1].a { width:330px !important;}
@@ -87,10 +87,10 @@ td[class~=sh1] { font-size:38px !important; line-height:40px !important;}
 h1[class~=h1] { font-size:37px !important; line-height:40px !important;}
 h1[class~=h1].b { font-size:48px !important; line-height:72px !important;}
 img[class~=logo-img] { width:145px !important; height:auto !important; max-width: 200px !important;}
-
-}
-@media only screen and (max-width: 359px) {
-
+/*MediaNeiEnd*/
+/*startMedia}/*endMedia*/
+/*startMedia@media only screen and (max-width: 359px) {/*endMedia*/
+/*start320MediaNeiStart
 table[class~=wrap], td[class~=wrap], table[class~=divider] { width:320px !important;}
 table[class~=row] { width:300px !important;}
 table[class~=cw1].a { width:300px !important;}
@@ -102,14 +102,15 @@ td[class~=block2] { width:100% !important; height:50px !important; display:block
 td[class~=border-dark].a { border-top-width:0px !important; border-bottom-width:0px !important;}
 table[class~=menu] td { padding:40px 4px !important;}
 img[class~=logo-img] { max-width: 200px !important;}
-
-}
+/*MediaNeiEnd*/
+/*startMedia}/*endMedia*/
 </style>
 </head>
 <body style="margin:0;padding:0;width:100%;height:100%;">
-<div class="preheader" style="display:none; visibility:hidden; height:0px; font-size:0px; line-height:0px;">messages
+<div class="preheader" style="display:none; visibility:hidden; height:0px; font-size:0px; line-height:0px;">Tutorago
 </div>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="BGtable" style="border-collapse: collapse;margin: 0;padding: 0;table-layout: fixed;background-color: #474747;width: 100% !important;height: 100% !important;">
+  <tbody>
 <tr>
 <td align="center" valign="top" class="BGtable-inner">
 <!-- start ◆header◆ -->
@@ -126,7 +127,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start logo img-->
 <table align="left" border="0" cellspacing="0" cellpadding="0" class="logo fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td style="padding: 28px 0 24px;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/images/email/logo.png" width="138" height="39" alt="logo" class="logo-img"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;"></a>
+<td style="padding: 28px 0 24px;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/logo.png" width="138" height="39" alt="logo" class="logo-img"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;"></a>
 </td>
 </tr>
 </table>
@@ -134,15 +135,15 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start menu-->
 <table align="right" border="0" cellspacing="0" cellpadding="0" class="menu fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="#" style="color: #242424;text-decoration: none;outline: none;">ABOUT US</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/aboutus" style="color: #242424;text-decoration: none;outline: none;">ABOUT US</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="#" style="color: #242424;text-decoration: none;outline: none;">B</a>ECOME A TUTOR
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/" style="color: #242424;text-decoration: none;outline: none;">BECOME A TUTOR</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="#" style="color: #242424;text-decoration: none;outline: none;">CONTACT US</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/contactus" style="color: #242424;text-decoration: none;outline: none;">CONTACT US</a>
 </td>
 </tr>
 </table>
@@ -153,32 +154,19 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 </table> 
-<!-- end - ◆header◆ -->
-<!-- start ◆title_module_2s◆ -->
-<table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
+<!-- end - ◆header_banner_3s◆ -->
+<!-- start ◆title_module_1s◆ -->
+<div mc:repeatable="title_module_1s"><layout label="title_module_1s">
+<table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;"><tbody>
 <tr>
 <td align="center" class="module-td1" style="padding: 70px 0 0;">
 <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
-<!--start title-->
+<!--start title--><tbody>
 <tr>
-<td align="center" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">
+<td align="center" class="h3 b title-td" mc:edit="title" style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;"><singleline label="title">Hi Tutorago Admin</singleline>
 </td>
 </tr>
-<tr>
-<td align="center" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #3291db; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">
-<span style="font-size: 27px; background-color: #ffffff; text-align: left;">Hi usename
-</span></h3><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #3291db; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">
-<span style="font-size: 27px; background-color: #ffffff; text-align: left;">Regarding your Request for the lesson below 
-</span>
-<br></h3>
-<table align="center" width="90" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-<tr>
-<td height="1" class="small-img line2" style="font-size: 0px;line-height: 0px;border-collapse: collapse;background-color: #252525;"><img  src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
-</td>
-</tr>
-</table>
-</td>
-</tr>
+
 <!--end title-->
 <tr>
 <td height="16" class="small-img" style="font-size: 0px;line-height: 0px;border-collapse: collapse;"><img  src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
@@ -186,79 +174,293 @@ img[class~=logo-img] { max-width: 200px !important;}
 </tr>
 <!--start content-->
 <tr>
-<td align="center" class="content b"  style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic;">
-<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;">my lessson detail</p>
+<td align="center" class="content b" mc:edit="content" style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic;"><multiline label="content"><p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;"> {{ $f->fullname }} just droped a mail, I think you should check it out</p></multiline>
 </td>
 </tr>
+<!--end content--></tbody>
 </table>
 </td>
-</tr>
-</table> 
-<!-- end - ◆title_module_2s◆ -->
-<!-- start ◆col2_module_4s◆ -->
-<table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
-<tr>
-<td align="center" class="module-td1" style="padding: 70px 0 0;">
-<table align="center" width="600" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
-<tr>
-<td>
-<!--start 1/2 column-->
-<table width="290" align="left" border="0" cellspacing="0" cellpadding="0" class="col2" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td><img  src="http://placehold.it/290x250/5a7285/fff&amp;text=290-250-img1" width="290" height="250" alt="image" class="img img290"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 290px;height: auto;max-width: 290px;">
-</td>
-</tr>
-</table>
-<!--end 1/2 column-->
-<!--start 2/2 column-->
-<table width="280" align="right" border="0" cellspacing="0" cellpadding="0" class="col2" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td height="30">
-</td>
-</tr>
-<!--start title-->
-<tr>
-<td align="left" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">
-</td>
-</tr>
-<tr>
-<td align="left" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #3291db; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">username has replied</h3>
-<table align="left" width="90" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td height="1" class="small-img line2" style="font-size: 0px;line-height: 0px;border-collapse: collapse;background-color: #252525;"><img  src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<!--end title-->
-<tr>
-<td height="16" class="small-img" style="font-size: 0px;line-height: 0px;border-collapse: collapse;"><img  src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
-</td>
-</tr>
-<!--start content-->
-<tr>
-<td align="left" class="content b"  style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic;">
-<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euimod tincidunt ut laoreet.</p>
-</td>
-</tr>
-<!--end content-->
-<tr>
-<td height="20">
-</td>
-</tr>
-<tr>
-<td align="left" class="h6" style="font-family: Raleway;font-weight: 400;color: #262424;font-size: 14px;line-height: 14px;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;">Discover &raquo;</a>
-</td>
-</tr>
-</table>
-<!--end 2/2 column-->
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table> 
+</tr></tbody>
+</table> </layout>
+</div>
+<!-- end - ◆title_module_1s◆ -->
+
+
+
+
+ <div mc:repeatable="col2_module_1s">
+    <layout label="col2_module_1s">
+    <table width="650" align="center" style="background: #fff;" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg">
+      <tr>
+        <td align="center" class="module-td3">
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center" width="50%" class="border-top border-right block">
+                <table align="right" width="300" border="0" cellspacing="0" cellpadding="0" class="fn">
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="35" height="35" class="colorbg">
+                                  <img src="{{ url('/') }}/images/email/icon-35-1.png" width="35" height="35" alt="icon" class="icon35" mc:edit="icon1" editable="true" label="icon1" />
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="17"></td>
+                          <td>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" class="col2">
+                              <!--start title-->
+                              <tr>
+                                <td align="left" mc:edit="title1">
+                                  <h6 class="h6 t bold"><singleline label="title1">Full name </singleline></h6>
+                                  <table align="left" width="90" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td height="1" class="small-img line2">
+                                        <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <!--end title-->
+                              <tr>
+
+                                <td height="16" class="small-img">
+                                  <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                </td>
+                              </tr>
+                              <!--start content-->
+                              <tr>
+                                <td align="left" class="content" mc:edit="content1">
+                                  <multiline label="content1"><p>{{ $f->fullname }}</p></multiline>
+                                </td>
+                              </tr>
+                              <!--end content-->
+                            </table>
+                          </td>
+                          <td width="17" class="hide"></td>
+                          <td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                </table>
+              </td>
+              <td align="center" width="50%" class="border-top block">
+                <table align="left" width="300" border="0" cellspacing="0" cellpadding="0" class="fn">
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="17" class="hide"></td>
+                          <td>
+                          <td valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="35" height="35" class="colorbg">
+                                  <img src="{{ url('/') }}/images/email/icon-35-2.png" width="35" height="35" alt="icon" class="icon35" mc:edit="icon2" editable="true" label="icon2" />
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="17"></td>
+                          <td>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" class="col2">
+                              <!--start title-->
+                              <tr>
+                                <td align="left" mc:edit="title2">
+                                  <h6 class="h6 t bold"><singleline label="title2">EMAIL</singleline></h6>
+                                  <table align="left" width="90" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td height="1" class="small-img line2">
+                                        <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <!--end title-->
+                              <tr>
+
+                                <td height="16" class="small-img">
+                                  <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                </td>
+                              </tr>
+                              <!--start content-->
+                              <tr>
+                                <td align="left" class="content" mc:edit="content2">
+                                  <multiline label="content2"><p>{{ $f->email }}</p></multiline>
+                                </td>
+                              </tr>
+                              <!--end content-->
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td align="center" width="50%" class="border-top border-right border-bottom block">
+                <table align="right" width="300" border="0" cellspacing="0" cellpadding="0" class="fn">
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="35" height="35" class="colorbg">
+                                  <img src="{{ url('/') }}/images/email/icon-35-17.png" width="35" height="35" alt="icon" class="icon35" mc:edit="icon3" editable="true" label="icon3" />
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="17"></td>
+                          <td>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" class="col2">
+                              <!--start title-->
+                              <tr>
+                                <td align="left" mc:edit="title3">
+                                  <h6 class="h6 t bold"><singleline label="title3">PHONE</singleline></h6>
+                                  <table align="left" width="90" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td height="1" class="small-img line2">
+                                        <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <!--end title-->
+                              <tr>
+
+                                <td height="16" class="small-img">
+                                  <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                </td>
+                              </tr>
+                              <!--start content-->
+                              <tr>
+                                <td align="left" class="content" mc:edit="content3">
+                                  <multiline label="content3"><p>{{ $f->phone }}</p></multiline>
+                                </td>
+                              </tr>
+                              <!--end content-->
+                            </table>
+                          </td>
+                          <td width="17" class="hide"></td>
+                          <td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                </table>
+              </td>
+              <td align="center" width="50%" class="border-top a border-bottom block">
+                <table align="left" width="300" border="0" cellspacing="0" cellpadding="0" class="fn">
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="17" class="hide"></td>
+                          <td>
+                          <td valign="top">
+                            <table border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="35" height="35" class="colorbg">
+                                  <img src="{{ url('/') }}/images/email/icon-35-1.png" width="35" height="35" alt="icon" class="icon35" mc:edit="icon4" editable="true" label="icon4" />
+                              </tr>
+                            </table>
+                          </td>
+                          <td width="17"></td>
+                          <td>
+                            <table align="left" border="0" cellspacing="0" cellpadding="0" class="col2">
+                              <!--start title-->
+                              <tr>
+                                <td align="left" mc:edit="title4">
+                                  <h6 class="h6 t bold"><singleline label="title4">MESSAGE</singleline></h6>
+                                  <table align="left" width="90" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                      <td height="1" class="small-img line2">
+                                        <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                              <!--end title-->
+                              <tr>
+
+                                <td height="16" class="small-img">
+                                  <img src="{{ url('/') }}/images/email/spacer.gif" width="1" height="1" />
+                                </td>
+                              </tr>
+                              <!--start content-->
+                              <tr>
+                                <td align="left" class="content" mc:edit="content4">
+                                  <multiline label="content4"><p>{{ $f->message}}</p></multiline>
+                                </td>
+                              </tr>
+                              <!--end content-->
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td height="40"></td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="40" class="colorbg-gray"></td>
+      </tr>
+      <tr>
+        <td align="center" class="colorbg-gray">
+          <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row">
+            <tr>
+              <td align="center" class="h4" mc:edit="link">
+                
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td height="45" class="colorbg-gray"></td>
+      </tr>
+    </table>
+    </layout>
+    </div>
 
 
 

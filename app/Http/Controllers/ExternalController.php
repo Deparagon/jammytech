@@ -13,6 +13,9 @@ use TTools;
 use App\IcanTeach;
 use App\Blogcat;
 use App\Comment;
+use App\Contact;
+use Mail;
+use App\Mail\ContactUsMailler;
 class ExternalController extends Controller
 {
     //
@@ -58,7 +61,7 @@ class ExternalController extends Controller
     {
       $this->validate($request, ['fullname' =>'required', 'email' => 'required', 'message' =>'required']);
 
-
+       
       $contact = new Contact();
       $contact->fullname = $request->fullname;
       $contact->email = $request->email;
@@ -66,7 +69,10 @@ class ExternalController extends Controller
       $contact->phone = $request->phone;
       $contact->save();
 
-      return back()->with(['contactsaved'=> 'Contact Saved successfully']);
+
+      Mail::to(config('app.email'))->send( new ContactUsMailler($request) );
+ 
+      return back()->with(['contactsaved'=> 'Contact sent successfully, Tutorago support team will get back to you']);
 
     }
 
