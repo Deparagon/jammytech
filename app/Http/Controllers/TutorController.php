@@ -11,6 +11,8 @@ use App\IcanTeach;
 use App\Education;
 use App\TeachingExperience;
 use App\WorkExperience;
+use App\RateLesson;
+
 class TutorController extends Controller
 {
     //
@@ -30,7 +32,8 @@ $educations = Education::where(['user_id' => $tutor->id])->get();
     	$workingexps = WorkExperience::where(['user_id' => $tutor->user_id])->get();
  //return $icanteach;
         
+        $tutorrattings = RateLesson::getTutorRating($tutor->id);
         
-         return view('tutor.tutor', ['datutor' => $tutor, 'tutorprofile' => $tutor, 'allclasses' => $allclasses, 'completedcount' => $completedcount, 'ongoingcount' => $ongoingcount, 'icanteach' => $icanteach, 'educations' => $educations, 'teachingexps' => $teachingexps, 'workingexps' => $workingexps]);
+         return view('tutor.tutor', ['datutor' => $tutor, 'tutorprofile' => $tutor, 'allclasses' => $allclasses, 'completedcount' => $completedcount, 'ongoingcount' => $ongoingcount, 'icanteach' => $icanteach, 'educations' => $educations, 'teachingexps' => $teachingexps, 'workingexps' => $workingexps, 'tutorrattings' => $tutorrattings]);
     }
 }

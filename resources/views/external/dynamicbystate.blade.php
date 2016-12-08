@@ -66,7 +66,7 @@ Top Rated Private Home Tutors in {{ $state }}  | Tutorago.Com
        <div class="row">
           <div class="col-sm-4">
             <div class="my-profile-img">
-              <img class="profile-img" src="/uploads/{{ $tutor->photo }}">
+              <img class="profile-img img-responsive" src="/uploads/{{ $tutor->photo }}">
             </div>
           </div>
            <div class="col-sm-8">

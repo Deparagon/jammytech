@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class RateLesson extends Model
 {
@@ -29,5 +30,14 @@ class RateLesson extends Model
     	$r->save();
             
 
+    }
+
+
+
+    public static function getTutorRating($id_tutor)
+    {
+        $ratings = DB::table('ratelessons')->select(DB::raw('comment, rate, name, firstname'))->join('lessons', 'lessons.id', '=', 'ratelessons.lesson_id')->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_student')->where(['ratelessons.tutor_id' => $id_tutor])->paginate(25);
+
+  return $ratings;
     }
 }

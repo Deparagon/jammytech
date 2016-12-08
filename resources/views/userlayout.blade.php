@@ -235,6 +235,9 @@
     </div>
      <ul class="list-group">
        <li class="list-group-item"> <i class="fa fa-user"> </i>  <a href="{{ url('/user/profile') }}"> &nbsp; &nbsp; Profile </a></li>
+        @if (UserBouncer::isTutorWanabe())
+         <li class="list-group-item"> <i class="fa fa-user"> </i>  <a href="{{ url('/user/tutor/'.Auth::user()->id) }}"> &nbsp; &nbsp; View as Student  </a></li>
+         @endif
        <li class="list-group-item"> <i class="fa fa-photo"> </i>  <a href="{{ url('/user/photo') }}"> &nbsp; &nbsp; Photo </a></li>
        <li class="list-group-item"> <i class="fa fa-film">  </i>  <a href="{{ url('/user/video') }}"> &nbsp; &nbsp; Video </a></li>
        <li class="list-group-item"><i class="fa fa-key"> </i> <a href="{{ url('/user/password') }}"> &nbsp; &nbsp; Password </a></li>

@@ -5,6 +5,10 @@
   {{ $datutor->firstname }} | Tutorago
 @endsection
 
+ @section('sectionheader')
+<link href="/css/bootstrap-rating.css" rel="stylesheet">
+ @endsection
+
 @section('dashbreadcumb')
 <ol class="breadcrumb">
   <li><a href="{{ url('/user/dashboard') }}">Home</a></li>
@@ -78,7 +82,7 @@
 <section class="tutor-education-work">
 <div class="row">
 <div class="col-sm-6">
-  <h3> My Qualifications </h3>
+  <h3 class="top-work"> <span>My Qualifications </span> </h3>
   <div class="table-responsive">
  <table class="table table-striped table-bordered">
  <thead>
@@ -100,7 +104,7 @@
  </div>
 
 <div class="col-sm-6">
-  <h3> My Working Experience </h3>
+  <h3 class="top-work">  <span> My Working Experience </span> </h3>
   <div class="table-responsive">
  <table class="table table-striped table-bordered">
  <thead>
@@ -125,9 +129,10 @@
 </section>
 
 <section class="tutor-icanteach">
+
 <div class="row">
 <div class="col-sm-6">
-  <h3> I can Teach </h3>
+  <h3 class="icanteach-top"> <span>I can Teach </span> </h3>
  <ul class="list-group">
   @if(isset($icanteach))
   @if(count($icanteach) >0)
@@ -140,6 +145,7 @@
  </div>
 
  <div class="col-sm-6">
+ <h3 class="icanteach-top"> <span>Teaching Experience </span> </h3>
   <h3> @if(isset($teachingexps)) @if(isset($teachingexps->teachinglevel)) {{ $teachingexps->teachinglevel }} @endif @endif </h3>
  <ul class="list-group">
   @if(isset($teachingexps))
@@ -155,9 +161,31 @@
 
 
 <section class="tutor-rating-in">
+ <h3 class="reviews-top"> <span> My Reviews & Ratings </span> </h3>
   <div class="row">
-    <div class="col-sm-6"> </div>
-    <div class="col-sm-6"> </div>
+    @if ( count($tutorrattings) > 0)
+    @foreach($tutorrattings as $rating)
+    <div class="col-sm-6"> 
+      <p class="well">
+         {{ $rating->name }} lesson completed with {{ $rating->firstname }}
+       </p>
+
+     </div>
+    <div class="col-sm-6 rating-col">
+
+      <input type="hidden"  value="{{ $rating->rate }}" disabled name="darating" class="rating starfa" data-filled="fa fa-star fa-3x" data-empty="fa fa-star-o fa-3x" id="darating">
+
+      </div>
+
+      @endforeach
+      @endif
+
+
    </div>
 </section>
+@endsection
+
+@section('sectionfooter')
+<script src="/js/bootstrap-rating.min.js"></script>
+<script src="/js/extrauser.js"></script>
 @endsection

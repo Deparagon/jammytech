@@ -196,6 +196,20 @@ SHOWCASE TUTOR
 	height: 250px;
 }
 
+.reviews-top, .icanteach-top, .top-work{
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.reviews-top span, .icanteach-top span , .top-work span {
+	border-bottom: 2px solid #E68824;
+}
+
+
+.rating-col{
+	color:#F5C812 !important;
+}
+
 .titlebox {
 	position:absolute;
 	bottom:0;
