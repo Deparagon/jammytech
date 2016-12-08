@@ -60,7 +60,7 @@ class CourseController extends Controller
         $course->category_id = $request->category_id;
         $course->name = $request->name;
         $course->description = $request->description;
-        $course->price = $request->price;
+        //$course->price = $request->price;
 
         if ($request->hasFile('imageurl')) {
             $courseimage = date('YmdHis').$request->name.'.jpg';
@@ -74,7 +74,7 @@ class CourseController extends Controller
         return back()->with(['createdmsg' => 'Course Updated Successfully']);
     }
 
-    public function delete()
+    public function delete(Request $request)
     {
         if (Course::find((int) $request->idcourse)->delete()) {
             return response()->json(['response' => 'success']);
