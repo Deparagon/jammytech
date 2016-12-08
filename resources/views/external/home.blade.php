@@ -87,7 +87,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     <div class="row">
     <div class="col-sm-12">
      <p class="tutor-assuc">
-        Tutorago Connects Professional Educators, Private Home Tutors with Students for One-on-One Personalized Tutoring Sessions on any Subject, Exam, Skill or Profession
+        Tutorago Connects Professional Educators, Private Home Tutors with Students for One-on-One Personalized Tutoring Sessions on any Subject, Exam, Skill or Profession.
 
       </p>
       </div>
