@@ -378,7 +378,9 @@ h4.base-hr {
 	height: 500px;
 }
 
-/*@media only screen 
+
+/* media query for top banner start here  */
+@media only screen 
   and (max-device-width: 768px)  { 
 .top-faq {
 	background:url('/img/faq.png');
@@ -426,8 +428,9 @@ background-size: cover;
 }
 
 
-}*/
+}
 
+/* media query for top banner stop here  */
 
 .top-faq {
 	background:url('/img/faq.png');

@@ -7,7 +7,7 @@
 @section('externalcontent')
 
 <section class="top-privacy">
- <div class="topbanner img-responsive"></div>
+ <div class="topbanner"></div>
 </section>
 
 <section class="">
