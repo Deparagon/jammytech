@@ -21,6 +21,7 @@ font-family: 'Raleway', sans-serif;
 	margin:0;
 }
 
+
 /*
  ADMIN MAIN CONTENT
 
@@ -190,6 +191,10 @@ SHOWCASE TUTOR
 	min-height: 200px;
 }
 
+.tutor-box img {
+	width: 250px;
+	height: 250px;
+}
 
 .titlebox {
 	position:absolute;

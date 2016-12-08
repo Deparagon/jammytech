@@ -146,7 +146,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
         <div class="col-lg-3">
          <a href="{{ url('/user/new-lesson/'.$course->id) }}">
           <div class="tutor-box">
-           <img class="" src="/uploads/{{ $course->imageurl }}">
+           <img class="img-responsive" src="/uploads/{{ $course->imageurl }}">
           <p class="titlebox">{{ $course->name }}</p>
           </div>
           </a>
