@@ -115,7 +115,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
          </div>
          <div class="col-sm-4"> 
           <div class="img-box-how"> <img src="/img/how3.png" class="img-howit"> 
-         <p class="how-p text-center"> Student Learning goals are achieved. Tutor get paid by Us. </p>
+         <p class="how-p text-center"> Student Learning goals are achieved. Tutor get paid by Us after student approval. </p>
 
           </div>
          </div>
