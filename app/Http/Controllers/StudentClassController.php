@@ -80,7 +80,7 @@ class StudentClassController extends Controller
 
            $this->validate($request, ['darating' =>'required', 'ratecomment' => 'required']);
 
-           RateLesson::createRating($request, Auth::user()->id, $lesson->id, 'STUDENT');
+           RateLesson::createRating($request, Auth::user()->id, $lesson->id);
            $lesson->studentrate = 1;
            $lesson->save();
 

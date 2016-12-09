@@ -20,6 +20,7 @@ class ReferralController extends Controller
     public function show()
     {
     	$referrals = Auth::user()->referrals;
+       // return $referrals;
     	return view('user.myreferrals', compact('referrals'));
     }
 }

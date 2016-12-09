@@ -13,7 +13,7 @@ use App\IcanTeach;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
-
+use TTools;
 class CredentialController extends Controller
 {
 
@@ -39,6 +39,8 @@ class CredentialController extends Controller
         $edu->institution = $request->institution;
         $edu->course = $request->course;
         $edu->degree = $request->degree;
+        $edu->startdate = $request->startdate;
+        $edu->enddate = $request->enddate;
         $edu->save();
 
         return back()->with('createdmsg', 'Successfully saved education information');
@@ -87,7 +89,7 @@ class CredentialController extends Controller
     {
         $teaching = Auth::user()->teachingExperiences;
 
-        $icanteachs = DB::table('icanteachs')->select(DB::raw('courses.id, courses.name as coursename, courses.description as coursedescription, courses.imageurl as image, categories.name as catname'))->join('courses', 'courses.id', '=', 'icanteachs.course_id')->join('categories', 'categories.id', '=', 'courses.category_id')->where(['user_id' => Auth::user()->id])->get();
+        $icanteachs = DB::table('icanteachs')->select(DB::raw('icanteachs.id, courses.name as coursename, courses.description as coursedescription, courses.imageurl as image, categories.name as catname'))->join('courses', 'courses.id', '=', 'icanteachs.course_id')->join('categories', 'categories.id', '=', 'courses.category_id')->where(['user_id' => Auth::user()->id])->get();
 
         //print_r($icanteachs);
 
@@ -96,7 +98,7 @@ class CredentialController extends Controller
 
     public function icanteachShow()
     {
-        $icanteachs = DB::table('icanteachs')->select(DB::raw('courses.id, price, courses.name as coursename, courses.description as coursedescription, courses.imageurl as image, categories.name as catname'))->join('courses', 'courses.id', '=', 'icanteachs.course_id')->join('categories', 'categories.id', '=', 'courses.category_id')->where(['user_id' => Auth::user()->id])->get();
+        $icanteachs = DB::table('icanteachs')->select(DB::raw('icanteachs.id,  price, courses.name as coursename, courses.description as coursedescription, courses.imageurl as image, categories.name as catname'))->join('courses', 'courses.id', '=', 'icanteachs.course_id')->join('categories', 'categories.id', '=', 'courses.category_id')->where(['user_id' => Auth::user()->id])->get();
 
         //print_r($icanteachs);
 
@@ -161,5 +163,19 @@ class CredentialController extends Controller
         $courserequest->save();
 
         return back()->with('createdmsg', 'Your request have been submitted Successfully');
+    }
+
+
+
+    public function deleteIcanteach(Request $request)
+    {
+    
+
+          $icanteach = IcanTeach::find($request->idteach);
+          if(TTools::obuObject($icanteach)){
+            $icanteach->delete();
+          }
+           echo 'OK';
+           exit;
     }
 }

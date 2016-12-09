@@ -42,13 +42,13 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr> <th> Name of Institution </th> <th> Course of Study</th> <th> Degree</th> <th>Action</th></tr>
+  <tr> <th> Name of Institution </th> <th> Course of Study</th> <th> Degree</th> <th> Start Date </th> <th> End Date </th> <th>Action</th></tr>
 </thead>
 
 <tbody>
 @if(!empty($educations))
 @foreach( $educations as $education)
-<tr> <td> {{ $education->institution }}</td> <td> {{ $education->course }} </td> <td> {{ $education->degree }}</td>  <td> <a  id="deleteeducationnewone"  data-edutionadb="{{ $education->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a> </td> </tr>
+<tr> <td> {{ $education->institution }}</td> <td> {{ $education->course }} </td> <td> {{ $education->degree }}</td>  <td> {{ $education->startdate }}</td> <td> {{ $education->enddate }}</td> <td> <a  id="deleteeducationnewone"  data-edutionadb="{{ $education->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a> </td> </tr>
 
 @endforeach
   
@@ -98,6 +98,25 @@
        </div>
        </div>
        </div>
+
+      <div class="row">
+      <div class="col-sm-6">
+       <div class="form-group">
+            <label for="startdate">Start e.g 2011-09-21</label>
+            <input type="date" placeholder="YYYY-MM-DD" class="form-control" name="startdate" id="startdate">
+
+       </div>
+       </div>
+
+     <div class="col-sm-6">
+       <div class="form-group">
+            <label for="enddate">End e.g 2015-02-15</label>
+            <input type="date"  placeholder="YYYY-MM-DD" class="form-control" name="enddate" id="enddate">
+       </div>
+       </div>
+       </div>
+
+
 
  </div>
   <div class="panel-footer"> 

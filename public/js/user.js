@@ -58,7 +58,7 @@ $('body').on('click', '#deleteeducationnewone', function(ev){
 
 		var gogdel =$.post('/user/delete/myguarantor', gtodel);
 		    gogdel.success(function(report){
-		    	console.log(report);
+		    	//console.log(report);
                if(report['response'] =='success'){
                	gdeline.fadeOut();
                }
@@ -67,6 +67,29 @@ $('body').on('click', '#deleteeducationnewone', function(ev){
 
 
 	});
+
+
+
+	$('body').on('click', '#killthiscourseofdauser', function(ev){
+		ev.preventDefault();
+		var gdeline = $(this).closest('tr');
+		var gtodel = {
+			 _token: $('input[name= "_token"]').val(),
+			 idteach: $(this).data('killcourseded'),
+		}
+              
+		var gogdel =$.post('/user/delete/icanteach', gtodel);
+		    gogdel.success(function(report){
+		    	console.log(report);
+               if(report =='OK'){
+               	gdeline.fadeOut();
+               }
+             
+		    });
+
+
+	});
+
 
 
 $('#searchcourbaycategorylist').on('submit', function(ev){

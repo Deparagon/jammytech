@@ -576,13 +576,14 @@ ul.list-login-register li {
 }
 
 .show-box-become {
-	background: #2a90c2;
+	/*background: #2a90c2;*/
 	padding:30px;
+	color: #2a90c2;
 
 }
 
 p.apply-p {
-	color: #fff;
+	color: #2a90c2;
 	text-align: center;
 }
 
@@ -922,5 +923,18 @@ h3.article-title {
 .img-box-how {
 	width: 80%;
 	margin-left: 10%;
+
+}
+
+.tiny-photo {
+	width: 70px;
+	height: 50px;
+}
+
+.boxed-paged-bar {
+	background: #fff;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding:10px;
 
 }

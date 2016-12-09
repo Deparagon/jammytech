@@ -79,6 +79,7 @@
   </div>
 </section>
 
+
 <section class="tutor-education-work">
 <div class="row">
 <div class="col-sm-6">
@@ -89,12 +90,12 @@
    <th> Institution </th> <th> Course</th> <th> Certificate </th>
  </thead>
 <tbody>
-  @if(isset($educations))
+  
   @if(count($educations) >0)
   @foreach($educations as $education)
   <tr> <td>{{ $education->institution }} </td> <td> {{ $education->course }}</td> <td>{{ $education->degree }} </td></tr>
   @endforeach
-  @endif
+
   @else
   <tr> <td colspan="3"> Preparing to update my qualifications, please come back and check </td></tr>
   @endif
@@ -111,12 +112,10 @@
    <th> Organization </th> <th> Position</th> <th> Roles </th>
  </thead>
 <tbody>
-  @if(isset($workingexps))
   @if(count($workingexps) >0)
   @foreach($workingexps as $workingexp)
   <tr> <td>{{ $workingexp->organization }} </td> <td> {{ $workingexp->position }}</td> <td>{{ $workingexp->roles }} </td></tr>
   @endforeach
-  @endif
   @else
   <tr> <td colspan="3"> Will be updated soon.  </td></tr>
   @endif
@@ -131,28 +130,29 @@
 <section class="tutor-icanteach">
 
 <div class="row">
-<div class="col-sm-6">
+<div class="col-sm-12">
   <h3 class="icanteach-top"> <span>I can Teach </span> </h3>
  <ul class="list-group">
-  @if(isset($icanteach))
-  @if(count($icanteach) >0)
-  @foreach($icanteach as $canteach)
+
+  @if(count($icanteachs) >0)
+  @foreach($icanteachs as $canteach)
   <li class="list-group-item"> {{ $canteach->course->name }}</li>
   @endforeach
-  @endif
+ @else
+  <li class="list-group-item"> Preparing the list of my subjects </li>
   @endif
  </ul>
  </div>
+</div>
 
- <div class="col-sm-6">
+<div class="row">
+ <div class="col-sm-12">
  <h3 class="icanteach-top"> <span>Teaching Experience </span> </h3>
-  <h3> @if(isset($teachingexps)) @if(isset($teachingexps->teachinglevel)) {{ $teachingexps->teachinglevel }} @endif @endif </h3>
+  <h3>  @if(isset($teachingexps->teachinglevel)) {{ $teachingexps->teachinglevel }} @endif </h3>
  <ul class="list-group">
-  @if(isset($teachingexps))
   @if(isset($teachingexps->levelexplanation))
      <p class="well"> {{ $teachingexps->levelexplanation }} </p>
   
-  @endif
   @endif
  </ul>
  </div>
@@ -162,26 +162,34 @@
 
 <section class="tutor-rating-in">
  <h3 class="reviews-top"> <span> My Reviews & Ratings </span> </h3>
-  <div class="row">
+  
     @if ( count($tutorrattings) > 0)
     @foreach($tutorrattings as $rating)
+    <div class="row boxed-paged-bar" >
     <div class="col-sm-6"> 
-      <p class="well">
-         {{ $rating->name }} lesson completed with {{ $rating->firstname }}
-       </p>
+     <p class=""> @if($rating->photo != '') <img class="tiny-photo img-circle" src="{{ url('/uploads/'.$rating->photo ) }}"> @endif  </p>
+      <h4> Reviewed by {{ $rating->firstname }} </h4>
 
      </div>
-    <div class="col-sm-6 rating-col">
+    <div class="col-sm-6">     
+     <div class="rating-col">
+      <input type="hidden"  value="{{ $rating->rate_by_student }}" disabled name="darating" class="rating starfa" data-filled="fa fa-star fa-2x" data-empty="fa fa-star-o fa-2x" id="darating">
+       </div>
+    <p>
+         {{ $rating->name }} lesson completed with {{ $rating->firstname }} 
+       </p>
+       <p> {{ $rating->comment_by_student }} </p>
 
-      <input type="hidden"  value="{{ $rating->rate }}" disabled name="darating" class="rating starfa" data-filled="fa fa-star fa-3x" data-empty="fa fa-star-o fa-3x" id="darating">
 
       </div>
+        </div>
+
 
       @endforeach
       @endif
 
 
-   </div>
+ 
 </section>
 @endsection
 

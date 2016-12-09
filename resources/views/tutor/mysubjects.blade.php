@@ -43,13 +43,13 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr> <th> ID </th> <th>Subject </th>  <th> Price (NGN)   </th> <th>Description</th> <th> Category</th> <th>Action</th></tr>
+  <tr>  <th> S/N</th> <th>Subject </th>  <th> Price (NGN)   </th> <th>Description</th> <th> Category</th> <th>Action</th></tr>
 </thead>
 
 <tbody>
 @if(!empty($canteachs))
-@foreach( $canteachs as $canteach)
-<tr> <td> {{ $canteach->id }} </td> <td> {{ $canteach->coursename }} </td> <td> {{ $canteach->price }}  </td> <td> {{ $canteach->coursedescription}}</td> <td>  {{ $canteach->catname }}</td>  <td> <a  id="killthiscourseofdauser"  data-killcourseded="{{ $canteach->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a></td></tr>
+@foreach( $canteachs as $k => $canteach)
+<tr> <td> {{ $k+1 }} </td> <td> {{ $canteach->coursename }} </td> <td> {{ $canteach->price }}  </td> <td> {{ $canteach->coursedescription}}</td> <td>  {{ $canteach->catname }}</td>  <td> <a  id="killthiscourseofdauser"  data-killcourseded="{{ $canteach->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a></td></tr>
 
 @endforeach
   
@@ -85,7 +85,7 @@
 
        </div>
         <p class="well"> <i class="fa fa-lightbulb-o fa-2x"> </i> You can add as many subject as you can, depending your knowledge of these subjects and readiness to teach. <br>
- You can add multiple subjects at a time (If all the subjects has same price per hour). Hold your control key on windows or command key on Mac to select multiple subjects. </p>
+ You can add multiple subjects at a time (If all the subjects has same price per hour). Hold your control key on windows or command key on Mac to select multiple subjects.  If your subject is not listed above, Please  <a href=" {{ url('user/create-subjects') }}">create a new subject  </a> </p>
 </form>
 
      </div>

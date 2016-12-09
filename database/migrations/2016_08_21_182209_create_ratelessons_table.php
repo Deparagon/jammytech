@@ -12,8 +12,10 @@ class CreateRatelessonsTable extends Migration
     {
         Schema::create('ratelessons', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('rate', [1, 2, 3, 4, 5]);
-            $table->string('comment');
+            $table->enum('rate_by_student', [1, 2, 3, 4, 5]);
+            $table->enum('rate_by_tutor', [1, 2, 3, 4, 5]);
+            $table->string('comment_by_student');
+            $table->string('comment_by_tutor');
             $table->integer('student_id')->nullable();
             $table->integer('tutor_id')->nullable();
             $table->integer('lesson_id');

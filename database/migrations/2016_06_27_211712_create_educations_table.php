@@ -16,6 +16,8 @@ class CreateEducationsTable extends Migration
             $table->string('institution');
             $table->string('course');
             $table->string('degree');
+            $table->datetime('startdate');
+            $table->datetime('enddate');
             $table->timestamps();
         });
     }

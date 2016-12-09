@@ -14,7 +14,7 @@ class CreateIcanteachsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('course_id');
-            $table->decimal('price', 6, 2);
+            $table->decimal('price', 10, 2);
             $table->string('status')->default('Pending');
             $table->timestamps();
         });

@@ -294,13 +294,19 @@ Route::post('user/password', 'SecurityController@changePassword');
 Route::get('/home', 'HomeController@index');
 
 
+// DELETE I CAN TEACH
+Route::post('/user/delete/icanteach', 'CredentialController@deleteIcanteach');
+
+
+
+
 
 //==========================================================================
  //                           TUTOR AND REFERRAL PAYOUT
 
 //==========================================================================
-Route::get('/user/payoutrequest', 'PayoutController@showForm');
-Route::post('/user/payoutrequest', 'PayoutController@saveForm');
+Route::get('/user/payout-request', 'PayoutController@showForm');
+Route::post('/user/payout-request', 'PayoutController@saveForm');
 
 Route::get('/user/bank', 'BankController@showForm');
 Route::post('/user/bank', 'BankController@saveForm');

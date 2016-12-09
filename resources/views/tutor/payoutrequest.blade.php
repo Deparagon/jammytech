@@ -1,7 +1,7 @@
 @extends('userlayout')
 
 @section('pagetitle')
-  My Payout Request | Tutorago
+  Make Earnings' Withdrawal Request | Tutorago
 @endsection
 
 @section('dashbreadcumb')
@@ -41,7 +41,7 @@
 
  <div class="panel panel-default">
      <div class="panel-heading">  
-          <h4 class="panel-title"> My Payments & Requests </h4>
+          <h4 class="panel-title"> Make Earnings' Withdrawal Request </h4>
      </div>
      <div class="panel-body">
 
@@ -88,7 +88,7 @@
             <div class="row">
              <div class="col-sm-10"> </div>
              <div class="col-sm-2">
-            <button type="submit" class="btn btn-sm btn-default pull-right "> <i class="fa fa-save">  </i> <br> Request</button>
+            <button type="submit" class="btn btn-sm btn-default pull-right "> <i class="fa fa-save">  </i> <br> Withdraw</button>
             </div>
             </div>
        </div>

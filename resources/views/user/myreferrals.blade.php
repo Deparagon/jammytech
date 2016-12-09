@@ -41,17 +41,18 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr> <th> Name </th> <th> Date Join </th>  <th> Status   </th> <th>Commission</th>
+  <tr> <th> Name </th>   <th> Status   </th>  <th> Date Join </th> <th>Commission</th>
 </tr>
 </thead>
 
 <tbody>
 @if(!empty($referrals))
 @foreach( $referrals as $referral)
-<tr> <td> {{ $referral->firstname }} </td> <td> {{ $referral->status }} </td> <td> {{ $referral->created_at }}  </td> <td> {{ $referral->commission}}</td> </tr>
+<tr> <td> {{ DaUser::getUserFirstname($referral->user_id) }} </td> <td> @if($referral->status ==0) Redeemable @else 'Redeemed' @endif </td> <td> {{ $referral->created_at }}  </td> <td> {{ $referral->commission}}</td> </tr>
 
 @endforeach
-  
+  @else 
+  <tr> <td colspan="4">  Refer people to Tutorago and get paid </td></tr>
   @endif
 </tbody>
 
@@ -68,4 +69,4 @@
 
 
 
-@stop
+@endsection

@@ -58,7 +58,7 @@
        </div>
        <p class="note"> How to get video url: </p>
        <p> Make a video and upload to You-tube;
-       <p> Copy the video Url e.g https://youtube.com/embed/ee0Dl0dFFPg
+       <p> Copy your video URL e.g https://youtube.com/embed/ee0Dl0dFFPg  into the box above
        </div>
        </div>
 

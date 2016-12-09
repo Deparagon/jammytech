@@ -115,7 +115,14 @@ class User extends Authenticatable
     return self::where(['state' =>$state, 'tutor' => 1])->get();
  }
 
-
+public static function getUserFirstname($id)
+{
+    $user = self::where(['id' => $id])->first();
+    if($user){
+        return $user->firstname;
+    }
+     return '';
+}
 
 
 }

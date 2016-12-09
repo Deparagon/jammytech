@@ -35,7 +35,7 @@
 
  <div class="panel panel-default">
      <div class="panel-heading">  
-          <h4 class="panel-title"> Profile Photo </h4>
+          <h4 class="panel-title"> Please upload your recent Passport Photograph </h4>
      </div>
      <div class="panel-body">
          {{ csrf_field() }}

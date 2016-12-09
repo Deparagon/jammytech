@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
+use TTool;
 
 class RateLesson extends Model
 {
@@ -17,14 +18,14 @@ class RateLesson extends Model
     }
 
 
-    public static function createRating($request, $user_id, $lessonid, $doer ='TUTOR')
+    public static function createRating($request, $user_id, $lessonid)
     {
 
     	$r = new self();
-    	$r->rate = $request->darating;
-    	$r->comment = $request->ratecomment;
-    	$r->tutor_id = ($doer =='TUTOR')? $user_id : null;
-    	$r->student_id =  ($doer =='STUDENT')? $user_id : null;
+    	$r->rate_by_student = $request->darating;
+    	$r->comment_by_student = $request->ratecomment;
+    	$r->tutor_id =  null;
+    	$r->student_id =   $user_id;
     	$r->lesson_id = $lessonid;
 
     	$r->save();
@@ -32,11 +33,22 @@ class RateLesson extends Model
 
     }
 
+    
+    public function doTutorLessonRating($request, $user_id, $lessonid)
+    {
+           $ratedata = self::where(['lesson_id' => $lessonid])->first();
+           if(TTool::obuObject($ratedata)){
+                   $ratedata->rate_by_tutor = $request->darating;
+                   $ratedata->comment_by_tutor = $request->ratecomment;
+                   $ratedata->tutor_id = $user_id;
 
+                   $ratedata->save();
+           }
+    }
 
     public static function getTutorRating($id_tutor)
     {
-        $ratings = DB::table('ratelessons')->select(DB::raw('comment, rate, name, firstname'))->join('lessons', 'lessons.id', '=', 'ratelessons.lesson_id')->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_student')->where(['ratelessons.tutor_id' => $id_tutor])->paginate(25);
+        $ratings = DB::table('ratelessons')->select(DB::raw('comment_by_student, rate_by_student, name, firstname, photo'))->join('lessons', 'lessons.id', '=', 'ratelessons.lesson_id')->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_student')->where(['ratelessons.tutor_id' => $id_tutor])->paginate(25);
 
   return $ratings;
     }
