@@ -87,7 +87,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     <div class="row">
     <div class="col-sm-12">
      <p class="tutor-assuc">
-        Tutorago Connects Professional Educators, private home tutors with students for one-on-one personalized tutoring sessions on any subject, exaim or skill
+        Tutorago Connects Professional Educators, Private Home Tutors with Students for One-on-One Personalized Tutoring Sessions on any Subject, Exam, Skill or Profession.
 
       </p>
       </div>
@@ -95,27 +95,27 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     
     </div>
      <div class="row">
-      <div class="col-sm-12"> <h3 class="how-itworks"> How It Works</h3> </div>
+      <div class="col-sm-12"> <h3 class="how-itworks"> HOW IT WORKS</h3> </div>
      </div>
 
      <div class="row">
        <div class="col-sm-4"> 
          <div class="img-box-how">
             <img src="/img/how1.png" class="img-howit">
-            <p class="how-p"> Request for a vetted private home tutor by booking as per your need and schedule </p>
+            <p class="how-p text-center"> Request for a vetted private home tutor by booking as per your need and schedule </p>
           </div>
          
 
        </div>
         <div class="col-sm-4">
  <div class="img-box-how"> <img src="/img/how2.png" class="img-howit"> 
-<p class="how-p"> Tutor shows up in person in the agreed location & time </p>
+<p class="how-p text-center"> Tutor shows up in person in the agreed location & time </p>
  </div>
          
          </div>
          <div class="col-sm-4"> 
           <div class="img-box-how"> <img src="/img/how3.png" class="img-howit"> 
-         <p class="how-p"> Student Learning goals are achieved. Tutor get paid by Us. </p>
+         <p class="how-p text-center"> Student Learning goals are achieved. Tutor get paid by Us after student approval. </p>
 
           </div>
          </div>
@@ -131,7 +131,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     <div class="container marketing">
      <div class="row">
       <div class="col-sm-12">
-      <h3 class="how-itworks">Subject Requests from Your Area</h3>
+      <h3 class="how-itworks">SUBJECT REQUESTS FROM YOUR AREA</h3>
       <hr>
       </div>
     </div>
@@ -191,9 +191,9 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 When you book a tutor with us, we make sure that our tutor delivers the necessary classes and lessons to you or your child without any delay.  
 Hence you should be rest assured that you are with the right company. Both parties are safe.</p>
         </div>
-        <div class="col-md-5 col-md-pull-7">
+        <!--<div class="col-md-5 col-md-pull-7">
 
-        </div>
+        </div>-->
       </div>
 
          
@@ -202,7 +202,7 @@ Hence you should be rest assured that you are with the right company. Both parti
 <section id="becometutorbtn" class="become-tutor-bar">
  <div class="row">
    <div class="col-sm-8 col-sm-offset-2">
-      <p class="tutor-b"> Have experience grooming students on an exam, subject, skill or profession</p>
+      <p class="tutor-b"> Have Experience Grooming Students on an Exam, Subject, Skill or Profession?</p>
     </div>
  </div>
 <div class="row">
@@ -223,7 +223,7 @@ Hence you should be rest assured that you are with the right company. Both parti
 <div class="container marketing">
       <div class="row">
          <div class="col-sm-8 col-sm-offset-2"> 
-            <h3 class="help-sec"> Need Helping hand?</h3>
+            <h3 class="help-sec"> Need Helping Hand?</h3>
              <p class="helpline"> Call 081 670 827 04 | info@tutorago.com </p>
          </div>
       </div>
