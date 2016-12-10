@@ -66,7 +66,7 @@
         <div class="row">
       <div class="col-sm-6">
        <div class="form-group">
-            <label for="orgainization">Subjects</label>
+            <label for="orgainization">Select your Subject(s)</label>
             <select  name="course_id[]" id="course_id" multiple="" class="form-control">
             @if(!empty($courses))
             @foreach ($courses as $course)
@@ -79,7 +79,7 @@
        </div>
 
        <div class="col-sm-6">
-          <label for="price">Price per Subject/Course (NGN)</label>
+          <label for="price">State Your Hourly Price per Subject/Course (NGN)</label>
          <input type="number" pattern="[0-9]{1,9}" id="price" name="price" class="form-control">
        </div>
 
