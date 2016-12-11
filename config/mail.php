@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => env('MAIL_PORT', 587),
+    'port' => env('MAIL_PORT', 465),
 
     /*
     |--------------------------------------------------------------------------
@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => 'info@tutorago.com',
+        'address' => 'support@tutorago.com',
         'name' => 'Tutorago',
     ],
 
@@ -71,7 +71,7 @@ return [
     |
     */
 
-    'encryption' => env('MAIL_ENCRYPTION', 'tls'),
+    'encryption' => env('MAIL_ENCRYPTION', 'ssl'),
 
     /*
     |--------------------------------------------------------------------------
@@ -84,7 +84,7 @@ return [
     |
     */
 
-    'username' => env('MAIL_USERNAME'),
+    'username' => env('support@tutorago.com'),
 
     /*
     |--------------------------------------------------------------------------
@@ -97,7 +97,7 @@ return [
     |
     */
 
-    'password' => env('MAIL_PASSWORD'),
+    'password' => env('Mutimuti2015'),
 
     /*
     |--------------------------------------------------------------------------
