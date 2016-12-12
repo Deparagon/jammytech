@@ -52,6 +52,7 @@
     </thead>
     <tbody>
     <tr><td> Name </td> <td> {{ $student->lastname }} {{ $student->firstname }}</td> </tr>
+     <tr><td>Phone </td> <td> {{ $student->phone }}</td> </tr>
     <tr><td> Email </td> <td> {{ $student->email }}</td> </tr>
    <tr> <td> Joined </td> <td> {{ TTools::displayDate($student->created_at) }}</td> </tr>
      </tbody>

@@ -117,6 +117,9 @@ $('body').on('submit', '#ajaxlogintutorago', function(ev){
 });
 
 
+$('body').on('click', '#lessonstartsinglelinktostart', function(){
+
+});
 
 /* CLOSE JQUERY */
 });

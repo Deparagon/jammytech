@@ -252,6 +252,7 @@ return [
         'TTools' => App\TTools::class,
         'Bank' => App\Bank::class,
         'DaUser' => App\User::class,
+        'RateCounter' => App\RateLesson::class,
         'UserBouncer' => App\UserBouncer::class,
         'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,

@@ -23,7 +23,7 @@ class LessonController extends Controller
 
     public function __construct()
     {
-        
+         $this->middleware('auth');
     }
 
 
@@ -157,5 +157,26 @@ class LessonController extends Controller
    }
 
 
+
+public function singleLessonStart(Course $course )
+{
+      if(TTools::obuObject($course)){
+
+         $coursedata = $course->category;
+         return view('student.startsinglecourse', ['course' => $course, 'coursedata' => $coursedata, 'profiledata' => Auth::user(), 'categories' => Category::all()]);
+
+      }
+}
+
+
+public function singleCategoryStart( Category $category)
+{
+   
+   $courses = Course::where(['category_id' => $category->id])->with('category')->get();
+   $profiledata = User::find(Auth::user()->id);
+
+   return view('student.startcategorycourse', ['courses' => $courses, 'cat' => $category, 'profiledata' => $profiledata, 'categories' => Category::all()]);
+
+}
   
 }

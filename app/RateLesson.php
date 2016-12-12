@@ -52,4 +52,30 @@ class RateLesson extends Model
 
   return $ratings;
     }
+
+
+    public static function getOverallRating($id_tutor)
+    {
+        $ratings = DB::table('ratelessons')->select(DB::raw('comment_by_student, rate_by_student, name, firstname, photo'))->join('lessons', 'lessons.id', '=', 'ratelessons.lesson_id')->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_student')->where(['ratelessons.tutor_id' => $id_tutor])->get();
+
+          $tutorrate = 0;
+          $myrates = 0;
+        if(!empty($ratings)){
+            // if(is_array($ratings)){
+              foreach($ratings as $rate){
+                $myrates++;
+                $tutorrate+= (int)$rate->rate_by_student;
+
+              }
+            // }
+        }
+
+        if($tutorrate > 0){
+           $r = ($tutorrate/$myrates);
+          return $r;
+           //exit;
+        }
+        return $tutorrate;
+    }
+
 }

@@ -938,3 +938,26 @@ h3.article-title {
 	padding:10px;
 
 }
+
+.top-start-based {
+	text-align: center;
+}
+
+.top-start-based span {
+	border-bottom: 2px solid #FF6C28;
+}
+
+img.profile-img {
+	height: 100%;
+	width: 140px;
+}
+
+.bar-tutor {
+	background: #fff;
+	border-bottom: 1px solid #ccc;
+	padding:10px;
+}
+h3.help-sec {
+	margin-top: 0;
+	padding-top: 0;
+}

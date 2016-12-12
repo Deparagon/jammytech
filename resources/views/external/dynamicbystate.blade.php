@@ -9,8 +9,10 @@ Top Rated Private Home Tutors in {{ $state }}  | Tutorago.Com
 @endsection
 @section('extracss')
 <!-- <link href="/css/bg.css" rel="stylesheet"> -->
+<link href="/css/bootstrap-rating.css" rel="stylesheet">
 <link href="/css/vegas.min.css" rel="stylesheet">
 @endsection
+
 @section('specifictopjs')
  
 
@@ -63,25 +65,38 @@ Top Rated Private Home Tutors in {{ $state }}  | Tutorago.Com
 <section class="display-tutors">
     <div class="container marketing">
      @foreach($statetutors as $tutor)
-       <div class="row">
-          <div class="col-sm-4">
+
+       <div class="row bar-tutor">
+          <div class="col-sm-3">
             <div class="my-profile-img">
-              <img class="profile-img img-responsive" src="/uploads/{{ $tutor->photo }}">
+              <img class="profile-img img-circled" src="/uploads/{{ $tutor->photo }}">
             </div>
           </div>
-           <div class="col-sm-8">
-              <h3 class="help-sec">{{ $tutor->lastname }}, {{ $tutor->firstname }}</h3>
-               <p class="bio-desc well"> {{ $tutor->bio }} </p>
+           <div class="col-sm-6">
+              <div class="row">
+               <div class="col-sm-8">
+              <h3 class="help-sec"> <a @if(Auth::user()) href="{{ url('/user/tutor/'.$tutor->id ) }}" @endif> {{ $tutor->lastname }}, {{ $tutor->firstname }} </a>       </h3>
+              </div>
+               <div class="col-sm-4">
+                   <div class="rating-col">
+      <input type="hidden"  value="{{ RateCounter::getOverallRating($tutor->id) }}" disabled name="darating" class="rating starfa" data-filled="fa fa-star fa-2x" data-empty="fa fa-star-o fa-2x" id="darating">
+       </div>
+
+               </div>
+
+               </div>
+               <p class="bio-desc "> {{ $tutor->bio }} </p>
+          </div>
+          <div class="col-sm-3">
+               <a class="btn btn-success btn-block" @if(Auth::guest())  data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/tutor/'.$tutor->id) }}" @endif >  View {{ $tutor->lastname }}, {{ $tutor->firstname }}'s Profile <i class="fa fa-angle-down"></i>  </a>
+          </div> 
           </div>
         @endforeach
-       </div>
+      
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
-
-         
-            
-
+ 
       </div><!-- /.row -->
 
 
@@ -110,4 +125,6 @@ Top Rated Private Home Tutors in {{ $state }}  | Tutorago.Com
 @section('specificfooterjs')
  <script src="/js/vegas.min.js"></script>
 <script src="/js/bg.js"></script>
+<script src="/js/bootstrap-rating.min.js"></script>
+<script src="/js/extrauser.js"></script>
 @endsection

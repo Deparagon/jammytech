@@ -196,7 +196,9 @@ Route::get('user/join-tutor-request', 'JoinTutorController@show');
 //LESSON
 Route::get('user/lessons', 'LessonController@show');
 Route::get('user/new-lesson', 'LessonController@lessonStepOne');
-Route::get('user/newlesson', 'LessonController@lessonStepOne');
+Route::get('user/newlesson/{category}', 'LessonController@singleCategoryStart');
+Route::get('user/new-lesson/{course}', 'LessonController@singleLessonStart');
+
  //LESSON
 Route::get('user/lessonstepthree', 'LessonController@lessonStepThree');
 

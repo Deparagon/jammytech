@@ -56,11 +56,11 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     <input type="checkbox" id="zm-switchzetta-menu1" />
     <ul onclick="">
 @foreach ($categories as $k => $category)
-      <li><a href="#">{{ $category->name }}<span class="zm-caret"><i class="fa fa-angle-down"></i></span></a>
+      <li> <a   @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/newlesson/'.$category->id) }}" @endif  >{{ $category->name }}<span class="zm-caret"><i class="fa fa-angle-down"></i> </span> </a>
         <div style="width:300px;" class=" zm-right-align">
           <ul>
           @foreach($category->courses as $key => $course)
-            <li><a href="#">{{ $course->name }}</a>
+            <li><a  @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/new-lesson/'.$course->id) }}" @endif > {{ $course->name }}</a>
             </li>
 
             @if ($key == 4)       
@@ -144,7 +144,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
       @endif
 
         <div class="col-lg-3">
-         <a href="{{ url('/user/new-lesson/'.$course->id) }}">
+         <a id="lessonstartsinglelinktostart" @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/new-lesson/'.$course->id) }}" @endif >
           <div class="tutor-box">
            <img class="img-responsive" src="/uploads/{{ $course->imageurl }}">
           <p class="titlebox">{{ $course->name }}</p>
