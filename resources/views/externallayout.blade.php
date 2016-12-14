@@ -94,7 +94,7 @@
               <li> <a href="{{ url('/blog') }}"> Blog </a> </li>
               <li> <a href="{{ url('/contact') }}"> Contact Us </a> </li>
               <li> <a href="{{ url('/') }}#becometutorbtn"> Tutoring Jobs </a> </li>
-              <li> <a href="{{ url('/user/lesson') }}"> Request a Tutor </a> </li>
+              <!-- <li> <a href="{{ url('/user/lesson') }}"> Request a Tutor </a> </li>-->
               </ul>
 
           </div>
@@ -207,6 +207,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="midreg-bar modal-title" id="myModalLabel"> TUTORAGO REGISTRATION</h4>
+        <h6>Sign Up to connect with private tutors and clients | Returning User? Please Login</h6>
       </div>
       <div class="modal-body">
             <div id="reportajaxregistrationstate"> </div>
@@ -296,6 +297,7 @@
                                 <button type="submit" class="btn btn-block btn-lg btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Register
                                 </button>
+                                <h6>By registering means you agree with our <a href="{{ url('/terms') }}">Terms</a></h6>
                             </div>
                             </div>
                         </div>
