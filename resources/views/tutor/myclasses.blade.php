@@ -59,7 +59,7 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr> <th> SN </th> <th> Student </th> <th> Course /Subjects</th> <th>Start</th><th> End Date</th> <th colspan="2">Status</th></tr>
+  <tr> <th> SN </th> <th> Student </th> <th> Course/Subject</th> <th>Start</th><th> End Date</th> <th colspan="2">Status</th></tr>
 </thead>
 
 <tbody>
