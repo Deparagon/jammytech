@@ -52,7 +52,7 @@
 
 @endforeach
   @else 
-  <tr> <td colspan="4">  Refer people to Tutorago and get paid </td></tr>
+  <tr> <td colspan="4">  Refer people to Tutorago and get paid each time a lesson is booked via your referral </td></tr>
   @endif
 </tbody>
 
