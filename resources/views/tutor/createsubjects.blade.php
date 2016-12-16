@@ -76,7 +76,7 @@
        </div>
 
       <div class="col-sm-6">
-               <h4 class="base-hr"> <span> The subjects i can Teach are not listed </span> </h4>
+               <h4 class="base-hr"> <span> The subjects i can teach are not listed </span> </h4>
                <p class="well"><i class="fa fa-lightbulb-o fa-2x"> </i>  You can create as many course requests as you can, Tutorago administrator will evaluate and approve within 24hrs. </p>
        </div>
 
