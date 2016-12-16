@@ -41,7 +41,7 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr>  <th> Name </th> <th> Email</th> <th> Phone</th> <th> Years Know</th> <th>Place of Work</th> <th>Action</th></tr>
+  <tr>  <th> Name </th> <th> Email</th> <th> Phone</th> <th> Years Known</th> <th>Place of Work</th> <th>Action</th></tr>
 </thead>
 
 <tbody>
