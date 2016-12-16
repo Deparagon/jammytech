@@ -32,7 +32,7 @@
 
  <div class="panel panel-default">
      <div class="panel-heading">  
-          <h4 class="panel-title"> Profile Details </h4>
+          <h4 class="panel-title">My Profile Details </h4>
      </div>
      <div class="panel-body">
          {{ csrf_field() }}
@@ -43,7 +43,7 @@
        </div>
 
        <div class="form-group">
-            <label for="lastname">LastName</label>
+            <label for="lastname">Last Name</label>
             <input type="text" readonly value="{{ $userdata->lastname }}" class="form-control" id="lastname">
 
        </div>
@@ -59,7 +59,7 @@
        </div>
             <div class="col-sm-6">  
  <div class="form-group">
-         <label for="phone"> Phone</label>
+         <label for="phone">Phone Number</label>
          <input type="tel" value="@if(isset($userdata)) {{ $userdata->phone }} @endif " name="phone" id="phone" class="form-control">
 
      </div>
@@ -71,12 +71,12 @@
        <div class="row">
        <div class="col-sm-12">
        <div class="form-group">
-            <label for="birthday">Birthday</label>
+            <label for="birthday">Birth Date</label>
             <div class="row"> 
             <div class="col-sm-2">
              <div class="sel-box-birth">
             <select class="form-control" name="day" id="day">
-               <option> Day</option>
+               <option>Select Day</option>
               @for ($i = 01; $i < 32; $i++)
     <option value="{{ $i }}" @if ( $i == $day) selected @endif >{{ $i }} </option>
                @endfor
@@ -87,7 +87,7 @@
                     <div class="col-sm-2">
                      <div class="sel-box-birth">
             <select class="form-control" name="month" id="month">
-               <option> Month </option>
+               <option>Select Month </option>
                <option value="01" @if ( $month == 01) selected @endif> January </option>
                <option value="02" @if ( $month == 02) selected @endif> February </option>
                <option value="03" @if ( $month == 03) selected @endif> March </option>
@@ -107,7 +107,7 @@
                     <div class="col-sm-2">
                      <div class="sel-box-birth">
             <select class="form-control" name="year" id="year">
-              <option> Year </option>
+              <option>Select Year </option>
                 @for ($i = 1940; $i < 2017; $i++)
                <option value="{{ $i }}" @if ( $i == $year) selected @endif>{{ $i }} </option>
                @endfor
@@ -159,7 +159,7 @@
      </div>
 
     <div class="form-group">
-       <label for="bio"> Describe yourself</label>
+       <label for="bio">Bio Introducing you to Prospective Clients</label>
          <textarea name="bio" rows="10" id="bio" class="form-control">@if(isset($userdata)) {{ $userdata->bio }} @endif </textarea>
     </div>
 
