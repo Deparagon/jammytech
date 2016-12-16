@@ -40,7 +40,7 @@
      <div class="panel-body">
 
      <p class="well"> 
-        This lesson started on {{ TTools::displayDate($lesson->start) }}, you can mark as complete. We will wait for your student to accept, Once your student accepts. We will contact you. 
+        This lesson started on {{ TTools::displayDate($lesson->start) }}, you can mark as complete. We will wait for your student to accept, once your student accepts. We will contact you. 
       </p>
 
        <div class="table-responsive">
@@ -49,7 +49,7 @@
          <tbody>
            <tr> <td> Course </td> <td> {{ $course->name }} </td></tr>
           <tr> <td> Goal </td> <td> {{ $lesson->lessongoal }} </td></tr>
-          <tr> <td> Expected Completion date </td> <td> {{ $lesson->end }} </td></tr>
+          <tr> <td> Expected Completion Date </td> <td> {{ $lesson->end }} </td></tr>
          </tbody>
           
 
@@ -84,7 +84,7 @@
     <form method="POST" action="">
     {{ csrf_field() }}
     <div class="form-group">
-        <label>Lesson Completion message</label>
+        <label>Lesson Completion Message</label>
         <textarea class="form-control" name="tutormessage"></textarea>
     </div>
 
