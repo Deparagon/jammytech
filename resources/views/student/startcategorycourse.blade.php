@@ -129,12 +129,13 @@
      <div class="row">
      <div class="col-sm-4">
      <div class="form-group">
-         <label for="lessonstartin"> Lesson starts </label>
+         <label for="lessonstartin"> Lesson starts in</label>
          <select name="lessonstartin" id="lessonstartin" class="form-control">
                 <option value="Immediately"> Immediately </option>
-                <option value="onweek"> In one Week </option>
+                <option value="onweek"> In one week </option>
                 <option value="twoweeks"> In two weeks </option>
-                <option value="onemonth"> In One Month </option>
+                <option value="onemonth"> In one month </option>
+                <option value="notsure"> Not sure </option>
          </select>
 
 
@@ -171,7 +172,7 @@
      <div class="row">
      <div class="col-sm-4">
      <div class="form-group">
-         <label for="lessonlocation"> Where should lessons hold </label>
+         <label for="lessonlocation"> Where should lessons hold? </label>
          <select name="lessonlocation" id="lessonlocation" class="form-control">
             <option value="tutorsaddress"> Tutors Address</option>
             <option value="mylocation"> My Location </option>
@@ -183,7 +184,7 @@
 
      <div class="col-sm-4">
      <div class="form-group">
-         <label for="phone">  Mobile phone (e.g 08023998899)  </label>
+         <label for="phone">  Mobile phone (e.g 08012345678)  </label>
          <input type="text"  value="@if(isset($profiledata)) @if (!empty($profiledata->phone)) {{ $profiledata->phone }} @endif @endif"  name="lessonphone" id="lessonphone" class="form-control">
              
      </div>
