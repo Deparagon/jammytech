@@ -56,9 +56,10 @@
             <input type="url" value="{{ Auth::user()->video }}" placeholder="https://youtube.com/embed/ee0Dl0dFFPg" name="video" class="form-control" id="video">
 
        </div>
+       <p>Adding a video of yourself presenting what you can offer a prospective student is guaranteed to convince them and this would definitely boost your sales</p>
        <p class="note"> How to get video url: </p>
-       <p> Make a video and upload to You-tube;
-       <p> Copy your video URL e.g https://youtube.com/embed/ee0Dl0dFFPg  into the box above
+       <p> Make a video and upload to You-tube;</p>
+       <p> Copy your video URL e.g https://youtube.com/embed/ee0Dl0dFFPg  into the box above and click Save. That's all.</P>
        </div>
        </div>
 
