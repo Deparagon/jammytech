@@ -33,7 +33,7 @@
           <h4 class="panel-title"> Almost done </h4>
      </div>
      <div class="panel-body">
-      {{ TTools::naInfo('Provide the information below, to complete your request')}}
+      {{ TTools::naInfo('Provide the information below, to complete your lesson request')}}
 
 <hr>
 
@@ -41,7 +41,7 @@
      <div class="row">
      <div class="col-sm-6">
      <div class="form-group">
-         <label for="lessondays"> Lesson days</label>
+         <label for="lessondays">Please select lesson days</label>
          <div class="row">
           <div class="col-sm-4">
             Monday: <input type="checkbox" name="lessondays[]" value="monday"> 
@@ -106,7 +106,7 @@
      <div class="row">
      <div class="col-sm-6">
      <div class="form-group">
-         <label for="city"> What Time should lesson Start</label>
+         <label for="city"> What time of the day should lesson start?</label>
          <select type="text" name="lessonstarttime" id="lessonstarttime" class="form-control">
          <option value="06:00 AM"> 6:00 AM </option>
          <option value="07:00 AM"> 7:00 AM </option>
@@ -160,7 +160,7 @@
      <div class="form-group">
          <label for="studentlevel"> Level of student </label>
          <select name="studentlevel" id="studentlevel" class="form-control">
-            <option value="prenursery"> Prenursery </option>
+            <option value="prenursery"> Pre-Nursery </option>
             <option value="nursery"> Nursery </option>
             <option value="primary"> Primary </option>
             <option value="secondary"> Secondary </option>
@@ -175,7 +175,7 @@
 
      <div class="col-sm-4">
      <div class="form-group">
-         <label for="budget">Budget</label>
+         <label for="budget">What's your monthly budget for this lesson</label>
          <input type="number"   name="budget" id="budget" class="form-control">
              
      </div>
@@ -184,7 +184,7 @@
 
      <div class="col-sm-8">
      <div class="form-group">
-         <label for="phone">  What's your goal </label>
+         <label for="phone">  What's your goal for this lesson </label>
          <textarea  name="lessongoal" id="lessongoal" class="form-control"></textarea>
      </div>
      </div>
