@@ -110,7 +110,7 @@ Please read our privacy policy carefully to get a clear understanding of how we 
         <div class="col-md-12">
             <h2 class="featurette-heading">How do we use your information? </h2>
            <p class="lead">
-           We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:
+           We may use the information we collect from you when you register, make a tutor request, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways:
           <ul class="privacy-list">
     <li>To personalize your experience and to allow us to deliver the type of content and product offerings in which you are most interested.</li>
     <li>To improve our website in order to better serve you.</li>
@@ -376,7 +376,7 @@ and we will promptly remove you from ALL correspondence.
         <div class="col-md-12">
             <h2 class="featurette-heading">Your acceptance of these terms</h2>
            <p class="lead">
-           By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. 
+           By using Tutorago.Com, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes. 
            </p>
 
 
