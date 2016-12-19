@@ -208,7 +208,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="midreg-bar modal-title" id="myModalLabel"> TUTORAGO REGISTRATION</h4>
-        <h6>Sign Up to connect with private tutors and clients | Returning User? Please Login</h6>
+        <p class="text-center" style="font-size: 14px">Sign Up to connect with private tutors and clients | Returning User? Please click <a href="{{ url('/#') }}">Login</a></p>
       </div>
       <div class="modal-body">
             <div id="reportajaxregistrationstate"> </div>
