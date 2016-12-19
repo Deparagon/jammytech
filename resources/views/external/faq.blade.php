@@ -35,7 +35,7 @@ Frequently Asked Questions (FAQ)  | Tutorago.Com
 
         </div>
         <div class="col-md-8">
-           <p class="lead">It is easy to apply as a tutor, just go over to the tutor sign up page to do so. Provide the necessary information concerning your qualifications, expertise, experiences and other necessary forms over there to get started e.t.c.  <br>
+           <p class="lead">It is easy to apply as a tutor, just go over to the tutor <a href="{{ url('/') }}#becometutorbtn"> sign up</a> page to do so. Provide the necessary information concerning your qualifications, expertise, experiences and other necessary forms over there to get started e.t.c.  <br>
 
              <strong>Before you register, you must:</strong> <br>
 
@@ -50,7 +50,7 @@ Frequently Asked Questions (FAQ)  | Tutorago.Com
 <hr>
       <div class="row  featurette">
         <div class="col-md-4">
-             <p class="lead"><strong>What subjects can I teach as a private tutor? </strong> </p>
+             <p class="lead"><strong>What subjects can i teach as a private tutor? </strong> </p>
 
         </div>
         <div class="col-md-8">
@@ -66,7 +66,7 @@ Skills: Graphic Design, Bag Making, Bead Making, Sewing, Web Design and Developm
 <hr>
           <div class="row  featurette">
         <div class="col-md-4">
-             <p class="lead"><strong>Where does Teaching take place? </strong> </p>
+             <p class="lead"><strong>Where does teaching take place? </strong> </p>
 
         </div>
         <div class="col-md-8">
@@ -78,7 +78,7 @@ Skills: Graphic Design, Bag Making, Bead Making, Sewing, Web Design and Developm
 
             <div class="row  featurette">
         <div class="col-md-4">
-             <p class="lead"><strong>How does Tutors Get Paid? </strong> </p>
+             <p class="lead"><strong>How does tutors get paid? </strong> </p>
 
         </div>
         <div class="col-md-8">
@@ -96,11 +96,9 @@ While you set the prices for your clients, you would earn 75% of whatever you ch
 
         </div>
         <div class="col-md-8">
-           <p class="lead">There are basically three ways you can get clients: <br>
+           <p class="lead">There are many ways you can get clients: <br>
 1.	Sharing your profiles in forums, social media, e.t.c increases your expertise visibility, hence more clients. Try building your profile with good rating. If you have good rating and reviews from other clients, you would always get more clients.<br>
-2.	Always apply via the job boards <br>
-3.	Check your email for periodic job availability emails from us.
-
+2.	Check your email for periodic job availability emails from us.
 </p>
         </div>
       </div>
@@ -108,7 +106,7 @@ While you set the prices for your clients, you would earn 75% of whatever you ch
 
                   <div class="row  featurette">
         <div class="col-md-4">
-             <p class="lead"><strong>Does Tutorago Cover my area? </strong> </p>
+             <p class="lead"><strong>Does tutorago cover my area? </strong> </p>
 
         </div>
         <div class="col-md-8">
@@ -133,11 +131,11 @@ While you set the prices for your clients, you would earn 75% of whatever you ch
 
           <div class="row  featurette">
         <div class="col-md-4">
-             <p class="lead"><strong>What is Tutorago Nigeria all about? </strong> </p>
+             <p class="lead"><strong>What is tutorago all about? </strong> </p>
 
         </div>
         <div class="col-md-8">
-           <p class="lead">Welcome to Tutorago, here we connect private home tutors with learners right in their respective home. Click here to see how it works.  
+           <p class="lead">Welcome to tutorago, here we connect private home tutors with learners right in their respective home. Click here to see how it works.  
 </p>
         </div>
       </div>
@@ -149,7 +147,7 @@ While you set the prices for your clients, you would earn 75% of whatever you ch
 
         </div>
         <div class="col-md-8">
-           <p class="lead">You can request a tutor by filling the tutor request form, then we would find an expert tutor for you or you search through the specific tutor profile you’ve been using on our website if you are a returning client.
+           <p class="lead">You can request a tutor by clicking on Start New Lesson menu from your dashboard, fill out the subject you need to be tutored on, fill all necessary details on the page. When we receive your request, we would get you get an expert tutor from your area within 24/48 hours. Leave everything to us. It's our job!
 </p>
         </div>
       </div>
@@ -194,7 +192,7 @@ While you set the prices for your clients, you would earn 75% of whatever you ch
 
         </div>
         <div class="col-md-8">
-           <p class="lead">It all depends on your preferences and length of the lessons.
+           <p class="lead">It all depends on your preferences and choices while ordering the lesson. You decide that, we would find the tutor that suit your preference. 
 </p>
         </div>
       </div>

@@ -94,7 +94,7 @@
               <li> <a href="{{ url('/blog') }}"> Blog </a> </li>
               <li> <a href="{{ url('/contact') }}"> Contact Us </a> </li>
               <li> <a href="{{ url('/') }}#becometutorbtn"> Tutoring Jobs </a> </li>
-              <li> <a href="{{ url('/user/lesson') }}"> Request a Tutor </a> </li>
+              <!-- <li> <a href="{{ url('/user/lesson') }}"> Request a Tutor </a> </li>-->
               </ul>
 
           </div>
@@ -102,6 +102,7 @@
         <div class="col-sm-3">
      <strong>ADDRESS</strong>
      <hr/>
+<p>16 Alhaja Eleshin Street, <br>Off Ramat Crescent, <br>Ogudu-Ojota, Kosofe, Lagos State.</p>
 <p>11, Obafemi Awolowo Way, <br>Beside BestSay Shopping Mall, <br>Igbona, Osogbo, Osun State. </p>
 
 
@@ -207,6 +208,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="midreg-bar modal-title" id="myModalLabel"> TUTORAGO REGISTRATION</h4>
+        <h6>Sign Up to connect with private tutors and clients | Returning User? Please Login</h6>
       </div>
       <div class="modal-body">
             <div id="reportajaxregistrationstate"> </div>
@@ -295,6 +297,7 @@
                                 <button type="submit" class="btn btn-block btn-lg btn-primary">
                                     <i class="fa fa-btn fa-user"></i> Register
                                 </button>
+                                <h6>By registering means you agree with our <a href="{{ url('/terms') }}">Terms</a></h6>
                             </div>
                             </div>
                         </div>
@@ -330,6 +333,16 @@
   ga('send', 'pageview');
 
 </script>
+    <!--Start of Zendesk Chat Script-->
+<script type="text/javascript">
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
+$.src="https://v2.zopim.com/?1NHJ4yihX57zB9p9D4Sua2U0ITpvyFCH";z.t=+new Date;$.
+type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+</script>
+<!--End of Zendesk Chat Script-->
+
       @yield('specificfooterjs')
   </body>
 </html>

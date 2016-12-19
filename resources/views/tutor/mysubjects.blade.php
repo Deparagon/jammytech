@@ -43,7 +43,7 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr>  <th> S/N</th> <th>Subject </th>  <th> Price (NGN)   </th> <th>Description</th> <th> Category</th> <th>Action</th></tr>
+  <tr>  <th> S/N</th> <th>Subject </th>  <th> My Hourly Price (NGN)   </th> <th>Description</th> <th> Category</th> <th>Action</th></tr>
 </thead>
 
 <tbody>

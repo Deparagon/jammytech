@@ -49,7 +49,7 @@ Home | Tutorago
        <div class="row">
           <div class="col-sm-12">
               <h2 class="featurette-heading">Searching for: {{ $searched }}  We got {{ $countresult }} result(s) </h2>
-               <p> If you did not get the result you where expecting, please try rephrasing your search or <a href="{{ url('/contact') }}"> contact us </a>
+               <p> If you did not get the result you were expecting, please try rephrasing your search or <a href="{{ url('/contact') }}"> contact us </a>
           </div>
 
        </div>

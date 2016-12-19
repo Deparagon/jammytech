@@ -297,6 +297,7 @@
         <div class="col-sm-3">
      <strong>ADDRESS</strong>
      <hr/>
+<p>16 Alhaja Eleshin Street, <br>Off Ramat Crescent, <br>Ogudu-Ojota, Kosofe, Lagos State.</p>
 <p>11, Obafemi Awolowo Way, <br>Beside BestSay Shopping Mall, <br>Igbona, Osogbo, Osun State. </p>
 
 

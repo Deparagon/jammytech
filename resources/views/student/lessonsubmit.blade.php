@@ -33,7 +33,7 @@
           <h4 class="panel-title"> Hi {{ Auth::user()->firstname }}! Final Step  </h4>
      </div>
      <div class="panel-body">
-      {{ TTools::naInfo('You are in the final step') }}
+      {{ TTools::naInfo('You are now in the final step') }}
       @if(session()->has('budgetstate'))
          @if (session('budgetstate') =='KO') 
          <p class="budgetdisplay">Your budget informs tutors of your willingliness to pay for lesson and how much you are willing to pay. Tutors will bid on your lessons. </p>

@@ -35,10 +35,10 @@
         @if ( isset($status))
          @if ($status == 'Pass')
              @if ($msg =='lessonfee')
-           {{ TTools::naSuccess( ' You payment is successful, your lesson have initiated.  You can view your lessons ') }}
+           {{ TTools::naSuccess( ' Your payment is successful and your lesson has been initiated.  You can view your lessons ') }}
             @endif
             @if ($msg =='processingfee')
-            {{ TTools::naSuccess( ' You payment is successful, Your lesson is open for bidding by our tutors, You will be informed when a tutor bids on your lesson. Select the tutor of your choice from the bidders') }}
+            {{ TTools::naSuccess( ' Your payment is successful. Your lesson is open for bidding by our tutors, You will be informed when a tutor bids on your lesson. Select the tutor of your choice from the bidders') }}
             @endif
 
           

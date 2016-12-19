@@ -117,7 +117,7 @@
   <tr> <td>{{ $workingexp->organization }} </td> <td> {{ $workingexp->position }}</td> <td>{{ $workingexp->roles }} </td></tr>
   @endforeach
   @else
-  <tr> <td colspan="3"> Will be updated soon.  </td></tr>
+  <tr> <td colspan="3"> My Work Experience will be updated soon.  </td></tr>
   @endif
   </tbody>
 </table>
@@ -131,7 +131,7 @@
 
 <div class="row">
 <div class="col-sm-12">
-  <h3 class="icanteach-top"> <span>I can Teach </span> </h3>
+  <h3 class="icanteach-top"> <span>I Can Teach </span> </h3>
  <ul class="list-group">
 
   @if(count($icanteachs) >0)

@@ -7,7 +7,7 @@
 @section('dashbreadcumb')
 <ol class="breadcrumb">
   <li><a href="{{ url('/user/dashboard') }}">Home</a></li>
-  <li class="active">My Request to join Tutorago Tutors</li>
+  <li class="active">My Request to Join Tutorago Tutors</li>
 </ol>
 
 @stop
@@ -20,7 +20,7 @@
 
  <div class="panel panel-bluebar">
      <div class="panel-heading">  
-          <h4 class="panel-title"> My Request to join Tutorago Tutors </h4>
+          <h4 class="panel-title"> My Request to Join Tutorago Tutors </h4>
      </div>
      <div class="panel-body">
 

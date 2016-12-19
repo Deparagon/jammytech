@@ -31,7 +31,7 @@ Contact us to get Private Home Tutors from your area | Tutorago.Com
       <div class="row  featurette">
         <div class="col-md-5">
              <p class="lead"><strong>Office address </strong> </p>
-
+<p>16, Alhaja Eleshin Street, <br>Off Ramat Crescent, <br>Ogudu-Ojota, Kosofe, Lagos State.</p>
 <p>11, Obafemi Awolowo Way, <br>Beside BestSay Shopping Mall, <br> Igbona, Osogbo, Osun State.</p>
     <p class="lead"><strong>Mobile </strong> </p>
        <p> +234 816 708 2704</p>

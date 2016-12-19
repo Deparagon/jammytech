@@ -93,7 +93,7 @@
      <div class="row">
      <div class="col-sm-6">
      <div class="form-group">
-         <label for="addresssearcher"> Your home Address</label>
+         <label for="addresssearcher"> Your home address</label>
          <input type="text" id="autocomplete" onFocus="geolocate()" name="fulladdress" class="form-control">
 
      </div>
@@ -129,12 +129,13 @@
      <div class="row">
      <div class="col-sm-4">
      <div class="form-group">
-         <label for="lessonstartin"> Lesson starts </label>
+         <label for="lessonstartin"> Lesson starts in</label>
          <select name="lessonstartin" id="lessonstartin" class="form-control">
                 <option value="Immediately"> Immediately </option>
                 <option value="onweek"> In one Week </option>
                 <option value="twoweeks"> In two weeks </option>
-                <option value="onemonth"> In One Month </option>
+                <option value="onemonth"> In one month </option>
+                <option value="notsure"> Not sure yet</option>
          </select>
 
 
@@ -183,7 +184,7 @@
 
      <div class="col-sm-4">
      <div class="form-group">
-         <label for="phone">  Mobile phone (e.g 08023998899)  </label>
+         <label for="phone">  Mobile phone (e.g 08012345678)  </label>
          <input type="text"  value="@if(isset($profiledata)) @if (!empty($profiledata->phone)) {{ $profiledata->phone }} @endif @endif"  name="lessonphone" id="lessonphone" class="form-control">
              
      </div>
@@ -194,7 +195,7 @@
          <label for="lessonemail"> Most active email Address</label>
          <input type="email"  value="{{ Auth::user()->email }}" name="lessonemail" id="lessonemail" class="form-control">
              
-         <span> 100% secure, We respect your privacy.</span>
+         <span> 100% secure, we respect your privacy.</span>
      </div>
      </div>
 

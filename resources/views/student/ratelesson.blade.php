@@ -39,7 +39,7 @@
       <div class="col-sm-12">
        <div class="panel panel-default">
        <div class="panel-heading">
-       <h3> Hi {{ Auth::user()->firstname }}! We are Glad your lesson have ended successfully. </h3>
+       <h3> Hi {{ Auth::user()->firstname }}! We are Glad your lessons have ended successfully. </h3>
        </div>
        <div class="panel-body">
         <p class="well">

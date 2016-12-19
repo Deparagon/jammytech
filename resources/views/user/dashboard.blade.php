@@ -37,12 +37,12 @@
                   @if ($profiledata->city !='' && $profiledata->phone != '' && $profiledata->bio !='')
                      Complete
                   @else
-                  <a href="{{url('/user/profile') }}">Incomplete </a>
+                  <a href="{{url('/user/profile') }}">Profile is Incomplete </a>
                   @endif
 
 
                   @else
-                   <a href="{{url('/user/profile') }}">Incomplete </a>
+                   <a href="{{url('/user/profile') }}">Profile is Incomplete</a>
                   @endif
                </p>
 
@@ -225,7 +225,7 @@
                      @endif
 
                   @else
-                  <a href="{{url('/user/profile') }}">Your profile is incomplete, Ensure that you update your profile. Add a photo  and video </a>
+                  <a href="{{url('/user/profile') }}">Your profile is incomplete, Ensure that you update your profile. Add a photo  and video. </a>
                   @endif
 
 
@@ -244,6 +244,7 @@
   </div>
 </section>
 
+<<<<<<< HEAD
 
 <section>
   <div class="row">
@@ -294,3 +295,6 @@
 </section>
 
 @endsection
+=======
+@endsection
+>>>>>>> d8261c56fe951ec8c98270b89bb209c19389dcc4
