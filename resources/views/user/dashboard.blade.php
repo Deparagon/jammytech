@@ -244,7 +244,7 @@
   </div>
 </section>
 
-<<<<<<< HEAD
+
 
 <section>
   <div class="row">
@@ -295,6 +295,4 @@
 </section>
 
 @endsection
-=======
-@endsection
->>>>>>> d8261c56fe951ec8c98270b89bb209c19389dcc4
+

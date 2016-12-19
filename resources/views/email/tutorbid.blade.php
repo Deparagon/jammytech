@@ -134,15 +134,15 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start menu-->
 <table align="right" border="0" cellspacing="0" cellpadding="0" class="menu fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/aboutus" style="color: #242424;text-decoration: none;outline: none;">ABOUT US</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="https://tutorago.com/#aboutusbelow" style="color: #242424;text-decoration: none;outline: none;">ABOUT US</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com" style="color: #242424;text-decoration: none;outline: none;">BECOME A TUTOR</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="https://tutorago.com/#becometutorbtn" style="color: #242424;text-decoration: none;outline: none;">BECOME A TUTOR</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/contactus" style="color: #242424;text-decoration: none;outline: none;">CONTACT US</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="https://tutorago.com/contact" style="color: #242424;text-decoration: none;outline: none;">CONTACT US</a>
 </td>
 </tr>
 </table>
@@ -395,7 +395,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-11.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="https://facebook.com/tutorago" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-11.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -405,7 +405,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-12.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="https://twitter.com/tutorago" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-12.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -415,7 +415,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-13.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="https://instagram.com/tutorago" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-13.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>

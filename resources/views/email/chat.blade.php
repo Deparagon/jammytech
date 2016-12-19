@@ -126,7 +126,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start logo img-->
 <table align="left" border="0" cellspacing="0" cellpadding="0" class="logo fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td style="padding: 28px 0 24px;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="http://localhost/emails/agency/html/blue-2/images/logo.png" width="138" height="39" alt="logo" class="logo-img"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;"></a>
+<td style="padding: 28px 0 24px;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/logo.png" width="138" height="39" alt="logo" class="logo-img"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;"></a>
 </td>
 </tr>
 </table>
@@ -134,15 +134,15 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start menu-->
 <table align="right" border="0" cellspacing="0" cellpadding="0" class="menu fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/aboutus" style="color: #242424;text-decoration: none;outline: none;">ABOUT US</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="https://tutorago.com/#aboutusbelow" style="color: #242424;text-decoration: none;outline: none;">ABOUT US</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com" style="color: #242424;text-decoration: none;outline: none;">BECOME A TUTOR</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="https://tutorago.com/#becometutorbtn" style="color: #242424;text-decoration: none;outline: none;">BECOME A TUTOR</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com/contactus" style="color: #242424;text-decoration: none;outline: none;">CONTACT US</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="https://tutorago.com/contact" style="color: #242424;text-decoration: none;outline: none;">CONTACT US</a>
 </td>
 </tr>
 </table>

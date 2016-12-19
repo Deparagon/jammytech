@@ -53,7 +53,7 @@ $('body').on('submit', '#tutorregistrationformele', function(ev){
             $('#reportajaxregistrationstate').html('<div class="alert alert-danger" role="alert">'+report['Captcha'][0]+'</div>');  
             }
   if(report['response']){
-            $('#reportajaxregistrationstate').html('<div class="alert alert-success" role="alert">Welcome to Tutorago, Please Login and Update your profile</div>');  
+            $('#reportajaxregistrationstate').html('<div class="alert alert-success" role="alert">Welcome to Tutorago, An email has been sent to your email address, Please check your email for details on how to activate your account.</div>');  
                  var i = 1;
                         setInterval(function () {
                             if(i == 0) {

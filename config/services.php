@@ -38,25 +38,25 @@ return [
     'facebook' => [
     'client_id' => '221731574937677',
     'client_secret' => '05f4e8ea9b79dc4075e90700bb5e3769',
-    'redirect' => 'http://localhost:8000/facebookcallback',
+    'redirect' => 'https://tutorago.com/facebookcallback',
 ],
 
 'twitter' => [
-    'client_id' => 'T89zCkPRDydJlkqIbqeEMGtJl',
-    'client_secret' => 'orr2rDpVT1fI4v9u92e5uLWrOM6iGPv6LX6d1TT1bMHRZ1X48F',
-    'redirect' => 'http://localhost:8000/twittercallback',
+    'client_id' => 'MrgZk0zUoyILG6RM8uQErjh8d',
+    'client_secret' => 'ZTpTls8rv86NqmBh5dxqi9WU3gnatKnXC1vt2sa065QHKoPIOH',
+    'redirect' => 'https://tutorago.com/twittercallback',
 ],
 
 'google' => [
-    'client_id' => '1009816866927-e0l99lptbhilvi71699mvdmduvqcq2s4.apps.googleusercontent.com',
-    'client_secret' => '-mzFDsLgMmdHyNKuUcA3VrQR',
-    'redirect' => 'http://localhost:8000/googlecallback',
+    'client_id' => '384956652739-btbm92fapuf4719avho4qhsgv3sihgg8.apps.googleusercontent.com',
+    'client_secret' => '9xG5HFT6ybjb7b_bklTlQOC7',
+    'redirect' => 'https://tutorago.com/googlecallback',
 ],
 
 'linkedin' => [
-    'client_id' => '77ymyfwk0javg5',
-    'client_secret' => 'PTK2hTUd5uQEMgyn',
-    'redirect' => 'http://localhost:8000/linkedincallback',
+    'client_id' => '773ui7uj5rpshp',
+    'client_secret' => 'xlVloAp34jlC7ZyY',
+    'redirect' => 'https://tutorago.com/linkedincallback',
 ],
 
 ];
