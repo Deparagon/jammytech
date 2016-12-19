@@ -54,6 +54,18 @@ public function icanteach()
 }
 
 
+    public static function findInCourse($keyword)
+{
+ 
+    $courses = DB::table('courses')
+                  ->where('courses.name', 'LIKE', "%$keyword%")
+                  ->orWhere('courses.description', 'LIKE', "%$keyword%")
+                  ->get();
+
+    return $courses;
+}
+
+
 
     public static function findCourseInCategory($id_category, $keyword)
 {
@@ -64,6 +76,7 @@ public function icanteach()
                   ->orWhere('courses.description', 'LIKE', "%$keyword%")
                   ->get();
 
+  return $courses;
 }
 
 }

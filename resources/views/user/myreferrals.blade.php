@@ -30,6 +30,38 @@
    @endif
 
 <section>
+
+     <section class="statisticsbars">
+   <div class="row">
+        <!-- subjects -->
+      <div class="col-sm-6">
+<div class="box-show show-1">
+<h4>Total referral </h4>
+              <p> {{ TTools::displayNumber($countref) }} </p>
+
+</div>
+       
+       </div>  <!--/subjects -->
+       
+
+       
+        <div class="col-sm-6">
+          <div class="box-show show-1">
+           <h4>Referral Earning </h4>
+              <p> {{ TTools::displayPrice( $refmoney )}} </p>
+
+       </div>
+       
+       </div>
+       
+       
+       
+    </div>
+
+</section>
+
+
+
   <div class="row">
 <div class="col-sm-12">
  <div class="panel panel-default">
@@ -61,6 +93,10 @@
 <hr>
 
 
+</div>
+
+<div class="panel-footer">
+     {{ $referrals->links() }}
 </div>
   </div>
   </div>

@@ -24,14 +24,15 @@
 </thead>
 
 <tbody>
-@if(!empty($pendings))
+@if(count($pendings) > 0)
 @foreach( $pendings as $pending)
 <form id="approveordisapprovemen" method="POST" action="">
   {{ csrf_field() }}
 <tr> <td> {{ $pending->user->lastname }} {{ $pending->user->firstname }} ( @if($pending->user->tutor ==1) <span class="greenbar"> Approved Tutor </span> @else Unapproved Tutor @endif )</td> <td> {{ $pending->course->name }} </td> <td> {{ $pending->course->description }}</td> <td> <button id="approvethipendreqicanteach" data-icanteachidapp="{{ $pending->id }}" class="btn btn-xs btn-success" type="button"><i class="fa fa-check"> </i> </button></td>  <td> <a  id="trashicanteachrequestn"  data-tracouricanq="{{ $pending->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a> </td></tr>
 </form>
 @endforeach
-  
+ @else
+ <tr> <td colspan="5"> No "I can teach" request at the moment </td></tr> 
   @endif
 </tbody>
 

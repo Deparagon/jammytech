@@ -29,7 +29,16 @@ class JoinTutorController extends Controller
 
     public function beTutor(Request $request)
     {
+
+        $myrequest = TutorshipRequest::where(['user_id'=> Auth::user()->id])->first();
+
+        if(TTools::obuObject($myrequest)){
+           TTools::naInfo('You have already submitted a request, please await response'); 
+           TTools::naSuccess('While you wait for admin approval, please update your credential and profile details ');
+           exit;
+        }
     	$tutor = new TutorshipRequest();
+
     	$tutor->user_id = Auth::user()->id;
 
     	$tutor->feedback = '  ';

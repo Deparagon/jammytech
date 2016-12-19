@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Referral;
 use Mail;
-use App\Mail\NewUserEmail;
+use App\Mail\WelcomeToTutorago;
 use TTools;
 
 class AuthController extends Controller
@@ -111,21 +111,18 @@ class AuthController extends Controller
 
     protected function validator(array $data)
     {
-             $grecaptcharesponse = $data['g-recaptcha-response'];
-
-             $response = $this->checkCaptchaStatus($grecaptcharesponse);
-             if($response->success !=1){
+      
                 return Validator::make($data, [
             'firstname' => 'required|max:255',
             'lastname' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6',
             'referralemail' => 'email',
-             'Captcha' => 'required',
+             
         ]);
                 //echo  json_encode(['response' => ' Captcha validation failed, confirm that you are human']);
                 //exit;
-             }
+             //}
 
         return Validator::make($data, [
             'firstname' => 'required|max:255',
@@ -144,14 +141,19 @@ class AuthController extends Controller
      */
     protected function create(array $data)
     {
+        
+        $randomstring = str_random(60);
+
         $newuser =  User::create([
             'firstname' => $data['firstname'],
             'lastname' => $data['lastname'],
             'email' => $data['email'],
+            'verification_code' => $randomstring,
             'password' => bcrypt($data['password']),
         ]);
 
-        Mail::to($data['email'])->send(new NewUserEmail($data['firstname']));
+        Mail::to($data['email'])->send(new WelcomeToTutorago($data['firstname'], $randomstring));
+      //  Mail::to($data['email'])->send(new NewUserEmail($data['firstname']));
         
         if($data['referralemail']){
             $dereferrer = User::where(['email' =>$data['referralemail']])->first();
@@ -185,7 +187,7 @@ class AuthController extends Controller
         }
          else{
            
-            if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password')])) {
+            if (Auth::attempt(['email' => $request->input('email'), 'password' => $request->input('password'), 'status' => 1])) {
             return response()->json(['response' => 'success']);
         }
         else{

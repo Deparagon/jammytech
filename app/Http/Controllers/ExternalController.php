@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Course;
 use App\Category;
@@ -15,6 +14,7 @@ use App\Blogcat;
 use App\Comment;
 use App\Contact;
 use Mail;
+use Session;
 use App\Mail\ContactUsMailler;
 class ExternalController extends Controller
 {
@@ -106,11 +106,14 @@ class ExternalController extends Controller
          else{
           $s = $t[0];
          }
+         
+             
+
  
          $statetutors = User::getByState($s);
-         $countstate = count($statetutors);
-        
-         
+
+         $countstate = User::countTutorByState($s);
+
         return view('external.dynamicbystate', ['statetutors' => $statetutors , 'state' => $s, 'countstate' => $countstate]);
     }
 
@@ -164,6 +167,30 @@ class ExternalController extends Controller
       public function login()
     {
         //
+      return redirect('/');
+    }
+
+
+
+    public function verifyEmail($code)
+    {
+      $user = User::where(['verification_code' => trim($code)])->first();
+
+      if(TTools::obuObject($user)){
+           if($user->status == 1){
+
+            Session::flash('activatedbefore', 'Your account have been previously activated'); 
+            return  redirect('/');
+             
+           }
+           elseif($user->status ==0){
+              $user->status = 1;
+              $user->save();
+                Session::flash('justactivated', 'Your account have been activated successfully, Please login '); 
+              
+           }
+      }
+
       return redirect('/');
     }
 }

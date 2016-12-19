@@ -26,12 +26,13 @@ class CreateUsersTable extends Migration
             $table->string('street')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
-            $table->string('bio')->nullable();
+            $table->text('bio')->nullable();
             $table->string('alatitude')->nullable();
             $table->string('alongitude')->nullable();
             $table->tinyInteger('power')->unsigned()->default(0);
             $table->tinyInteger('tutor')->unsigned()->default(0);
             $table->tinyInteger('student')->unsigned()->default(1);
+            $table->string('verification_code');
             $table->tinyInteger('status')->unsigned()->default(0);
             $table->rememberToken();
             $table->timestamps();

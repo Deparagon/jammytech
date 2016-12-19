@@ -1,9 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateContactTable extends Migration
+class CreateIdentitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +13,11 @@ class CreateContactTable extends Migration
      */
     public function up()
     {
-        Schema::create('contact', function (Blueprint $table) {
+        Schema::create('identities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('fullname');
-            $table->string('phone');
-            $table->string('email');
-            $table->text('message');
+            $table->integer('user_id');
+            $table->string('idtype');
+            $table->text('identity');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateContactTable extends Migration
      */
     public function down()
     {
-        Schema::drop('contact');
+        Schema::dropIfExists('identities');
     }
 }

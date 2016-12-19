@@ -941,11 +941,22 @@ h3.article-title {
 
 .top-start-based {
 	text-align: center;
+	padding-bottom: 15px;
 }
 
 .top-start-based span {
 	border-bottom: 2px solid #FF6C28;
 }
+
+.top-start-inner {
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.top-start-inner span {
+	border-bottom: 2px solid #3D5999;
+}
+
 
 img.profile-img {
 	height: 100%;
@@ -960,4 +971,34 @@ img.profile-img {
 h3.help-sec {
 	margin-top: 0;
 	padding-top: 0;
+}
+
+.identity-img {
+	width: 280px;
+	height: 240px;
+	
+}
+
+span.verify-span {
+    width: 60%;
+    margin-left:20%;
+}
+
+
+
+
+.bigsuccess{
+  color:#fff;
+  background: green;
+  padding:10px;
+  z-index: 9999;
+  text-align: center;
+
+}
+.biginfo{
+  color:#fff;
+  background: #A3ADF2;
+  padding:10px;
+  z-index: 9999;
+  text-align: center;
 }

@@ -19,6 +19,13 @@
 @section('innercontent')
 <h2 class="cent-h"> Tutors Wanabes </h2>
 
+    @if (session()->has('deletedreq'))
+
+    {{ TTools::naSuccess(session('deletedreq')) }}
+
+@endif
+
+
 <section class="list-course-categories">
 {{ csrf_field() }}
 <div class="table-responsive">
@@ -30,7 +37,7 @@
 <tbody>
 @if(!empty($trequests))
 @foreach( $trequests as $trequest)
-<tr> <td> {{ $trequest->id }} </td> <td> {{ $trequest->user->firstname }} </td> <td> {{ $trequest->user->email }}</td> <td> {{ $trequest->status }} </td> <td>  <a href="{{ url('/admin/tutorship/'.$trequest->id) }}"><i class="fa fa-edit"> </i> </td> <td> <a  id="trashtutorshiprequest"  data-trashreqtutor="{{ $trequest->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a></td></tr>
+<tr> <td> {{ $trequest->id }} </td> <td> {{ $trequest->user->firstname }} </td> <td> {{ $trequest->user->email }}</td> <td> {{ $trequest->status }} </td> <td>  <a href="{{ url('/admin/tutorship/'.$trequest->id) }}"><i class="fa fa-edit"> </i> </td> <td> <a  id="trashtutorshiprequest"  data-trashreqtutor="" href="{{ url('/admin/killtrequest/'.$trequest->id) }}"> <i class="fa fa-trash"> </i> </a></td></tr>
 
 @endforeach
   

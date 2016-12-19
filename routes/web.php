@@ -52,6 +52,9 @@ Route::get('/subjects/{subjects}', 'ExternalController@bySubject');
 Route::post('/blog/{post}', 'ExternalController@commentSave');
 
 
+//EMAIL VERIFICATION
+
+Route::get('/validate/{code}', 'ExternalController@verifyEmail');
 
 
 //============================AUTHENTICATION ===============================//
@@ -121,6 +124,9 @@ Route::post('admin/post/edit/{post}', 'PostController@updatePost');
 Route::get('admin/tutorship', 'TutorshipController@index');
 Route::get('admin/tutorship/{tutorreq}', 'TutorshipController@show');
 
+Route::get('admin/killtrequest/{tutorreq}', 'TutorshipController@killRequest');
+
+
 Route::get('admin/icanteachrequest', 'TutorshipController@icanTeachRequests');
 
 Route::post('admin/tutoraction/approve', 'TutorshipController@approve');
@@ -128,6 +134,10 @@ Route::post('admin/tutoraction/comment', 'TutorshipController@comment');
 
 Route::get('admin/courserequest', 'RequestController@index');
 Route::post('admin/requestaction/approve', 'RequestController@approveCourse');
+
+// delete course request
+Route::get('/admin/coursereqkill/{crequest}', 'RequestController@deleteCourseRequest');
+
 
 //ICANTeach delete
 Route::post('/admin/requestaction/deleteicanteach', 'TutorshipController@icanTeachDelete');
@@ -196,6 +206,7 @@ Route::get('user/join-tutor-request', 'JoinTutorController@show');
 //LESSON
 Route::get('user/lessons', 'LessonController@show');
 Route::get('user/new-lesson', 'LessonController@lessonStepOne');
+
 Route::get('user/newlesson/{category}', 'LessonController@singleCategoryStart');
 Route::get('user/new-lesson/{course}', 'LessonController@singleLessonStart');
 
@@ -209,6 +220,8 @@ Route::post('user/new-lesson', 'LessonController@lessonStepTwo');
 Route::post('user/lessonstepthree', 'LessonController@lessonStepFour');
 Route::post('user/lessonsubmit', 'LessonController@lessonPayment');
 
+Route::post('user/newlesson/{category}', 'LessonController@lessonStepTwo');
+Route::post('user/new-lesson/{course}', 'LessonController@lessonStepTwo');
 
 // TOP SEARCH 
 
@@ -278,6 +291,10 @@ Route::post('user/icanteach', 'CredentialController@createIcanTeach');
 Route::post('user/myguarantor', 'GuarantorController@add');
 Route::post('user/courserequest', 'CredentialController@requestAdd');
 
+Route::post('user/idenfification', 'CredentialController@saveID');
+
+
+
 //DELETE
 Route::post('/user/delete/education', 'CredentialController@deleteEdu');
 Route::post('/user/delete/workexperience', 'CredentialController@deleteWexp');
@@ -331,10 +348,23 @@ Route::post('/user/paystack', 'PaymentController@goToPayStack');
 //GoTo pay options
 Route::post('/user/payoptions', 'PaymentController@payOptions');
 
+
+
+
 //===========================================================================
 //                      SOCIAL NETWORK VALIDATION
 //===========================================================================
 
-Route::get('/redirect', 'SocialAuthController@redirect');
-Route::get('/callback', 'SocialAuthController@callback');
+Route::get('/facebookredirect', 'SocialAuthController@doFacebookRedirect');
+Route::get('/facebookcallback', 'SocialAuthController@doFacebookCallback');
+
+Route::get('/twitterredirect', 'SocialAuthController@doTwitterRedirect');
+Route::get('/twittercallback', 'SocialAuthController@doTwitterCallback');
+
+
+Route::get('/googleredirect', 'SocialAuthController@doGoogleRedirect');
+Route::get('/googlecallback', 'SocialAuthController@doGoogleCallback');
+
+Route::get('/linkedinredirect', 'SocialAuthController@doLinkedinRedirect');
+Route::get('/linkedincallback', 'SocialAuthController@doLinkedinCallback');
 });

@@ -76,6 +76,11 @@
 
 </section>
 
+@if (session()->has('sociallinkage'))
+       {{ TTools::naSuccess(session('sociallinkage')) }}
+   @endif
+
+
 <section>
   <div class="row">
 <div class="col-sm-12">
@@ -228,6 +233,55 @@
                    <a href="{{url('/user/profile') }}">Incomplete </a>
                   @endif
                </p>
+
+
+     </div>
+
+ </div>
+
+</div>
+
+  </div>
+</section>
+
+
+<section>
+  <div class="row">
+<div class="col-sm-12">
+ <div class="panel panel-default">
+     <div class="panel-heading">  
+          <h4 class="panel-title"> Social Verification </h4>
+     </div>
+     <div class="panel-body">
+              
+              <div class="row">
+
+                 <div class="col-sm-4">
+                      <div class="img-facebookbox">
+                        <a href="{{ url('/facebookredirect') }}"> <i class="fa fa-3x fa-facebook"></i> Verify Facebook Account </a>
+                         <br>
+                        <span class="verify-span"> @if(isset($facebook->status)) Verified  @else Unverified @endif </span>
+                       </div>
+                 </div>
+                 <div class="col-sm-4">
+                      <div class="img-googleplus">
+                           <a href="{{ url('/googleredirect') }}"> <i class="fa fa-3x fa-google"></i> Verify Google Account </a>
+                           <br>
+                           
+                      <span class="verify-span"> @if(isset($gplus->status)) Verified  @else Unverified @endif </span>
+                      </div>
+         
+                 </div>
+                 <div class="col-sm-4">
+                     <div class="img-twitterbox">
+                        <a href="{{ url('/twitterredirect') }}"> <i class="fa fa-3x fa-twitter"></i> Verify Twitter Account </a>
+                          <br>
+                         <span class="verify-span"> @if(isset($twitter->status)) Verified  @else Unverified @endif </span>
+                      </div>
+
+                 </div>
+
+              </div>
 
 
      </div>

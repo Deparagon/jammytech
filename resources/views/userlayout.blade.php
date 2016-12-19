@@ -37,7 +37,7 @@
   <body>
   <div class="row dash-top-1">
      <div class="col-sm-2 top-logo">
-     <h2 class="logo"> <img src="/img/logo/logo.png" alt="Tutorago">  </h2>
+     <h2 class="logo"> <a href="{{ url('/') }}"> <img src="/img/logo/logo.png" alt="Tutorago">  </a> </h2>
        </div>
 
        <div class="col-sm-6 col-sm-offset-1"> 
@@ -118,12 +118,14 @@
  <div class="col-lg-9 col-md-9 col-md-push-3 col-lg-push-3" id="becomeatutortodaybyc"> 
    @yield('innercontent')
    @if (!UserBouncer::isTutorWanabe())
+   @if (Auth::user()->phone !='')
 <div class="show-box-become">
    <p class="apply-p"> Have some skills, Ready to teach and Make some money </p>
     {{ csrf_field() }}
    <div class="row"> <div class="col-sm-4 col-sm-offset-4"><button class="btn btn-lg btn-danger btn-block" id="applyfortutorbtnclick"> Join Our Tutors </button> </div> </div>
 </div>
   <div id="showboxreturntutorrequest"> </div>
+  @endif
 @endif
  <br>
   </div>

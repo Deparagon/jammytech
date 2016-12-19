@@ -92,7 +92,7 @@ $('body').on('submit', '#ajaxlogintutorago', function(ev){
         });
         login.success(function(report){
         	if(report['response']  =='mismatch'){
-        		$('#reportajaxloginstate').html('<div class="alert alert-danger" role="alert">Incorrect username and password combination </div>');
+        		$('#reportajaxloginstate').html('<div class="alert alert-danger" role="alert">Incorrect username and password combination | Ensure your account has been verified </div>');
         	}
         	if(report['password']){
         		$('#reportajaxloginstate').html('<div class="alert alert-danger" role="alert">'+$report['password']+'</div>');	
@@ -120,6 +120,19 @@ $('body').on('submit', '#ajaxlogintutorago', function(ev){
 $('body').on('click', '#lessonstartsinglelinktostart', function(){
 
 });
+
+      var i = 1;
+                        setInterval(function () {
+                            if(i == 0) {
+                                  $('.bigsuccess').fadeOut();
+
+                                    $('.biginfo').fadeOut();
+                            }
+                            i--;
+                        }, 1000);
+
+
+
 
 /* CLOSE JQUERY */
 });

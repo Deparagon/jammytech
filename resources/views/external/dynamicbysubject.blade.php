@@ -72,7 +72,12 @@
               </div>
                <div class="col-sm-4">
                    <div class="rating-col">
-      <input type="hidden"  value="{{ RateCounter::getOverallRating($tutor->id) }}" disabled name="darating" class="rating starfa" data-filled="fa fa-star fa-2x" data-empty="fa fa-star-o fa-2x" id="darating">
+                   <?php $ratecount = RateCounter::getOverallRating($tutor->id) ?>
+                   @if($ratecount >0)
+      <input type="hidden"  value="{{ $ratecount }}" disabled name="darating" class="rating starfa" data-filled="fa fa-star fa-2x" data-empty="fa fa-star-o fa-2x" id="darating">
+      @else
+          <span> No Reviews Yet</span>
+          @endif
        </div>
 
                </div>

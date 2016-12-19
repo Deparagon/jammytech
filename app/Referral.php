@@ -19,4 +19,11 @@ class Referral extends Model
     {
     	return self::where(['referred' => $id_student, 'status' => 0])->first();
     }
+
+
+    public static function countMyReferrals($user_id)
+    {
+    	return self::where(['user_id' => $user_id])->count();
+
+    }
 }

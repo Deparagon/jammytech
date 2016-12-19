@@ -41,7 +41,7 @@ class LessonController extends Controller
     public function lessonStepOne()
     {
         $allcourses = Course::with('category')->get();
-        $profiledata = Auth::user()->profile;
+        $profiledata = User::find(Auth::user()->id);
 
         return view('student.newlesson', ['categories' => Category::all(), 'allcourses' => $allcourses, 'profiledata' => $profiledata]);
     }
@@ -49,7 +49,7 @@ class LessonController extends Controller
 //'duration' => 'required', 'hoursperday' => 'required', 'lessonstarttime' => 'required', 'studentlevel' => 'required', 'budget' => 'required', 'amount' => 'required', 'tutorgender' => 'required'
     public function lessonStepTwo(Request $request)
     {
-        $this->validate($request, ['lessontostart'=> 'required','lessoncity' => 'required', 'lessonstate' => 'required', 'lessonstartin' => 'required', 'lessonstudentcount' => 'required', 'tutorgender'=>'required', 'lessonlocation' => 'required', 'lessonphone' => 'required', 'lessonemail' => 'required']);
+        $this->validate($request, ['lessontostart'=>  'required', 'lessonstreet' => 'required','lessoncity' => 'required', 'lessonstate' => 'required', 'lessonstartin' => 'required', 'lessonstudentcount' => 'required', 'tutorgender'=>'required', 'lessonlocation' => 'required', 'lessonphone' => 'required', 'lessonemail' => 'required']);
 
        Session::put('lessonsteponeinfo', $request->all());
        Session::put('lessononestatus','success');

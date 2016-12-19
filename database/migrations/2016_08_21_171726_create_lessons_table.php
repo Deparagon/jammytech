@@ -37,7 +37,7 @@ class CreateLessonsTable extends Migration
             $table->tinyInteger('studentcomplete')->default(0);
             $table->tinyInteger('studentreject')->default(0);
             $table->tinyInteger('tutorcomplete')->default(0);
-            $table->string('status');
+            $table->string('status')->nullable();
             $table->tinyInteger('studentrate')->default(0);
             $table->tinyInteger('tutorrate')->default(0);
             $table->timestamps();

@@ -47,7 +47,7 @@ class Bidder extends Model
    {
        $student = User::find($lesson->id_student);
        $course = Course::find($lesson->id_course);
-     Mail::to($student->email)->send( new TutorBidsEmail($student->firstname, Auth::user()->firstname, $price, $course, $lesson, $comment, date('Y-m-d H:i:s') ));    
+     Mail::to($student->email)->send( new TutorBidsEmail($student->firstname, Auth::user()->firstname, $price, $course, $lesson, $comment, date('Y-m-d H:i:s'), $course->imageurl ));    
 
    }
 //Bidder::sendBidEmail($lesson, $request->price, $request->comment)

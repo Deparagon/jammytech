@@ -36,7 +36,7 @@
   <body>
   <div class="row dash-top-1">
      <div class="col-sm-2 top-logo">
-<h2 class="logo"> <img src="/img/logo/logo.png" alt="Tutorago">  </h2>
+<h2 class="logo"> <a href="{{ url('/') }}"><img src="/img/logo/logo.png" alt="Tutorago"> </a>  </h2>
        </div>
        <div class="col-sm-6"> 
          <div class="search-box-in">
@@ -232,8 +232,11 @@
       <div class="container">
        <div class="row">
         <div class="col-sm-3">
-           LOGO
+           
+         <div class="footer-logo">
+           <a href="{{ url('/') }}"><img src="/img/logo/footerlogo.png"> </a>
 
+   </div>
 
           </div>
 

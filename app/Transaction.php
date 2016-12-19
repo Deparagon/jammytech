@@ -31,7 +31,14 @@ class Transaction extends Model
 
     public static function getAdminCommission()
     {
-       $credit = self::where(['user_id' =>1, 'transaction_type' =>'AdminCommission'])->sum('credit');
+       $credit = self::where(['user_id' =>1, 'transaction_type' =>'CreditAdminCommission'])->sum('credit');
+       
+     return $credit;
+    }
+
+    public static function getMyReferralEarning($user_id)
+    {
+       $credit = self::where(['user_id' =>$user_id, 'transaction_type' =>'CreditReferralCommission'])->sum('credit');
        
      return $credit;
     }
@@ -49,6 +56,17 @@ class Transaction extends Model
         $t->save();
     }
 
+
+    public static function payAdmin( $amount, $detail)
+    {
+        $t = new self();
+        $t->user_id = 1;
+        $t->credit = $amount;
+        $t->debit = 0;
+        $t->transaction_type = 'CreditAdminCommission';
+        $t->detail = $detail;
+        $t->save();
+    }
 
     public static function payReferral($user_id, $amount, $detail)
     {

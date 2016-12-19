@@ -15,10 +15,10 @@
 @section('innercontent')
 <section>
 	<div class="row">
-	        <h1> {{ $userdata->firstname }} Wants to Join Tutorago Tutors </h1>
+	        <h1 class="top-start-inner"> <span> {{ $userdata->firstname }} Wants to Join Tutorago Tutors </span> </h1>
        </div>
 </section>
-<hr>
+
 <section class="profile-bar"> 
    <div class="row">
       <div class="col-sm-8"> 
@@ -28,7 +28,17 @@
              <tr> <td><strong> Phone</strong> </td> <td> @if(isset($userdata->phone)) {{ $userdata->phone }} @endif </td></tr>
              <tr> <td><strong> Street</strong> </td> <td> @if(isset($userdata->street)) {{ $userdata->street }} @endif </td></tr>
              <tr> <td><strong> City</strong> </td> <td> @if(isset($userdata->city)){{ $userdata->city }} @endif </td></tr>
+
+
+
              <tr> <td><strong> State </strong></td> <td>@if(isset($userdata->state)) {{ $userdata->state }} @endif</td></tr>
+
+<tr> <td colspan="2"> Social Links </td></tr>
+
+<tr> <td><strong> Facebook </strong></td> <td>@if(isset($facebook->status)) {{ $facebook->sociallink }} @endif</td></tr>
+<tr> <td><strong> Twitter </strong></td> <td>@if(isset($twitter->status)) {{ $twitter->sociallink }} @endif</td></tr>
+<tr> <td><strong> Google Plus </strong></td> <td>@if(isset($gplus->status)) {{ $gplus->sociallink }} @endif</td></tr>
+
             </table>
          </div>
        </div>
@@ -89,6 +99,32 @@
 
 </section>
 
+<section>
+ <div class="row">
+ <div class="col-sm-12">
+ <div class="panel panel-default">
+ <div class="panel-heading">  My ID</div>
+   <div class="panel-body">
+<div class="row">
+     <div class="col-sm-6">
+           <h3> ID Type: <span> @if( isset($identification->idtype))  {{ $identification->idtype }} @endif </span> </h3>
+      </div>
+     <div class="col-sm-6"> 
+           <div class="id-box">
+             @if( isset($identification->identity)) 
+             <img class="identity-img" src="{{ url('/uploads/'.$identification->identity) }}">
+
+             @endif
+            </div>
+     </div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
 <section class="educations-list">
 <div class="row">
 <div class="col-sm-12">
@@ -100,13 +136,13 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr> <th> ID </th> <th> Name of Institution </th> <th> Course of Study</th> <th> Degree</th> </tr>
+  <tr> <th> ID </th> <th> Name of Institution </th> <th> Course of Study</th> <th> Degree</th> <th> Start Date</th> <th>End Date</th></tr>
 </thead>
 
 <tbody>
-@if(!empty($educations))
+@if(count($educations) >0)
 @foreach( $educations as $education)
-<tr> <td> {{ $education->id }} </td> <td> {{ $education->institution }}</td> <td> {{ $education->course }} </td> <td> {{ $education->degree }}</td>  </tr>
+<tr> <td> {{ $education->id }} </td> <td> {{ $education->institution }}</td> <td> {{ $education->course }} </td> <td> {{ $education->degree }}</td> <td> {{ $education->startdate }}</td> <td> {{ $education->enddate }}</td>  </tr>
 
 @endforeach
   
@@ -141,7 +177,7 @@
 </thead>
 
 <tbody>
-@if(!empty($gurantors))
+@if(count($gurantors) > 0)
 @foreach( $gurantors as $guarantor)
 <tr> <td> {{ $guarantor->lastname }}, {{ $guarantor->firstname }} </td> <td> {{ $guarantor->email }}</td> <td> {{ $guarantor->phone }} </td> <td> {{ $guarantor->yearsknown}}</td> <td>  {{ $guarantor->placeofwork }} </td>  </tr>
 

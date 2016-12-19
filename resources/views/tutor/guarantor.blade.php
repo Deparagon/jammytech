@@ -65,14 +65,14 @@
       <div class="col-sm-6">
        <div class="form-group">
             <label for="firstname">Firstname</label>
-            <input type="text" name="firstname" class="form-control" id="firstname">
+            <input type="text" name="firstname" value="{{ old('firstname') }}" class="form-control" id="firstname">
 
        </div>
        </div>
      <div class="col-sm-6">
        <div class="form-group">
             <label for="lastname">Lastname</label>
-            <input type="text" name="lastname" class="form-control" id="lastname">
+            <input type="text" name="lastname" value="{{ old('lastname') }}" class="form-control" id="lastname">
 
        </div>
        </div>
@@ -83,7 +83,7 @@
       <div class="col-sm-6">
        <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="text" name="phone" class="form-control" id="phone">
+            <input type="text" name="phone" value="{{ old('phone') }}" class="form-control" id="phone">
 
        </div>
        </div>
@@ -91,7 +91,7 @@
      <div class="col-sm-6">
        <div class="form-group">
             <label for="email">Email</label>
-             <input type="email" name="email" class="form-control" id="email">
+             <input type="email" name="email" value="{{ old('email') }}" class="form-control" id="email">
 
        </div>
        </div>
@@ -101,7 +101,7 @@
       <div class="col-sm-6">
        <div class="form-group">
             <label for="yearsknown">Years Known </label>
-            <input type="text" name="yearsknown"  class="form-control" id="yearsknown">
+            <input type="text" name="yearsknown" value="{{ old('yearsknown') }}" class="form-control" id="yearsknown">
 
        </div>
        </div>
@@ -109,7 +109,7 @@
      <div class="col-sm-6">
        <div class="form-group">
             <label for="placeofwork">Place Of Work</label>
-             <input type="text" name="placeofwork"  class="form-control" id="placeofwork">
+             <input type="text" name="placeofwork" value="{{ old('placeofwork') }}" class="form-control" id="placeofwork">
 
        </div>
        </div>

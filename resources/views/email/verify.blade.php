@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;"/>
-<title>chat.html-inline</title>
+<title>welcome.html-inline</title>
 <link href="http://fonts.googleapis.com/css?family=Playfair+Display:400italic|Montserrat:400,700" rel="stylesheet" type="text/css">
 <style type="text/css">
 /*
@@ -20,7 +20,7 @@
 body { -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; -webkit-font-smoothing:antialiased;}
 .yshortcuts, .yshortcuts a, .yshortcuts a:link, .yshortcuts a:visited, .yshortcuts a:hover, .yshortcuts a span { text-decoration:none !important; border-bottom:none !important; background:none !important;}
 /*link styles & hover*/
-a { color:#3291db; text-decoration:none; outline:none;}
+a { color:#e54d24; text-decoration:none; outline:none;}
 a:hover { text-decoration:underline !important;}
 /*media query*/
 @media only screen and (max-width: 649px) {
@@ -107,7 +107,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </style>
 </head>
 <body style="margin:0;padding:0;width:100%;height:100%;">
-<div class="preheader" style="display:none; visibility:hidden; height:0px; font-size:0px; line-height:0px;">MessageChat
+<div class="preheader" style="display:none; visibility:hidden; height:0px; font-size:0px; line-height:0px;">Welcome To Tutorago
 </div>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="BGtable" style="border-collapse: collapse;margin: 0;padding: 0;table-layout: fixed;background-color: #474747;width: 100% !important;height: 100% !important;">
 <tr>
@@ -126,7 +126,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start logo img-->
 <table align="left" border="0" cellspacing="0" cellpadding="0" class="logo fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td style="padding: 28px 0 24px;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/logo.png" width="138" height="39" alt="logo" class="logo-img"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;"></a>
+<td style="padding: 28px 0 24px;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/logo.png" width="138" height="39" alt="logo" class="logo-img"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;"></a>
 </td>
 </tr>
 </table>
@@ -138,7 +138,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
-<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com" style="color: #242424;text-decoration: none;outline: none;">BECOME A TUTOR</a>
+<td  style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;"><a  href="http://tutorago.com">BECOME A TUTOR</a>
 </td>
 <td style="font-family: Montserrat;font-size: 13px;line-height: 13px;font-weight: 700;color: #262424;padding: 40px 8px;">-
 </td>
@@ -154,6 +154,72 @@ img[class~=logo-img] { max-width: 200px !important;}
 </tr>
 </table> 
 <!-- end - ◆header◆ -->
+<!-- start ◆header_banner_2s◆ -->
+<table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap" style="border-collapse: collapse;width: 650px;margin: 0 auto;">
+<tr>
+<td width="650" align="center" valign="top" background="{{ url('/') }}/img/mail/welcome.jpg" class="wrap headerbanner b" style="-webkit-background-size: cover; width: 650px; margin: 0px auto; background-image: url({{ url('/') }}/img/mail/welcome.jpg); background-color: #555555; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;">
+<!--[if gte mso 9]>
+        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:650px;"> 
+        <v:fill type="tile" src="{{ url('/') }}/img/mail/welcome.jpg" color="#555555" id="msoBG-2" />
+        <v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+        <![endif]-->
+<div>
+<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+<tr>
+<td height="75">
+</td>
+</tr>
+<!--start title-->
+<tr>
+<td align="center" ><h1 class="h1 b" style="font-family: 'Playfair Display'; font-weight: 400; color: #252525; font-size: 53px; line-height: 96px; font-style: italic; margin: 0px !important;">Hello!&nbsp;
+<span class="highlight" style="color: #e54d24;">{{ $firstname }}
+</span></h1>
+<table align="center" width="90" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
+<tr>
+<td height="1" class="small-img line2" style="font-size: 0px;line-height: 0px;border-collapse: collapse;background-color: #252525;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td height="12" class="small-img" style="font-size: 0px;line-height: 0px;border-collapse: collapse;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
+</td>
+</tr>
+<tr>
+<td align="center" class="title-td"  style="padding: 0 90px;"><h1 class="h1 bold" style="color: #252525; font-size: 41px; line-height: 45px; margin: 0px !important;">
+<span class="ff1 regular"><font face="Montserrat, Tahoma">WELCOME TO&nbsp;</font>
+</span>
+<span class="ff1 regular" style="font-family: 'Playfair Display'; font-weight: 400;">&nbsp;
+</span><font face="Montserrat, Tahoma">TUTORAGO</font></h1>
+</td>
+</tr>
+<!--end title-->
+<tr>
+<td height="60">
+</td>
+</tr>
+<!--start button-->
+<tr>
+<td align="center">
+<br>
+</td>
+</tr>
+<!--end button-->
+<tr>
+<td height="65">
+</td>
+</tr>
+</table>
+</div>
+<!--[if gte mso 9]>
+        </v:textbox>
+        </v:rect>
+        <![endif]-->
+</td>
+</tr>
+</table> 
+<!-- end - ◆header_banner_2s◆ -->
 <!-- start ◆title_module_1s◆ -->
 <table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
 <tr>
@@ -161,11 +227,12 @@ img[class~=logo-img] { max-width: 200px !important;}
 <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
 <!--start title-->
 <tr>
-<td align="center" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">Hi {{ $student }}!
+<td align="center" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">
+<br>
 </td>
 </tr>
 <tr>
-<td align="center" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #3291db; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">{{ $tutor }} Bidded on your lesson, {{ $course->name }} for {{ TTools::displayPrice( $price ) }}</h3>
+<td align="center" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #e54d24; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">ONE MORE STEP &nbsp;VERIFY YOUR ACCOUNT</h3>
 <table align="center" width="90" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
 <td height="1" class="small-img line2" style="font-size: 0px;line-height: 0px;border-collapse: collapse;background-color: #252525;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
@@ -182,109 +249,36 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start content-->
 <tr>
 <td align="center" class="content b"  style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic;">
-<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;">See {{ $tutor }}'s message below</p>
+<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;"> Click on the link below to verify your email address. Once your account is verified you can login to your tutorago account.
+ 
+</p>
+ <h3> <a href="{{ url('/validate/'.$verification_code) }}"> Verify Email </a> </h3>
 </td>
 </tr>
 </table>
 </td>
 </tr>
 </table> 
-<!-- end - ◆title_module_1s◆ -->
-<!-- start ◆divider_70px_height◆ -->
-<table width="650" align="center" border="0" cellpadding="0" cellspacing="0" class="divider wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
-<tr>
-<td height="70" class="small-img" style="font-size: 0px;line-height: 0px;border-collapse: collapse;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
-</td>
-</tr>
-</table> 
-<!-- end - ◆divider_70px_height◆ -->
-<!-- start ◆col2_module_8s◆ -->
-<table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
-<tr>
-<td align="center" class="module-td3" style="padding: 50px 0 0;">
-<table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
-<tr>
-<td>
-<!--start 1/2 column-->
-<table width="290" align="left" border="0" cellpadding="0" cellspacing="0" class="col2 mid2" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td align="center"><img  src="{{ url('/uploads/'.$coursephoto) }} " width="290" height="200" alt="image" class="img img290"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 290px;height: auto;max-width: 290px;">
-</td>
-</tr>
-</table>
-<!--end 1/2 column-->
-<!--start 2/2 column-->
-<table width="290" align="right" border="0" cellpadding="0" cellspacing="0" class="col2" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td align="left" ><h5 class="h5 bold" style="font-family: Montserrat,Tahoma;font-weight: 700;color: #262424;font-size: 17px;line-height: 17px;margin: 0 0 8px !important;"> BID DETAILS</h5>
-</td>
-</tr>
-<tr>
-<td align="left" class="padding-td5" style="padding: 0 0 18px;">
-<table align="left" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td><img  src="{{ url('/') }}/img/mail/icon-15-1.png" width="15" height="15" alt="icon" class="icon15"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 15px;height: auto;max-width: 15px;max-height: 15px;">
-</td>
-<td class="padding-td6 content gray"  style="font-family: Raleway, Arial; font-weight: 400; font-size: 13px; line-height: 19px; color: #585858; -webkit-font-smoothing: antialiased; padding: 0px 12px;">By: {{ $tutor }}
-</td>
-<td><img  src="{{ url('/') }}/img/mail/icon-15-2.png" width="15" height="15" alt="icon" class="icon15"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 15px;height: auto;max-width: 15px;max-height: 15px;">
-</td>
-<td class="padding-td6 content gray"  style="font-family: Raleway, Arial; font-weight: 400; font-size: 13px; line-height: 19px; color: #585858; -webkit-font-smoothing: antialiased; padding: 0px 12px;">{{ TTools::displayDate($dedate) }}
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<!--start content-->
-<tr>
-<td align="left" class="content"  style="font-family: Raleway, Arial; font-weight: 400; font-size: 13px; line-height: 19px; color: #252525; -webkit-font-smoothing: antialiased;">
-<p style="font-family: Raleway, Arial; font-weight: 400; font-size: 13px; line-height: 19px; color: #252525; -webkit-font-smoothing: antialiased; margin: 0px !important;">{{ $comment }}</p>
-</td>
-</tr>
-<!--end content-->
-<tr>
-<td height="28">
-</td>
-</tr>
-<!--start button-->
-<tr>
-<td align="left">
-<table align="left" border="0" cellspacing="0" cellpadding="0" class="button a" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td align="center" class="out" style="padding: 4px; border: 1px solid #3291db; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
-<table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
-<tr>
-<td class="in colorbg"  style="font-family: Raleway; font-size: 14px; line-height: 14px; font-weight: 400; padding: 11px 19px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-color: #3291db;">Reply<a  href="{{ url('/') }}" style="color: #fff;text-decoration: none !important;outline: none;">&raquo;</a>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-<!--end button-->
-</table>
-<!--end 2/2 column-->
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table> 
-<!-- end - ◆col2_module_8s◆ -->
-<!-- start ◆divider_70px_height◆ -->
-<table width="650" align="center" border="0" cellpadding="0" cellspacing="0" class="divider wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
-<tr>
-<td height="70" class="small-img" style="font-size: 0px;line-height: 0px;border-collapse: collapse;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
-</td>
-</tr>
-</table> 
-<!-- end - ◆divider_70px_height◆ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end - ◆col2_module_1s◆ -->
 <!-- start ◆footer◆ -->
 <table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap footer" style="border-collapse: collapse;width: 650px;margin: 0 auto;">
 <tr>
-<td align="center" class="colorbg-dark" style="background-image: none; background-color: #252525;">
+<td align="center" class="colorbg-gray" style="background-image: none; background-color: #f2f2f2;">
 <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
 <tr>
 <td align="center">
@@ -302,7 +296,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" class="sh1 white"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #fff;font-size: 47px;line-height: 47px;">+234 81 670 827 04
+<td align="center" class="sh1"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 47px;line-height: 47px;">081 670 827 04&nbsp;
 </td>
 </tr>
 </table>
@@ -316,7 +310,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" class="colorbg-dark" style="background-image: none; background-color: #252525;">
+<td align="center" class="colorbg-gray" style="background-image: none; background-color: #f2f2f2;">
 <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
 <tr>
 <td height="30">
@@ -331,8 +325,10 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" class="h5 white"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #fff;font-size: 17px;line-height: 17px;">11, Obafemi Awolowo way, Beside BestSay Shopping Mall,
-<br>Igbonna, Osogbo, Osun State
+<td align="center" class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 17px;line-height: 17px;">11, Obafemi Awolowo Way,&nbsp;
+<br>Beside BestSay Shopping Mall,&nbsp;
+<br>Igbona, Osogbo, Osun State.
+<br>
 </td>
 </tr>
 <tr>
@@ -350,9 +346,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 <td width="15">
 </td>
-<td class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 17px;line-height: 17px;">
-<span style="color:#FFFFFF;">info
-</span><a  href="#" class="white" style="color: #fff;text-decoration: none;outline: none;">@tutorago.com</a>
+<td class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 17px;line-height: 17px;">info<a  href="#" class="dark" style="color: #252525;text-decoration: none;outline: none;">@</a>tutorago.com
 </td>
 <td width="15" class="hide">
 </td>
@@ -368,7 +362,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 <td width="15">
 </td>
-<td class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 17px;line-height: 17px;"><a  href="#" class="white" style="color: #fff;text-decoration: none;outline: none;">www.tutorago.com</a>
+<td class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 17px;line-height: 17px;"><a  href="#" class="dark" style="color: #252525;text-decoration: none;outline: none;">www.tutorago.com</a>
 </td>
 </tr>
 </table>
@@ -385,7 +379,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" height="120" class="colorbg ch2" style="background-color: #3291db;">
+<td align="center" height="120" class="colorbg-dark ch2" style="background-image: none; background-color: #252525;">
 <!--start social icons-->
 <table align="center" border="0" cellspacing="0" cellpadding="0" class="social-icons" style="border-collapse: collapse;">
 <tr>
@@ -395,7 +389,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-11.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-11.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -405,7 +399,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-12.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-12.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -415,7 +409,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-13.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-13.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -431,7 +425,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-14.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-14.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -441,7 +435,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-15.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-15.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -451,7 +445,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #3291db;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-16.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
+<td align="center" width="59" height="59" class="icon-border" style="border: 2px solid #fff;"><a  href="#" style="color: #e54d24;text-decoration: none;outline: none;"><img  src="{{ url('/') }}/img/mail/icon-35-16.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;"></a>
 </td>
 </tr>
 </table>
@@ -472,7 +466,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--copyright-->
 <table align="left" border="0" cellspacing="0" cellpadding="0" class="fn" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
-<td align="center" class="cprt a"  style="font-family: Raleway;font-size: 11px;line-height: 11px;color: #2c2c2c;font-weight: 400;padding: 22px 0 20px;">Copyright@2016 Tutorago Inc., All rights reserved
+<td align="center" class="cprt a"  style="font-family: Raleway;font-size: 11px;line-height: 11px;color: #2c2c2c;font-weight: 400;padding: 22px 0 20px;">Copyright@2016 Tutorago.com, All rights reserved
 </td>
 </tr>
 </table>

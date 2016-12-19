@@ -18,6 +18,14 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 @endsection
 @section('externalcontent')
 
+@if (session()->has('activatedbefore'))
+   <div class="biginfo">{{ session('activatedbefore') }} </div>
+   @endif
+
+@if (session()->has('justactivated'))
+  <div class="bigsuccess"> {{  session('justactivated') }} </div>
+   @endif
+
 <div id="home_top" style="height:500px">
  <div class="row"> 
  <div class="col-sm-12"> 

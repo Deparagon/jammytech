@@ -11,7 +11,7 @@ use App\Lesson;
 use App\Transaction;
 use TTools;
 use App\Activity;
-
+use App\Social;
 
 class ProfileController extends Controller
 {
@@ -34,9 +34,13 @@ class ProfileController extends Controller
          $myunratedlessons = Lesson::getUnRatedByStudent(Auth::user()->id);
 
          $myunratedclasses = Lesson::getUnRatedByTutor(Auth::user()->id);
+         
+         $facebook = Social::getSocial(Auth::user()->id, 'Facebook');
+         $gplus = Social::getSocial(Auth::user()->id, 'Google');
+         $twitter = Social::getSocial(Auth::user()->id, 'Twitter');
 
         $countlesson = Lesson::where(['id_student'=> Auth::user()->id])->count();
-        return view('user.dashboard', ['countlesson' => $countlesson, 'datejoin' =>Auth::user()->created_at, 'profiledata' =>$profiledata, 'mybalance' => $mybalance, 'activities' => $activities, 'lessonnotes' => $lessonnotes, 'lessonattentions' => $lessonattentions, 'myunratedlessons' => $myunratedlessons, 'myunratedclasses' => $myunratedclasses]);
+        return view('user.dashboard', ['countlesson' => $countlesson, 'datejoin' =>Auth::user()->created_at, 'profiledata' =>$profiledata, 'mybalance' => $mybalance, 'activities' => $activities, 'lessonnotes' => $lessonnotes, 'lessonattentions' => $lessonattentions, 'myunratedlessons' => $myunratedlessons, 'myunratedclasses' => $myunratedclasses, 'facebook' => $facebook, 'twitter' => $twitter, 'gplus' => $gplus]);
     }
 
     public function show()
@@ -64,9 +68,9 @@ class ProfileController extends Controller
         $user->phone = $request->phone;
         $user->gender = $request->gender;
         $user->birthday = $birthday;
-        $user->street = $request->street;
-        $user->city= $request->city;
-        $user->state = $request->state;
+        $user->street = trim($request->street);
+        $user->city= trim($request->city);
+        $user->state = trim($request->state);
         $user->bio= $request->bio;
         $user->save();
        

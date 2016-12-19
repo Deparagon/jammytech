@@ -61,6 +61,7 @@ class StudentClassController extends Controller
             $lesson->save();
             $this->payTutor($lesson);
             $this->payReferral($lesson);
+            $this->payAdminCommission($lesson);
 
             return back()->with(['markedgreend' => 'You have successfully marked this lesson as complete. Please rate your tutor, describe your experience with your tutor.']);
         }
@@ -122,4 +123,12 @@ class StudentClassController extends Controller
 
     }
 
+   public function payAdminCommission($lesson)
+   {
+
+    $admincut = (0.2 * $lesson->amount);
+     $course = Course::find($lesson->id_course);
+
+       Transaction::payAdmin( $admincut, 'Admin Commisstion for '.$course->name.' completed. Lesson ID :'.$lesson->id);
+   }
 }

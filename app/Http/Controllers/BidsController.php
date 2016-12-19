@@ -43,7 +43,7 @@ class BidsController extends Controller
               $ibid = 'Yes';
             }
             $days = LessonDay::getLessonDays($lesson->id);
-                     return view('user.biddable_single', ['lesson' => $lesson, 'course' => $course, 'days' => $days, 'ibid' => $ibid]);
+                     return view('tutor.biddable_single', ['lesson' => $lesson, 'course' => $course, 'days' => $days, 'ibid' => $ibid]);
             }
            }
    }

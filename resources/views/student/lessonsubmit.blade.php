@@ -36,7 +36,7 @@
       {{ TTools::naInfo('You are in the final step') }}
       @if(session()->has('budgetstate'))
          @if (session('budgetstate') =='KO') 
-         <p class="budgetdisplay">We suggest that you increase your budget. </p>
+         <p class="budgetdisplay">Your budget informs tutors of your willingliness to pay for lesson and how much you are willing to pay. Tutors will bid on your lessons. </p>
          @if (session()->has('bestpricedtutor'))
           <p class="well"> The most basic price we obtained from our search indicates that the lowest price a tutor can use to teach this lesson anywhere in the country is {{ TTools::displayPrice(session('bestpricedtutor')) }} </p>
           @endif

@@ -66,11 +66,11 @@
       <div class="col-sm-6">
        <div class="form-group">
             <label for="course">Course/Subject</label>
-            <input type="text" name="course" id="course"  class="form-control">
+            <input type="text" name="course" id="course" value="{{ old('course') }}"  class="form-control">
        </div>
        <div class="form-group">
             <label for="description">Description</label>
-            <textarea type="text" name="description" id="description"  class="form-control"> </textarea>
+            <textarea type="text" name="description" id="description"  class="form-control">{{ old('description') }}</textarea>
        </div>
 
        </div>

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
 use App\User;
+use App\Transaction;
+use App\Referral;
 class ReferralController extends Controller
 {
     //
@@ -19,8 +21,17 @@ class ReferralController extends Controller
 
     public function show()
     {
-    	$referrals = Auth::user()->referrals;
+    	$referrals = Referral::where(['user_id' => Auth::user()->id])->paginate(25);
+
+        $countref = Referral::countMyReferrals(Auth::user()->id);
+
+        $refmoney = Transaction::getMyReferralEarning(Auth::user()->id);
        // return $referrals;
-    	return view('user.myreferrals', compact('referrals'));
+    	return view('user.myreferrals', ['referrals' =>$referrals, 'refmoney' => $refmoney, 'countref' => $countref]);
     }
+
+
+   
+
+
 }

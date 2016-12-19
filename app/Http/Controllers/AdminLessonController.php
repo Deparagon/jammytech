@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Lesson;
-use TTools;
 use App\Course;
 use App\User;
 use App\Invoice;
@@ -28,7 +27,7 @@ class AdminLessonController extends Controller
 
     public function show(Lesson $lesson)
     {
-    	if(TTools::obuObject($lesson)){
+    	if(is_object($lesson)){
 
     		$course = Course::find($lesson->id_course);
     		$student = User::find($lesson->id_student);
@@ -48,7 +47,7 @@ class AdminLessonController extends Controller
 
         $lesson = Lesson::find((int)$request->lesson);
 
-        if(TTools::obuObject($lesson)){
+        if(is_object($lesson)){
         	if($lesson->status =='Fresh'){
         		Lesson::LessonProccessingFeePaid($lesson->id);
         		return back()->with('updatedfee', 'Processing fee was successfully applied to this lesson');
@@ -66,7 +65,7 @@ class AdminLessonController extends Controller
 
         $lesson = Lesson::find((int)$request->lesson);
 
-        if(TTools::obuObject($lesson)){
+        if(is_object($lesson)){
         	if($lesson->status =='Biddable'){
         		Lesson::lessonPaymentMade($lesson->id, $lesson->amount);
         		return back()->with('updatedfee', 'Lesson fee was successfully applied to this lesson');

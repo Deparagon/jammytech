@@ -12,7 +12,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->increments('id')->unsigned();
-            $table->string('imageurl');
+            $table->string('imageurl')->nullable();
             $table->integer('category_id')->unsigned();
             $table->string('name');
             $table->string('description');

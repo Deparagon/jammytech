@@ -89,7 +89,7 @@ class CourseController extends Controller
     {
         if($request->category =='All'){
             if(!empty($request->searchlesson)){
-                $data = Course::findCourse($request->searchlesson);
+                $data = Course::findInCourse($request->searchlesson);
             }
             else{
                 TTools::naError('Provide search text');
@@ -109,7 +109,7 @@ class CourseController extends Controller
         }
     
     $result ='';
-    if(!empty($data)){
+    if(count($data) >0){
         foreach($data as $lesson){ 
         $result.='
 <tr> <td> <img class="list-img" src="/uploads/'.$lesson->imageurl.'"> </td> <td>'.$lesson->name.'</td> <td>'.$lesson->description.' </td> <td> Search </td> <td> <input class="form-control" type="radio" name="lessontostart" value="'.$lesson->id.'"></td> </tr>';

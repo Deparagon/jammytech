@@ -20,7 +20,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-         'email', 'password', 'firstname', 'lastname', 'zipcode',
+         'email', 'password', 'firstname', 'lastname', 'verification_code',
     ];
 
     /**
@@ -112,7 +112,12 @@ class User extends Authenticatable
  
  public static function getByState($state)
  {
-    return self::where(['state' =>$state, 'tutor' => 1])->get();
+    return self::where(['state' =>$state, 'tutor' => 1])->paginate(25);
+ }
+
+  public static function countTutorByState($state)
+ {
+    return self::where(['state' =>$state, 'tutor' => 1])->count();
  }
 
 public static function getUserFirstname($id)

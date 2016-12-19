@@ -70,6 +70,7 @@ class Lesson extends Model
               // exit;
 
         $lesson->id_course = Session::get('lessonsteponeinfo')['lessontostart'];
+        $lesson->lessonstreet =Session::get('lessonsteponeinfo')['lessonstreet'];
         $lesson->lessoncity =Session::get('lessonsteponeinfo')['lessoncity'];
         $lesson->lessonstate = Session::get('lessonsteponeinfo')['lessonstate'];
         $lesson->lessonstartin = Session::get('lessonsteponeinfo')['lessonstartin'];
@@ -132,7 +133,7 @@ class Lesson extends Model
               $lesson->status ='Ongoing';
               $lesson->save();
 
-              $this->emailLessonStart($lesson);
+              self::emailLessonStart($lesson);
 
               // Inform lesson tutor
 
@@ -242,7 +243,7 @@ public static function emailBidders($lessonid)
 
 
 
-public function emailLessonStart($lesson)
+public static function emailLessonStart($lesson)
 {
 
   $student = User::find($lesson->id_student);

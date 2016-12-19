@@ -64,6 +64,12 @@ class RequestController extends Controller
     {
 
     }
+    
 
+    public function deleteCourseRequest(CourseRequest $crequest)
+    {
+           $crequest->delete();
+           return back()->with('rdeleted', 'Course request was deleted successfully');
+    }
     
 }

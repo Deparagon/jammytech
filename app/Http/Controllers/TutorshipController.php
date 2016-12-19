@@ -10,17 +10,18 @@ use App\TeachingExperience;
 use App\WorkExperience;
 use App\Guarantor;
 use App\Education;
-use App\Profile;
 use App\User;
-use App\TTools;
+use TTools;
 use App\IcanTeach;
+use App\Identity;
+use App\Social;
 class TutorshipController extends Controller
 {
     //
 
     public function __construct()
     {
-         $this->middleware('auth');
+         $this->middleware('DaPowerful');
     }
 
 
@@ -46,9 +47,15 @@ class TutorshipController extends Controller
     	$teachingexps = TeachingExperience::where(['user_id' => $tutorreq->user_id])->first();
     	$workingexps = WorkExperience::where(['user_id' => $tutorreq->user_id])->get();
     	$gurantors = Guarantor::where(['user_id' => $tutorreq->user_id])->get();
+
+        $identification = Identity::where('user_id', $tutorreq->user_id)->first();
     	// $profile =Profile::where(['user_id' => $tutorreq->user_id])->first();
+
+         $facebook = Social::getSocial($tutorreq->user_id, 'Facebook');
+         $gplus = Social::getSocial($tutorreq->user_id, 'Googleplus');
+         $twitter = Social::getSocial($tutorreq->user_id, 'Twitter');
         $userdata =User::where(['id' => $tutorreq->user_id])->first();
-        return view('admin.user.tutorapproval', ['teachingexps' =>$teachingexps, 'workingexps'=>$workingexps, 'gurantors' => $gurantors, 'userdata' =>$userdata, 'tutorreq' =>$tutorreq]);
+        return view('admin.user.tutorapproval', ['teachingexps' =>$teachingexps, 'workexperiences'=>$workingexps, 'gurantors' => $gurantors, 'identification' => $identification, 'userdata' =>$userdata, 'educations' => $educations, 'tutorreq' =>$tutorreq, 'facebook' => $facebook, 'twitter' => $twitter, 'gplus' => $gplus]);
 
     }
 
@@ -114,5 +121,12 @@ class TutorshipController extends Controller
          }
          echo 'KO';
          exit;
+    }
+
+
+    public function killRequest(TutorshipRequest $tutorreq)
+    {
+             $tutorreq->delete();
+             return back()->with(['deletedreq' => 'Request have been deleted successfully']);
     }
 }

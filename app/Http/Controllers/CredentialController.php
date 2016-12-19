@@ -14,6 +14,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Auth;
 use TTools;
+use Image;
+use App\Identity;
+
 class CredentialController extends Controller
 {
 
@@ -26,8 +29,9 @@ class CredentialController extends Controller
         $educations = Auth::user()->educations;
 
         $workexperiences = Auth::user()->workexperiences;
+        $identification = Identity::where('user_id', Auth::user()->id)->first();
 
-        return view('tutor.credential', ['educations' => $educations, 'workexperiences' => $workexperiences]);
+        return view('tutor.credential', ['educations' => $educations, 'identification' => $identification, 'workexperiences' => $workexperiences]);
     }
 
     public function createEdu(Request $request)
@@ -177,5 +181,19 @@ class CredentialController extends Controller
           }
            echo 'OK';
            exit;
+    }
+
+
+
+    public function saveID(Request $request)
+    {
+            $this->validate($request, ['idtype' =>'required', 'identity' =>'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048']);
+
+            $identity = date('YmdHis').$request->idtype.'.jpg';
+
+            Image::make($request->file('identity'))->save('uploads/'.$identity);
+
+          Identity::saveUpdate(Auth::user()->id, $request->idtype, $identity);
+          return back()->with(['savedid' => 'Identity updated successfully']);
     }
 }

@@ -15,6 +15,13 @@
 @section('innercontent')
 <h2 class="cent-h"> {{ TTools::showNumber($countedreq) }} Courses Requested by Tutors </h2>
 
+    @if (session()->has('rdeleted'))
+
+    {{ TTools::naSuccess(session('rdeleted')) }}
+
+@endif
+
+
 <section class="list-course-categories">
    <div id="proceseachrequestedcourd"></div>
 <div class="table-responsive">
@@ -24,7 +31,7 @@
 </thead>
 
 <tbody>
-@if(!empty($crequests))
+@if(count($crequests) >0)
 @foreach( $crequests as $crequest)
 <form id="approveordisapprovemen" method="POST" action="">
   {{ csrf_field() }}
@@ -37,10 +44,12 @@
   @endforeach
     @endif
 </select>
-  </td> <td> <button class="btn btn-xs btn-success" type="submit"><i class="fa fa-check"> </i> </button></td>  <td> <a  id="traxrequestnow"  data-tracoursereq="{{ $crequest->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a> </td></tr>
+  </td> <td> <button class="btn btn-xs btn-success" type="submit"><i class="fa fa-check"> </i> </button></td>  <td> <a  id="traxrequestnow"  data-tracoursereq="{{ $crequest->id }}" href="{{ url('/admin/coursereqkill/'.$crequest->id) }}"> <i class="fa fa-trash"> </i> </a> </td></tr>
 </form>
 @endforeach
   
+  @else
+  <tr> <td colspan="7"> No course request at the moment </td></tr>
   @endif
 </tbody>
 

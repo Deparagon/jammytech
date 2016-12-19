@@ -24,8 +24,9 @@ class TutorBidsEmail extends Mailable
     public $lesson;
     public $comment;
     public $dedate;
+    public $coursephoto;
 
-    public function __construct($student, $tutor, $price, $course, $lesson, $comment, $dedate)
+    public function __construct($student, $tutor, $price, $course, $lesson, $comment, $dedate, $coursephoto)
     {
          $this->student = $student;
          $this->tutor = $tutor;
@@ -34,6 +35,7 @@ class TutorBidsEmail extends Mailable
          $this->lesson = $lesson;
          $this->comment = $comment;
          $this->dedate = $dedate;
+         $this->coursephoto = $coursephoto;
     }
 
     /**

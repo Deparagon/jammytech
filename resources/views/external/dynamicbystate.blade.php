@@ -96,7 +96,7 @@ Top Rated Private Home Tutors in {{ $state }}  | Tutorago.Com
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
- 
+           {{ $statetutors->links() }}
       </div><!-- /.row -->
 
 

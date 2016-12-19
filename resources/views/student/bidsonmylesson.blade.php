@@ -31,12 +31,13 @@
 </thead>
 
 <tbody>
-@if(!empty($bidsonmylesson))
+@if(count($bidsonmylesson) >0)
 @foreach( $bidsonmylesson as $bid)
 <tr> <td> {{ TTools::showDate($bid->created_at) }} </td> <td> {{ $bid->name }} </td> <td> {{ $bid->description }}</td>  <td> <a href="{{ url('/user/tutor/'.$bid->tutor) }}"> {{ $bid->lastname }} {{ $bid->firstname}} </a> </td> <td> <a class="btn btn-md btn-success"  href="{{ url('/user/lessonchat/'.$bid->bidder) }}"> <i class="fa fa-check-square-o"> </i> </a> </td> </tr>
 
 @endforeach
-  
+  @else 
+  <tr> <td colspan="5"> No bids yet! Wait a little while </td></tr>
   @endif
 </tbody>
 
