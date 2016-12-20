@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-            $categories = \App\Category::with('courses')->inRandomOrder()->take(6)->get();
+            $categories = \App\Category::with('courses')->inRandomOrder()->take(5)->get();
          $subjects = \App\Course::inRandomOrder()->get();
      $states=["Abuja","Anambra","Enugu","Akwa-Ibom","Adamawa","Abia","Bauchi","Bayelsa","Benue","Borno","Cross-River","Delta","Ebonyi","Edo","Ekiti","Gombe","Imo","Jigawa","Kaduna","Kano","Katsina","Kebbi","Kogi","Kwara","Lagos","Nasarawa","Niger","Ogun","Ondo","Osun","Oyo","Plateau","Rivers","Sokoto","Taraba","Yobe","Zamfara"];
  
