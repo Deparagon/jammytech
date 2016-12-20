@@ -54,15 +54,15 @@ $('body').on('submit', '#tutorregistrationformele', function(ev){
             }
   if(report['response']){
             $('#reportajaxregistrationstate').html('<div class="alert alert-success" role="alert">Welcome to Tutorago, An email has been sent to your email address, Please check your email for details on how to activate your account.</div>');  
-                 var i = 1;
-                        setInterval(function () {
-                            if(i == 0) {
-                                  $('#regformlocatesmallpage').modal('hide');
+                 // var i = 1;
+                 //        setInterval(function () {
+                 //            if(i == 0) {
+                 //                  $('#regformlocatesmallpage').modal('hide');
 
-                                    $('#dologincallshortpage').modal('show');
-                            }
-                            i--;
-                        }, 1000);
+                 //                    $('#dologincallshortpage').modal('show');
+                 //            }
+                 //            i--;
+                 //        }, 1000);
 
 
 

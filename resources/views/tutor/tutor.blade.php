@@ -186,6 +186,9 @@
 
 
       @endforeach
+
+      @else
+      <p class=""> <span> No Reviews Yet</span> </p>
       @endif
 
 

@@ -30,6 +30,6 @@ class ContactUsMailler extends Mailable
      */
     public function build()
     {
-        return $this->view('email.contactmail');
+        return $this->view('email.contactmail')->from($this->f->email, $this->f->fullname);
     }
 }

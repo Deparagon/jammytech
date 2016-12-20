@@ -75,7 +75,7 @@
   text-align: right;
 }
 .zetta-menu1 > ul .zm-switch label {
-  padding-right: 25px;
+  padding-right: 18px;
 }
 /*
 *
@@ -101,6 +101,7 @@
   vertical-align: top;
   display: inline-block;
   float: left;
+  font-size: 14px;
 }
 .zetta-menu1 > ul > li.zm-right-item {
   margin-right: 0;
@@ -110,7 +111,7 @@
 .zetta-menu1 > ul > li > a:visited {
   text-decoration: none;
   color: #ffffff;
-  padding: 0px 22px 0px 22px;
+  padding: 0px 20px 0px 20px;
   height: 50px;
   line-height: 50px;
   text-align: center;

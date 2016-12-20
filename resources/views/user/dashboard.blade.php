@@ -80,6 +80,9 @@
        {{ TTools::naSuccess(session('sociallinkage')) }}
    @endif
 
+@if ($profiledata->city =='' || $profiledata->phone == '' || $profiledata->bio =='')
+       {{ TTools::naInfo('Your profile is incomplete, complete your profile to access all the hidden features <a href="/user/profile"> Profile </a>' )}}            
+@endif
 
 <section>
   <div class="row">
@@ -259,14 +262,14 @@
 
                  <div class="col-sm-4">
                       <div class="img-facebookbox">
-                        <a href="{{ url('/facebookredirect') }}"> <i class="fa fa-3x fa-facebook"></i> Verify Facebook Account </a>
+                        <a href=" @if(isset($facebook->status)) # @else {{ url('/facebookredirect') }} @endif "> <i class="fa fa-3x fa-facebook"></i> Verify Facebook Account </a>
                          <br>
                         <span class="verify-span"> @if(isset($facebook->status)) Verified  @else Unverified @endif </span>
                        </div>
                  </div>
                  <div class="col-sm-4">
                       <div class="img-googleplus">
-                           <a href="{{ url('/googleredirect') }}"> <i class="fa fa-3x fa-google"></i> Verify Google Account </a>
+                           <a href=" @if(isset($gplus->status)) # @else {{ url('/googleredirect') }} @endif"> <i class="fa fa-3x fa-google"></i> Verify Google Account </a>
                            <br>
                            
                       <span class="verify-span"> @if(isset($gplus->status)) Verified  @else Unverified @endif </span>
@@ -275,7 +278,7 @@
                  </div>
                  <div class="col-sm-4">
                      <div class="img-twitterbox">
-                        <a href="{{ url('/twitterredirect') }}"> <i class="fa fa-3x fa-twitter"></i> Verify Twitter Account </a>
+                        <a href="@if(isset($twitter->status)) # @else {{ url('/twitterredirect') }} @endif"> <i class="fa fa-3x fa-twitter"></i> Verify Twitter Account </a>
                           <br>
                          <span class="verify-span"> @if(isset($twitter->status)) Verified  @else Unverified @endif </span>
                       </div>
