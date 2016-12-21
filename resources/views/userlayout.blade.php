@@ -37,7 +37,7 @@
   <body>
   <div class="row dash-top-1">
      <div class="col-sm-2 top-logo">
-     <h2 class="logo"> <a href="{{ url('/') }}"> <img src="/img/logo/logo.png" alt="Tutorago">  </a> </h2>
+     <h2 class="logo"> <a href="{{ url('/') }}"> <img src="/img/logo/logo.png" alt="Tutorago Logo">  </a> </h2>
        </div>
 
        <div class="col-sm-6 col-sm-offset-1"> 
@@ -58,7 +58,7 @@
           <ul class="nav navbar-nav navbar-right user-top">
            @if (isset($profiledata))
            @if (!empty($profiledata->photo))
-          <li class="no-line"> <a  href="{{ url('/user/dashboard') }}"> <img class="img-circle" src="/uploads/{{ $profiledata->photo }}" width="50" height="50" > </a> </li>
+          <li class="no-line"> <a  href="{{ url('/user/dashboard') }}"> <img class="img-circle" src="/uploads/{{ $profiledata->photo }}" width="50" height="50" alt="Profile Photo"> </a> </li>
           @else
           <li><a  href="{{ url('/user/dashboard') }}">{{ Auth::user()->firstname }}</a></li>
 
@@ -272,7 +272,7 @@
        <div class="row">
         <div class="col-sm-3">
            <div class="footer-logo">
-           <a href="{{ url('/') }}"><img src="/img/logo/footerlogo.png"> </a>
+           <a href="{{ url('/') }}"><img src="/img/logo/footerlogo.png" alt="Footer Logo"> </a>
 
    </div>
 
