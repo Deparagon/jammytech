@@ -109,20 +109,20 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
      <div class="row">
        <div class="col-sm-4"> 
          <div class="img-box-how">
-            <img src="/img/how1.png" class="img-howit">
+            <img src="/img/how1.png" class="img-howit" alt="How it works image">
             <p class="how-p text-center"> Request for a vetted private home tutor by booking as per your need and schedule </p>
           </div>
          
 
        </div>
         <div class="col-sm-4">
- <div class="img-box-how"> <img src="/img/how2.png" class="img-howit"> 
+ <div class="img-box-how"> <img src="/img/how2.png" class="img-howit" alt="How it works image"> 
 <p class="how-p text-center"> Tutor shows up in person in the agreed location & time </p>
  </div>
          
          </div>
          <div class="col-sm-4"> 
-          <div class="img-box-how"> <img src="/img/how3.png" class="img-howit"> 
+          <div class="img-box-how"> <img src="/img/how3.png" class="img-howit" alt="How it works image"> 
          <p class="how-p text-center"> Student Learning goals are achieved. Tutor get paid by Us after student approval. </p>
 
           </div>
@@ -154,7 +154,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
         <div class="col-lg-3">
          <a id="lessonstartsinglelinktostart" @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/new-lesson/'.$course->id) }}" @endif >
           <div class="tutor-box">
-           <img class="img-responsive" src="/uploads/{{ $course->imageurl }}">
+           <img class="img-responsive" alt="Trending Subject Image" src="/uploads/{{ $course->imageurl }}">
           <p class="titlebox">{{ $course->name }}</p>
           </div>
           </a>
