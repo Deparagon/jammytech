@@ -33,7 +33,7 @@
 <tbody>
 @if(count($bidders) > 0)
 @foreach( $bidders as $bid)
-<tr> <td> {{ TTools::showDate($bid->created_at) }} </td> <td><p class="well well-lg"> @foreach ($bid->bidcussion as $k => $bidcomment) @if( $k == count($bid->bidcussion) -1 ) {{ $bidcomment->comment}}  @endif @endforeach  </p></td> <td> {{ $bid->lesson->lessonstartin }}</td>  <td> <a class="btn btn-md btn-success"  href="{{ url('/user/mybids/'.$bid->id) }}"> <i class="fa fa-check-square-o"> </i> </a> </td> </tr>
+<tr> <td> {{ TTools::showDate($bid->created_at) }} </td> <td><p class="well well-lg"> @foreach ($bid->bidcussion as $k => $bidcomment) @if( $k == count($bid->bidcussion) -1 ) {{ $bidcomment->comment}}  @endif @endforeach  </p></td> <td> {{ $bid->lesson->lessonstartin }}</td>  <td> <a class="btn btn-md btn-success"  href="{{ url('/user/my-bids/'.$bid->id) }}"> <i class="fa fa-check-square-o"> </i> </a> </td> </tr>
 
 @endforeach
   @else

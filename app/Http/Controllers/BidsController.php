@@ -15,6 +15,8 @@ use TTools;
 use App\LessonDay;
 use DB;
 use App\Bidcussion;
+use Mail;
+use App\Mail\YouHaveAMessageFromTutorago;
 class BidsController extends Controller
 {
     
@@ -91,6 +93,12 @@ public function saveTutorChat(Request $request, Bidder $bidded)
   	   if(TTools::obuObject($bidded)){
   	   	Bidcussion::doTutorComments($bidded->id, Auth::user()->id, $request->price, $request->comment);
 
+        $lesson = Lesson::find($bidded->lesson_id);
+
+        $studentdata = User::find($lesson->id_student);
+        $themessage = 'Suggested Price :'.TTools::showPrice($request->price).' Message: '.$request->comment;
+        Mail::to($studentdata->email)->send( new YouHaveAMessageFromTutorago( $studentdata->firstname, Auth::user()->firstname, $themessage) );
+
   	   	return back()->with(['goodchat' => 'Reply submitted successfully']);
   	   }
   	   return back()->with(['badchat' => 'Error Occured while processing your request, try again later']);	   
@@ -130,6 +138,12 @@ public function saveTutorChat(Request $request, Bidder $bidded)
   	$this->validate($request, ['price' =>'required|numeric', 'comment' => 'required']);
   	   if(TTools::obuObject($bid)){
   	   	Bidcussion::doStudentComment($bid->id, Auth::user()->id, $request->price, $request->comment);
+
+        // email 
+        $debidder = User::find($bid->user_id); 
+          
+          $themessage = 'Suggested Price :'.TTools::showPrice($request->price).' Message: '.$request->comment;
+         Mail::to($debidder->email)->send( new YouHaveAMessageFromTutorago( $debidder->firstname, Auth::user()->firstname, $themessage) );
 
   	   	return back()->with(['goodchat' => 'Reply submitted successfully']);
   	   }

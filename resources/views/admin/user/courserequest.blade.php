@@ -1,5 +1,9 @@
 @extends('adminlayout')
 
+@section('pagetitle')
+ Course Requests | Admin Course Request Management
+@endsection
+
 @section('dashbreadcumb')
 <div class="row"> 
   <div class="col-sm-12"> 

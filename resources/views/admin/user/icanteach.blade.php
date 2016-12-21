@@ -1,5 +1,9 @@
 @extends('adminlayout')
 
+@section('pagetitle')
+ I Can Teach | Admin I Can Teach Management
+@endsection
+
 @section('dashbreadcumb')
 <div class="row"> 
   <div class="col-sm-12"> 

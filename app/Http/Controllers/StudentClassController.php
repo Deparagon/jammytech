@@ -13,6 +13,10 @@ use TTools;
 use Auth;
 use App\Transaction;
 use App\Referral;
+use Mail;
+use App\Mail\LessonCompletedSuccessfully;
+use App\Mail\LessonCompleted;
+use App\Mail\LessonRejectedByStudent;
 class StudentClassController extends Controller
 {
     //
@@ -47,7 +51,12 @@ class StudentClassController extends Controller
             $lesson->studentreject = 1;
             $lesson->tutorcomplete = 0;
             $lesson->save();
-                     LessonComment::makeComment($lesson->id, Auth::user()->id, $request->studentmessage, 'STUDENT');
+             
+             $tutor = User::find($lesson->id_tutor);
+             $course = Course::find($lesson->id_course);
+
+          Mail::to($tutor->email)->send( new LessonRejectedByStudent( $tutor->firstname,  Auth::user()->firstname, $request->studentmessage, $course->name ));
+             //LessonComment::makeComment($lesson->id, Auth::user()->id, $request->studentmessage, 'STUDENT');
 
          return back()->with(['markedreject' => 'You rejected the offer to mark this lesson as completed. Your tutor will be informed.']);
 
@@ -62,6 +71,10 @@ class StudentClassController extends Controller
             $this->payTutor($lesson);
             $this->payReferral($lesson);
             $this->payAdminCommission($lesson);
+
+             
+             $this->sendLessonComplete($lesson, $request->studentmessage);
+             // LESSON COMPLETED mail
 
             return back()->with(['markedgreend' => 'You have successfully marked this lesson as complete. Please rate your tutor, describe your experience with your tutor.']);
         }
@@ -130,5 +143,17 @@ class StudentClassController extends Controller
      $course = Course::find($lesson->id_course);
 
        Transaction::payAdmin( $admincut, 'Admin Commisstion for '.$course->name.' completed. Lesson ID :'.$lesson->id);
+   }
+
+
+
+   public function sendLessonComplete($lesson, $comment)
+   {
+           $course = Course::find($lesson->id_course);
+           $tutor = User::find($lesson->id_tutor);
+
+          Mail::to(Auth::user()->email)->send(new LessonCompleted( Auth::user()->firstname, $course->name  ));
+
+           Mail::to($tutor->email)->send(new LessonCompletedSuccessfully( $tutor->firstname, $course->name, Auth::user()->firstname, $comment ));
    }
 }

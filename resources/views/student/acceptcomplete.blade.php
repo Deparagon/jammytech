@@ -141,7 +141,7 @@
 
 
   </div>
-  </div>
+ 
   @endif
 
   @if (session()->has('markedgreend'))

@@ -129,6 +129,14 @@ public static function getUserFirstname($id)
      return '';
 }
 
+public static function getUserNames($id)
+{
+    $user = self::where(['id' => $id])->first();
+    if($user){
+        return $user->lastname.' '.$user->firstname;
+    }
+     return '';
+}
 
 }
 

@@ -15,7 +15,7 @@ class CreateRatelessonsTable extends Migration
             $table->enum('rate_by_student', [1, 2, 3, 4, 5]);
             $table->enum('rate_by_tutor', [1, 2, 3, 4, 5]);
             $table->string('comment_by_student');
-            $table->string('comment_by_tutor');
+            $table->string('comment_by_tutor')->nullable();
             $table->integer('student_id')->nullable();
             $table->integer('tutor_id')->nullable();
             $table->integer('lesson_id');

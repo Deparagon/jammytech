@@ -135,7 +135,7 @@ class CredentialController extends Controller
 
     public function createIcanTeach(Request $request)
     {
-        $this->validate($request, ['course_id' => 'required', 'price' => 'required']);
+        $this->validate($request, ['course_id' => 'required', 'price' => 'required|max:4']);
 
         foreach ($request->course_id as $course_id) {
             if (IcanTeach::where(['user_id' => $course_id, 'course_id' => $course_id])->first()) {
@@ -150,6 +150,8 @@ class CredentialController extends Controller
 
         return back()->with('createdmsg', 'All Subject(s) successfully added to your profile');
     }
+
+
 
 
     public function createNewSubjects()
@@ -169,7 +171,7 @@ class CredentialController extends Controller
         return back()->with('createdmsg', 'Your request have been submitted Successfully');
     }
 
-
+    
 
     public function deleteIcanteach(Request $request)
     {
@@ -195,5 +197,17 @@ class CredentialController extends Controller
 
           Identity::saveUpdate(Auth::user()->id, $request->idtype, $identity);
           return back()->with(['savedid' => 'Identity updated successfully']);
+    }
+
+
+
+    public function deleteCourseRequest(CourseRequest $creq  )
+    {
+             if($creq->status == 'Approved'){
+                return back()->with('cantdo', 'You cannot delete approved course request');
+
+             }
+             $creq->delete();
+             return back()->with('createdmsg', 'You have successfully deleted the request');
     }
 }

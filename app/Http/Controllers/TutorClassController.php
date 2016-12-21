@@ -10,6 +10,9 @@ use Auth;
 use App\Course;
 use App\LessonComment;
 use App\RateLesson;
+use Mail;
+use App\Mail\TutorMarkedLessonComplete;
+use App\User;
 class TutorClassController extends Controller
 {
     //
@@ -45,6 +48,9 @@ class TutorClassController extends Controller
         $this->validate($request, ['tutormessage' => 'required']);
         $lesson->tutorcomplete = 1;
         $lesson->save();
+         $student = User::find($lesson->id_student);
+         $course = Course::find($lesson->id_course);
+         Mail::to($student->email)->send( new TutorMarkedLessonComplete( $student->firstname, Auth::user()->firstname, $request->tutormessage, $course->name ));
          
          LessonComment::makeComment($lesson->id, Auth::user()->id, $request->tutormessage);
          return back()->with(['markedgreend' => 'Lesson has been marked as complete, we will wait for student to respond']);

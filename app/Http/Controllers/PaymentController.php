@@ -119,6 +119,7 @@ class PaymentController extends Controller
     $bid = Bidder::where(['lesson_id' => $lesson->id])->first();
     $latestreply = Bidcussion::getLatestTutorReply($bid->id);
     $lesson->id_tutor = $latestreply->tutor_id;
+    $lesson->amount = $latestreply->price;
     $lesson->save();
 
            $invoice= Invoice::makeInvoice($latestreply->price, $lesson->id, 'LessonFee');

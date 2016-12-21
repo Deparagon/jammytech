@@ -19,6 +19,16 @@
 
 @section('innercontent')
 <h2 class="cent-h"> <span>{{ $userdata->firstname }}'s Detail </span> </h2>
+@if (count($errors))
+
+@foreach($errors->all() as $error)
+{{ TTools::naError($error) }} 
+
+@endforeach
+
+@endif
+
+
 
 @if (session()->has('updatedprof'))
 

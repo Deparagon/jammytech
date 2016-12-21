@@ -100,7 +100,7 @@
       <th> Criteria </th> <th> Info</th>
     </thead>
     <tbody>
-    <tr> <td> Address </td> <td> {{ $lesson->street }}, {{ $lesson->lessoncity }}, {{ $lesson->lessonstate }}</td> </tr>
+    <tr> <td> Address </td> <td> {{ $lesson->lessonstreet }}, {{ $lesson->lessoncity }}, {{ $lesson->lessonstate }}</td> </tr>
     <tr> <td> Number of Student </td> <td> {{ $lesson->lessonstudentcount }}</td> </tr>
     
    <tr> <td> Location </td> <td> {{ $lesson->lessonlocation }}</td> </tr>
@@ -131,7 +131,7 @@
       <th> Criteria </th> <th> Info</th>
     </thead>
     <tbody>
-    <tr><td> Name  </td> <td> @if (isset($tutor)) @if (isset($tutor->firstname)) <a target="_blank" href="{{ url('/user/tutor/'.$tutor->id) }}"> {{ $tutor->lastname }}, {{ $tutor->lastname }}</a> @else No tutor   @endif @else No tutor @endif </td> </tr>
+    <tr><td> Name  </td> <td> @if (isset($tutor)) @if (isset($tutor->firstname)) <a target="_blank" href="{{ url('/user/tutor/'.$tutor->id) }}"> {{ $tutor->lastname }}, {{ $tutor->firstname }}</a> @else No tutor   @endif @else No tutor @endif </td> </tr>
   
      </tbody>
     </table>

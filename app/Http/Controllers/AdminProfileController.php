@@ -37,20 +37,20 @@ class AdminProfileController extends Controller
 
     public function studentedit(User $student)
     {
-        $profiledata = $student;
+    
 
         $month = '00';
         $year = '00';
         $day = '00';
-        if(TTools::obuObject($profiledata)){
-            if($profiledata->birthday !='0000-00-00'){
-                $day = date('d', strtotime($profiledata->birthday));
-                $month = date('m', strtotime($profiledata->birthday));
-                $year = date('Y', strtotime($profiledata->birthday));
+        if(TTools::obuObject($student)){
+            if($student->birthday !='0000-00-00'){
+                $day = date('d', strtotime($student->birthday));
+                $month = date('m', strtotime($student->birthday));
+                $year = date('Y', strtotime($student->birthday));
             }
         }
 
-        return view('admin.user.studentprofile', ['userdata' => $student, 'profiledata' => $profiledata, 'day' => $day, 'year' => $year, 'month' => $month]);
+        return view('admin.user.studentprofile', ['userdata' => $student, 'profiledata' => $student, 'day' => $day, 'year' => $year, 'month' => $month]);
     }
 
     public function tutoredit(User $tutor)
@@ -74,6 +74,7 @@ class AdminProfileController extends Controller
     public function updateStudent(User $student, Request $request)
     {
 
+           //return $student;
     	$this->validate($request, ['phone' => 'required', 'bio' => 'required']);
     	       
         $student->gender = $request->gender;
@@ -104,6 +105,23 @@ class AdminProfileController extends Controller
         $tutor->bio = $request->bio;
         $tutor->save();
         return back()->with(['updatedprof' => 'Profile updated successfully']);
+    }
+
+
+    public function deleteUser(Request $request)
+    { 
+        $deletable = User::find($request->userid);
+
+        if(is_object($deletable)){
+            $deletable->delete();
+            echo 'OK';
+            exit;
+        }
+        else{
+            echo 'Could not find user to delete';
+            exit;
+        }
+
     }
 
 }

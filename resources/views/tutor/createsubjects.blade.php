@@ -28,6 +28,14 @@
    <div class="alert alert-success"> {{ session('createdmsg') }} </div>
 
    @endif
+
+
+@if (session()->has('cantdo'))
+
+   <div class="alert alert-danger"> {{ session('cantdo') }} </div>
+
+   @endif
+
 <section>
   <div class="row">
 <div class="col-sm-12">
@@ -42,13 +50,13 @@
 <div class="table-responsive">
 <table class="table table-striped table-bordered">
 <thead>
-  <tr> <th> ID </th> <th> Course /Subject</th>  <th> Description  </th> <th>Status</th> <th colspan="2">Action</th></tr>
+  <tr> <th> Course /Subject</th>  <th> Description  </th> <th>Status</th> <th colspan="2">Action</th></tr>
 </thead>
 
 <tbody>
 @if(!empty($courserequests))
 @foreach( $courserequests as $courserequest)
-<tr> <td> {{ $courserequest->id }} </td> <td> {{$courserequest->course }} </td> <td> {{ $courserequest->description }}  </td> <td> {{ $courserequest->status }} </td> <td> <a  id="dacourserequestedprkillid"  data-killcourserequestedpre="{{ $courserequest->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a></td></tr>
+<tr> <td> {{$courserequest->course }} </td> <td> {{ $courserequest->description }}  </td> <td> {{ $courserequest->status }} </td> <td> <a  id="dacourserequestedprkillid"  data-killcourserequestedpre="{{ $courserequest->id }}" href="{{ url('/user/coursereqkill/'.$courserequest->id) }}"> <i class="fa fa-trash"> </i> </a></td></tr>
 
 @endforeach
   

@@ -24,6 +24,7 @@ class RateLesson extends Model
     	$r = new self();
     	$r->rate_by_student = $request->darating;
     	$r->comment_by_student = $request->ratecomment;
+      $r->comment_by_tutor = ' ';
     	$r->tutor_id =  null;
     	$r->student_id =   $user_id;
     	$r->lesson_id = $lessonid;

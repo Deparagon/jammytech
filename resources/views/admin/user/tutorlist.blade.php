@@ -30,7 +30,7 @@
 <tbody> 
 @if(count($tutors) >0)
 @foreach( $tutors as $tutor)
-<tr> <td> {{ $tutor->id }} </td><td> {{ $tutor->firstname }}</td>   <td> {{ $tutor->lastname }}</td> <td> {{ $tutor->email }} </td> <td> {{ $tutor->created_at }}</td> <td>  <a href="{{ url('/admin/tutor/'.$student->id) }}"><i class="fa fa-edit"> </i> </td> <td> <a  id="killdeletestudentfromdbandallacts"  data-killstudentdata="{{ $tutor->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a></td></tr>
+<tr> <td> {{ $tutor->id }} </td><td> {{ $tutor->firstname }}</td>   <td> {{ $tutor->lastname }}</td> <td> {{ $tutor->email }} </td> <td> {{ $tutor->created_at }}</td> <td>  <a href="{{ url('/admin/tutor/'.$tutor->id) }}"><i class="fa fa-edit"> </i> </td> <td> <a  id="killdeletestudentfromdbandallacts"  data-killstudentdata="{{ $tutor->id }}" href="javascript:;"> <i class="fa fa-trash"> </i> </a></td></tr>
 
 @endforeach
 

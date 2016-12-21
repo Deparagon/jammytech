@@ -15,6 +15,8 @@ use TTools;
 use App\IcanTeach;
 use App\Identity;
 use App\Social;
+use App\Mail\JoinTutoragoTutorApproval;
+use Mail;
 class TutorshipController extends Controller
 {
     //
@@ -52,7 +54,7 @@ class TutorshipController extends Controller
     	// $profile =Profile::where(['user_id' => $tutorreq->user_id])->first();
 
          $facebook = Social::getSocial($tutorreq->user_id, 'Facebook');
-         $gplus = Social::getSocial($tutorreq->user_id, 'Googleplus');
+         $gplus = Social::getSocial($tutorreq->user_id, 'Google');
          $twitter = Social::getSocial($tutorreq->user_id, 'Twitter');
         $userdata =User::where(['id' => $tutorreq->user_id])->first();
         return view('admin.user.tutorapproval', ['teachingexps' =>$teachingexps, 'workexperiences'=>$workingexps, 'gurantors' => $gurantors, 'identification' => $identification, 'userdata' =>$userdata, 'educations' => $educations, 'tutorreq' =>$tutorreq, 'facebook' => $facebook, 'twitter' => $twitter, 'gplus' => $gplus]);
@@ -75,6 +77,8 @@ class TutorshipController extends Controller
             $requestdata->feedback =$request->defeedback;
             $requestdata->update();
 
+            Mail::to($tutoruser->email)->send( new JoinTutoragoTutorApproval($tutoruser->firstname, $request->defeedback) );
+
             TTools::naSuccess($tutoruser->firstname.' tutor request have been approved');
             exit;
 
@@ -87,11 +91,15 @@ class TutorshipController extends Controller
     {
     	if((int) $request->idreq >0){
 
+
+
             $requestdata = TutorshipRequest::find( (int) $request->idreq);
             if($requestdata){
+                 $tutoruser =User::where(['id' => $requestdata->user_id])->first();
             $requestdata->feedback =$request->defeedback;
             $requestdata->update();
-
+            
+            Mail::to($tutoruser->email)->send(new JoinTutorRequestResponse( $tutoruser->firstname, $request->defeedback));
             TTools::naSuccess('Comment have been applied to the request ');
             exit;
 

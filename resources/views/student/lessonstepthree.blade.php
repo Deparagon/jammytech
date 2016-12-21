@@ -176,7 +176,7 @@
      <div class="col-sm-4">
      <div class="form-group">
          <label for="budget">What's your monthly budget for this lesson</label>
-         <input type="number"   name="budget" id="budget" class="form-control">
+         <input type="number" value="{{ old('budget') }}"  name="budget" id="budget" class="form-control">
              
      </div>
      </div>
@@ -185,7 +185,7 @@
      <div class="col-sm-8">
      <div class="form-group">
          <label for="phone">  What's your goal for this lesson </label>
-         <textarea  name="lessongoal" id="lessongoal" class="form-control"></textarea>
+         <textarea  name="lessongoal" id="lessongoal" class="form-control">{{ old('lessongoal') }}</textarea>
      </div>
      </div>
      

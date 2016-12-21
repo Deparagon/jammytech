@@ -3,7 +3,7 @@
 namespace app;
 
 use Illuminate\Database\Eloquent\Model;
-use TTools;
+//use TTools;
 use App\Course;
 use App\User;
 class IcanTeach extends Model
@@ -41,7 +41,7 @@ class IcanTeach extends Model
     {
         $tutors =[];
         $course = Course::where(['name' => $subject])->first();
-        if(TTools::obuObject($course)){
+        if(is_object($course)) {
             $subjecttutors = self::where(['course_id' => $course->id])->get();
             if(!empty($subjecttutors)){
                 if(count($subjecttutors) > 0){

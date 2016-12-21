@@ -24,7 +24,7 @@ class SearchController extends Controller
     if(!empty($data)){
         foreach($data as $lesson){ 
         $result.='
-<li class="list-group-item"> '.$lesson->name.' is avaliable | <a href="/subjects/'.$lesson->url.'"> View Tutors </a> | <a href="/user/newlesson">start a lesson </a> </li>';
+<li class="list-group-item"> '.$lesson->name.' is avaliable | <a href="/subjects/'.$lesson->url.'"> View Tutors </a> | <a href="/user/new-lesson">start a lesson </a> </li>';
 }
 
 

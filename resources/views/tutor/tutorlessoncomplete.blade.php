@@ -40,7 +40,7 @@
      <div class="panel-body">
 
      <p class="well"> 
-        This lesson started on {{ TTools::displayDate($lesson->start) }}, you can mark as complete. We will wait for your student to accept, once your student accepts. We will contact you. 
+        This lesson started on {{ TTools::displayDate($lesson->start) }}, You can mark as complete. We will wait for your student to accept, once your student accepts. We will contact you. 
       </p>
 
        <div class="table-responsive">

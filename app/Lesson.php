@@ -206,7 +206,7 @@ class Lesson extends Model
 
 public static function getMyLessons($id_student)
 {
-  $mylessons = DB::table('lessons')->select(DB::raw('courses.name as coursename, courses.description as coursedescription, paymentstatus, firstname, lastname, start, end'))->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_student')->where(['id_student' => $id_student])->get();
+  $mylessons = DB::table('lessons')->select(DB::raw('courses.name as coursename, courses.description as coursedescription, paymentstatus, id_tutor, firstname, lastname, start, end'))->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_student')->where(['id_student' => $id_student])->paginate(25);
 
   return $mylessons;
    

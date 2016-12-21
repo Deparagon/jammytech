@@ -66,7 +66,7 @@
 <tbody>
 @if(count($mylessons) >0)
 @foreach( $mylessons as $k =>$lesson)
-<tr> <td> {{ $k+1 }} </td> <td> {{ $lesson->coursename }}</td> <td> {{ $lesson->firstname }} </td> <td> {{ $lesson->paymentstatus}}</td> <td> {{ $lesson->start }} </td> <td> {{ $lesson->end }}</td> </tr>
+<tr> <td> {{ $k+1 }} </td> <td> {{ $lesson->coursename }}</td> <td> <a href="{{ url('/user/tutor/'.$lesson->id_tutor) }}"> {{ DaUser::getUserNames($lesson->id_tutor) }} </a> </td> <td> {{ $lesson->paymentstatus}}</td> <td> {{ $lesson->start }} </td> <td> {{ $lesson->end }}</td> </tr>
 
 @endforeach
 @else
@@ -83,7 +83,7 @@
 
  </div>
   <div class="panel-footer"> 
-
+                   {{ $mylessons->links() }}
    </div>
 </div>
 </form>

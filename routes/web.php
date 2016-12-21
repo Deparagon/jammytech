@@ -20,6 +20,14 @@ Route::post('createuser', 'Auth\AuthController@createViaAjax');
 Route::post('loginuser', 'Auth\AuthController@doLogin');
 Route::get('/login', 'ExternalController@login');
 
+/////////////////////////////////////////////////////////////
+ 
+ // DELETE USER //
+Route::post('/admin/userkill', 'AdminProfileController@deleteUser');
+
+
+//////////////////////////////////////////////////////////////
+
 
 //============================EXTERNAL PAGES  ===============================//
 //============================EXTERNAL PAGES  ===============================//
@@ -292,6 +300,9 @@ Route::post('user/myguarantor', 'GuarantorController@add');
 Route::post('user/courserequest', 'CredentialController@requestAdd');
 
 Route::post('user/idenfification', 'CredentialController@saveID');
+
+// DELETE COURSE REQUEST 
+Route::get('user/coursereqkill/{creq}', 'CredentialController@deleteCourseRequest');
 
 
 

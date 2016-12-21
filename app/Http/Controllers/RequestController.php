@@ -10,6 +10,8 @@ use App\Course;
 use App\CourseRequest;
 use App\User;
 use TTools;
+use Mail;
+use App\Mail\CourseRequestApproval;
 class RequestController extends Controller
 {
     //
@@ -33,15 +35,21 @@ class RequestController extends Controller
     {
     	if( (int) $request->idrequest > 0){
     		$requestdata = CourseRequest::find( (int) $request->idrequest);
-    		if($requestdata){
-    			$course = new Course;
 
+    		if($requestdata){
+                $tutor = User::find($requestdata->user_id);
+    			$course = new Course;
+                 
     			$course->category_id = (int) $request->category;
     			$course->name = $requestdata->course;
     			$course->description = $requestdata->description;
     			$course->save();
     			$requestdata->status = 'Approved';
     			$requestdata->update();
+
+                //send email
+
+                Mail::to($tutor->email)->send( new CourseRequestApproval( $tutor->firstname, $requestdata->course));
     			TTools::naSuccess('Course request have been approved');
     			exit;
     		}

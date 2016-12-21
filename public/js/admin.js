@@ -199,5 +199,30 @@ $('#frontpaysearchbaruser').on('change keyup', function(){
 
 
 
+$('body').on('click', '#killdeletestudentfromdbandallacts', function(ev){
+      
+      var conf = confirm('Sure you wanna do this');
+      if(conf){
+        var libar = $(this).closest('tr');
+        libar.css('background', 'red');
+              var deuser = {
+         _token: $('input[name= "_token"]').val(),
+         userid: $(this).data('killstudentdata'),
+      }
+   var postdelu = $.post('/admin/userkill', deuser);
+      postdelu.success(function(report){
+        if(report =='OK'){
+        libar.fadeOut();
+
+        }
+        else{
+          alert(report);
+        }
+          
+      })
+      }
+
+
+});
 
 });// /Document is ready;

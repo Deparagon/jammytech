@@ -83,7 +83,7 @@
                </div>
 
                </div>
-               <p class="bio-desc "> {{ $tutor->bio }} </p>
+               <p class="bio-desc ">   {{ str_limit($tutor->bio, 128) }} </p>
           </div>
           <div class="col-sm-3">
                <a   class="btn btn-success btn-block" @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/tutor/'.$tutor->id) }}" @endif >  View {{ $tutor->lastname }}, {{ $tutor->firstname }}'s Profile  </a>

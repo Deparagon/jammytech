@@ -13,6 +13,11 @@ class CourseController extends Controller
 {
     //
 
+    public function __construct()
+    {
+        
+    }
+
      public function index()
      {
          $courses = Course::with('category')->get();

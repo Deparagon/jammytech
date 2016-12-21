@@ -80,7 +80,7 @@
 
        <div class="col-sm-6">
           <label for="price">State Your Hourly Price per Subject/Course (NGN)</label>
-         <input type="number" pattern="[0-9]{1,9}" id="price" name="price" class="form-control">
+         <input type="number" maxlength="4" pattern="[0-9]{1,4}" id="price" name="price" class="form-control">
        </div>
 
        </div>
