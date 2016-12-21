@@ -15,7 +15,7 @@ Home | Tutorago
 <div id="home_top" style="height:500px">
  <div class="row"> 
  <div class="col-sm-12"> 
-  <h2 class="seark">  WANT TO LEARN SOMETHING</h2> 
+  <h2 class="seark">  WANT TO LEARN SOMETHING?</h2> 
    <p class="subtop"> Let's Get You a Private Home Tutor from Your Area </p>    </div>
 </div>
 <div class="row">
@@ -62,7 +62,7 @@ Home | Tutorago
 
         <div class="col-lg-3">
           <div class="tutor-box">
-           <a href="{{ url('/subjects/'.$course->url) }}"><img class="" src="/uploads/{{ $course->imageurl }}"> </a>
+           <a href="{{ url('/subjects/'.$course->url) }}"><img class="" alt="Searched Subject Image" src="/uploads/{{ $course->imageurl }}"> </a>
           <p class="titlebox">{{ $course->name }} </p>
           </div>
         </div><!-- /.col-lg-3 -->
