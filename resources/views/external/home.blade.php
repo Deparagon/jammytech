@@ -29,7 +29,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 <div id="home_top" style="height:500px">
  <div class="row"> 
  <div class="col-sm-12"> 
-  <h2 class="seark">  WANT TO LEARN SOMETHING</h2> 
+  <h2 class="seark"> WANT TO LEARN SOMETHING?</h2> 
    <p class="subtop"> Let's Get You a Private Home Tutor from Your Area </p>    </div>
 </div>
 <div class="row">
@@ -139,7 +139,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     <div class="container marketing">
      <div class="row">
       <div class="col-sm-12">
-      <h3 class="how-itworks">SUBJECT REQUESTS FROM YOUR AREA</h3>
+      <h3 class="how-itworks">TRENDING SUBJECTS RIGHT NOW</h3>
       <hr>
       </div>
     </div>
