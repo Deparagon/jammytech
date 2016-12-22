@@ -24,7 +24,7 @@ public static function isTutor()
  public static function isTutorWanabe ()
  {
 
- 	$tutor =TutorshipRequest::where(['user_id' =>Auth::user()->id]);
+ 	$tutor =TutorshipRequest::where(['user_id' =>Auth::user()->id])->first();
 
  	if(is_object($tutor)){
  		return true;

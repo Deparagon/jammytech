@@ -85,7 +85,7 @@ Top Rated Private Home Tutors in {{ $state }}  | Tutorago.Com
                </div>
 
                </div>
-               <p class="bio-desc "> {{ str_limit($tutor->bio, 128)}} </p>
+               <p class="bio-desc "> {{ str_limit($tutor->bio, 380) }} ..<a href="{{ url('/user/tutor/'.$tutor->id ) }}">read more </a> </p>
           </div>
           <div class="col-sm-3">
                <a class="btn btn-success btn-block" @if(Auth::guest())  data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/tutor/'.$tutor->id) }}" @endif >  View {{ $tutor->lastname }}, {{ $tutor->firstname }}'s Profile <i class="fa fa-angle-down"></i>  </a>

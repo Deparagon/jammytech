@@ -80,7 +80,7 @@
 <tbody>
 @if(!empty($referrals))
 @foreach( $referrals as $referral)
-<tr> <td> {{ DaUser::getUserFirstname($referral->user_id) }} </td> <td> @if($referral->status ==0) Redeemable @else 'Redeemed' @endif </td> <td> {{ $referral->created_at }}  </td> <td> {{ $referral->commission}}</td> </tr>
+<tr> <td> {{ DaUser::getUserFirstname($referral->referred) }} </td> <td> @if($referral->status ==0) Redeemable @else 'Redeemed' @endif </td> <td> {{ $referral->created_at }}  </td> <td> {{ $referral->commission}}</td> </tr>
 
 @endforeach
   @else 

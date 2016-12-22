@@ -52,6 +52,7 @@
 </thead>
 
 <tbody>
+
 @if(!empty($payouts))
 @foreach( $payouts as $payout)
 <tr> <td> {{ $payout->created_at }} </td> <td> {{ $payout->amount }} </td> <td> {{ $payout->charge }}</td> <td> @if ($payout->wstatus ==1) <span class="greenbar"> Paid</span> @else <span class="redbar"> Unpaid</span> @endif </td>  <td>@if ($payout->paidon !='') {{ TTools::displayDate($payout->paidon) }} @endif </td></tr>

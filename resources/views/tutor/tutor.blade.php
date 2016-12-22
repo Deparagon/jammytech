@@ -152,7 +152,8 @@
  <ul class="list-group">
   @if(isset($teachingexps->levelexplanation))
      <p class="well"> {{ $teachingexps->levelexplanation }} </p>
-  
+  @else
+   <p> I'm currently updating my teaching experience(s), check back soon.  </p>
   @endif
  </ul>
  </div>

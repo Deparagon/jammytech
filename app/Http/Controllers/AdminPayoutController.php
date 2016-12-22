@@ -29,6 +29,7 @@ class AdminPayoutController extends Controller
     {
         if(TTools::obuObject($payout)){
             $payout->wstatus = 1;
+            $payout->paidon = date('Y-m-d H:i:s');
             $payout->save();
 
             return back()->with('paidmark', 'Payment request successfully marked as paid');

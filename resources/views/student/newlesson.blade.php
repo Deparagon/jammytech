@@ -88,6 +88,9 @@
 
 </table>
 </div>
+<div class="pa">
+ {{ $allcourses->links() }}
+</div>
 <hr>
 <div class="box-ready-address">
      <div class="row">

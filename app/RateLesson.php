@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use DB;
-use TTool;
+
 
 class RateLesson extends Model
 {
@@ -35,10 +35,10 @@ class RateLesson extends Model
     }
 
     
-    public function doTutorLessonRating($request, $user_id, $lessonid)
+    public static function doTutorLessonRating($request, $user_id, $lessonid)
     {
            $ratedata = self::where(['lesson_id' => $lessonid])->first();
-           if(TTool::obuObject($ratedata)){
+           if(is_object($ratedata)){
                    $ratedata->rate_by_tutor = $request->darating;
                    $ratedata->comment_by_tutor = $request->ratecomment;
                    $ratedata->tutor_id = $user_id;

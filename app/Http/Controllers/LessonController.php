@@ -40,7 +40,7 @@ class LessonController extends Controller
 
     public function lessonStepOne()
     {
-        $allcourses = Course::with('category')->get();
+        $allcourses = Course::with('category')->paginate(20);
         $profiledata = User::find(Auth::user()->id);
 
         return view('student.newlesson', ['categories' => Category::all(), 'allcourses' => $allcourses, 'profiledata' => $profiledata]);

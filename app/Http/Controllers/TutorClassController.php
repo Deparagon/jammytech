@@ -64,12 +64,9 @@ class TutorClassController extends Controller
     }
     public function rateCompletedLesson(Lesson $lesson, Request $request)
     {
-
-
+    
 
            $this->validate($request, ['darating' =>'required', 'ratecomment' => 'required']);
-
-
 
            RateLesson::doTutorLessonRating($request, Auth::user()->id, $lesson->id);
            $lesson->tutorrate = 1;

@@ -357,7 +357,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" height="120" class="colorbg-dark ch2" style="background-image: none; background-color: #252525;">
+<td align="center" height="120" class="colorbg-dark ch2" style="background-image: none; background-color:;">
 <!--start social icons-->
 <table align="center" border="0" cellspacing="0" cellpadding="0" class="social-icons" style="border-collapse: collapse;">
 <tr>

@@ -254,7 +254,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td align="center" class="out" style="padding: 4px; border: 1px solid #3291db; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px;">
 <table align="center" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td class="in colorbg"  style="font-family: Raleway; font-size: 14px; line-height: 14px; font-weight: 400; padding: 11px 19px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-color: #3291db;"><a  href="{{ url('/') }}" style="color: #fff;text-decoration: none !important;outline: none;"> Reply &raquo;</a>
+<td class="in colorbg"  style="font-family: Raleway; font-size: 14px; line-height: 14px; font-weight: 400; padding: 11px 19px; border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; background-color:;"><a  href="{{ url('/') }}" style="color: #fff;text-decoration: none !important;outline: none;"> Reply &raquo;</a>
 </td>
 </tr>
 </table>
@@ -385,7 +385,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" height="120" class="colorbg ch2" style="background-color: #3291db;">
+<td align="center" height="120" class="colorbg ch2" style="background-color:;">
 <!--start social icons-->
 <table align="center" border="0" cellspacing="0" cellpadding="0" class="social-icons" style="border-collapse: collapse;">
 <tr>
