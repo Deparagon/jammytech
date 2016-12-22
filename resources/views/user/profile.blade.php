@@ -50,7 +50,7 @@
       <div class="row">
       <div class="col-sm-6">
        <div class="form-group">
-            <label for="gender">Gender</label>
+            <label for="gender">Gender <span class="req"> * </span> </label>
             <select class="form-control" name="gender" id="gender">
                <option value="male" @if(isset($userdata)) @if  ($userdata->gender == 'male') selected @endif @endif> Male </option>
                <option value="female"@if(isset($userdata)) @if ($userdata->gender == 'female') selected @endif @endif> Female </option>
@@ -59,7 +59,7 @@
        </div>
             <div class="col-sm-6">  
  <div class="form-group">
-         <label for="phone">Phone Number</label>
+         <label for="phone">Phone Number <span class="req"> * </span></label>
          <input type="tel" value="@if(isset($userdata)) {{ $userdata->phone }} @endif " name="phone" id="phone" class="form-control">
 
      </div>
@@ -71,7 +71,7 @@
        <div class="row">
        <div class="col-sm-12">
        <div class="form-group">
-            <label for="birthday">Birth Date</label>
+            <label for="birthday">Birth Date  <span class="req"> * </span></label>
             <div class="row"> 
             <div class="col-sm-2">
              <div class="sel-box-birth">
@@ -134,7 +134,7 @@
       
       <div class="col-sm-6">
      <div class="form-group">
-         <label for="street"> Street</label>
+         <label for="street"> Street  <span class="req"> * </span> </label>
          <input type="text" id="route"  value="@if(isset($userdata)) {{ $userdata->street }} @endif" name="street"  class="form-control">
 
      </div>
@@ -143,7 +143,7 @@
      <div class="row">
      <div class="col-sm-6">
      <div class="form-group">
-         <label for="city"> City</label>
+         <label for="city"> City <span class="req"> * </span> </label>
          <input type="text" value="@if(isset($userdata)) {{ $userdata->city }} @endif" name="city" id="locality" class="form-control">
 
 
@@ -152,18 +152,18 @@
 
      <div class="col-sm-6">
      <div class="form-group">
-         <label for="state"> State</label>
+         <label for="state"> State  <span class="req"> * </span></label>
          <input type="text" value="@if(isset($userdata)) {{ $userdata->state }} @endif" name="state" id="administrative_area_level_1" class="form-control">
      </div>
      </div>
      </div>
 
     <div class="form-group">
-       <label for="bio">Bio Introducing you to Prospective Clients</label>
+       <label for="bio">Bio Introducing you to Prospective Clients <span class="req"> * </span> </label>
          <textarea name="bio" rows="10" id="bio" class="form-control">@if(isset($userdata)) {{ $userdata->bio }} @endif </textarea>
     </div>
 
-
+  <span class="req"> * </span>  All asterisked fields are <span class="req"> required </span>. Do not submit without filling required fields
 
 
  </div>

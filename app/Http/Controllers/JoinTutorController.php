@@ -32,7 +32,7 @@ class JoinTutorController extends Controller
 
         $myrequest = TutorshipRequest::where(['user_id'=> Auth::user()->id])->first();
 
-        if(TTools::obuObject($myrequest)){
+        if(is_object($myrequest)) {
            TTools::naInfo('You have already submitted a request, please await response'); 
            TTools::naSuccess('While you wait for admin approval, please update your credential and profile details ');
            exit;
@@ -44,7 +44,7 @@ class JoinTutorController extends Controller
     	$tutor->feedback = '  ';
     	$tutor->save();
 
-    	 Activity::act('Requested to join tutorago tutors ', Auth::user()->id);
+    	Activity::act('Requested to join tutorago tutors ', Auth::user()->id);
     	TTools::naSuccess('Thanks for your interest in Tutorago');
     	TTools::naSuccess('Your request has been submitted');
     	TTools::naSuccess('While you wait for admin approval, please update your credential and profile details ');

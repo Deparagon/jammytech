@@ -1002,3 +1002,9 @@ span.verify-span {
   z-index: 9999;
   text-align: center;
 }
+
+span.req {
+	color:#990000;
+	font-weight: bolder;
+	font-size: 18px;
+}
