@@ -139,7 +139,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
     <div class="container marketing">
      <div class="row">
       <div class="col-sm-12">
-      <h3 class="how-itworks">TRENDING SUBJECTS RIGHT NOW</h3>
+      <h3 class="how-itworks">REQUEST A SUBJECT FROM YOUR AREA.</h3>
       <hr>
       </div>
     </div>
@@ -154,7 +154,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
         <div class="col-lg-3">
          <a id="lessonstartsinglelinktostart" @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/new-lesson/'.$course->id) }}" @endif >
           <div class="tutor-box">
-           <img class="img-responsive" alt="Trending Subject Image" src="/uploads/{{ $course->imageurl }}">
+           <img class="img-responsive" src="/uploads/{{ $course->imageurl }}">
           <p class="titlebox">{{ $course->name }}</p>
           </div>
           </a>
