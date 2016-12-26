@@ -44,7 +44,7 @@
       </div>
         <div class="col-sm-4">
         <div class="box-myinfo">
-          <p class="t-info"> Completed Classes:{{ TTools::displayNumber($completedcount) }} </p>
+          <p class="t-info"> Completed Classes: {{ TTools::displayNumber($completedcount) }} </p>
         </div>
 
       </div>
