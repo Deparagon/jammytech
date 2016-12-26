@@ -29,8 +29,8 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 <div id="home_top" style="height:500px">
  <div class="row"> 
  <div class="col-sm-12"> 
-  <h2 class="seark"> WANT TO LEARN SOMETHING?</h2> 
-   <p class="subtop"> Let's Get You a Private Home Tutor from Your Area </p>    </div>
+  <h2 class="seark"> FIND VETTED, AFFORDABLE, EXPERT TUTORS</h2> 
+   <p class="subtop"> Get more attention, improve your grades via one-on-one tutor </p>    </div>
 </div>
 <div class="row">
 <div class="col-sm-12">  
@@ -41,7 +41,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 
           <div class="input-group">
 
-      <input type="search" name="searched" class="form-control main-search" id="frontpaysearchbar" placeholder="What do you want to learn?">
+      <input type="search" name="searched" class="form-control main-search" id="frontpaysearchbar" placeholder="Type what you want to learn, then click the Search Button">
       <div id="formsearchsubmitfabtn" class="input-group-addon"><i class="fa fa-search"> </i></div>
     </div>
 </form>
