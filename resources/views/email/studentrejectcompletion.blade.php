@@ -218,7 +218,7 @@ Lesson Message
 <!--start title-->
 <tr>
 <td align="center" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">
-                                {{ $student }} Rejected your offer to mark {{ $course }} lesson as completed
+                                {{ $student }} rejected your offer to mark {{ $course }} lesson as completed
 <br>
 </td>
 </tr>
