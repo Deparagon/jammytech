@@ -183,7 +183,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <tr>
 <td align="center" class="content b"  style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic;">
 <p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;"> {{ $student }} has accepted your bid and paid the required lesson fee.</p>
-<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;">Your lesson ({{ $course }}) has already starting.&nbsp;</p>
+<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;">Your lesson ({{ $course }}) would be starting any moment from today.&nbsp;</p>
 <p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;">Remember: Dedication and quality of services matters.&nbsp;</p>
 </td>
 </tr>
