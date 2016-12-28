@@ -107,7 +107,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </style>
 </head>
 <body style="margin:0;padding:0;width:100%;height:100%;">
-<div class="preheader" style="display:none; visibility:hidden; height:0px; font-size:0px; line-height:0px;">Welcome To Tutorago
+<div class="preheader" style="display:none; visibility:hidden; height:0px; font-size:0px; line-height:0px;">Please confirm your email address
 </div>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" class="BGtable" style="border-collapse: collapse;margin: 0;padding: 0;table-layout: fixed;background-color: #474747;width: 100% !important;height: 100% !important;">
 <tr>
@@ -232,7 +232,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #e54d24; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">ONE MORE STEP &nbsp;VERIFY YOUR ACCOUNT</h3>
+<td align="center" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #e54d24; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">ONE MORE STEP &nbsp; TO CONFIRM YOUR ACCOUNT</h3>
 <table align="center" width="90" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
 <td height="1" class="small-img line2" style="font-size: 0px;line-height: 0px;border-collapse: collapse;background-color: #252525;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1" style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
@@ -249,10 +249,10 @@ img[class~=logo-img] { max-width: 200px !important;}
 <!--start content-->
 <tr>
 <td align="center" class="content b"  style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic;">
-<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;"> Click on the link below to verify your email address. Once your account is verified you can login to your tutorago account.
+<p style="font-family: 'Playfair Display', Arial; font-weight: 400; font-size: 15px; line-height: 21px; color: #252525; -webkit-font-smoothing: antialiased; font-style: italic; margin: 0px !important;"> Click on the link below to confirm your email address. Once your account is confirmed, you can login to your tutorago account.
  
 </p>
- <h3> <a href="{{ url('/validate/'.$verification_code) }}"> Verify Email </a> </h3>
+ <h3> <a href="{{ url('/validate/'.$verification_code) }}"> Confirm Email </a> </h3>
 </td>
 </tr>
 </table>
