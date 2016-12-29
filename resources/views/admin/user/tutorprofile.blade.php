@@ -58,8 +58,8 @@
        <div class="form-group">
             <label for="gender">Gender</label>
             <select class="form-control" id="gender">
-               <option value="male" @if(isset($profiledata)) @if  ($profiledata->gender == 'male') selected @endif @endif> Male </option>
-               <option value="female"@if(isset($profiledata)) @if ($profiledata->gender == 'female') selected @endif @endif> Female </option>
+               <option value="male" @if(isset($userdata)) @if  ($userdata->gender == 'male') selected @endif @endif> Male </option>
+               <option value="female"@if(isset($userdata)) @if ($userdata->gender == 'female') selected @endif @endif> Female </option>
             </select>
        </div>
 
@@ -69,7 +69,7 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="phone"> Phone</label>
-         <input type="tel" value="@if(isset($profiledata)) {{ $profiledata->phone }} @endif " name="phone" id="phone" class="form-control">
+         <input type="tel" value="@if(isset($userdata)) {{ $userdata->phone }} @endif " name="phone" id="phone" class="form-control">
 
      </div>
      </div>
@@ -77,7 +77,7 @@
       <div class="col-sm-6">
      <div class="form-group">
          <label for="street"> Street</label>
-         <input type="text" value="@if(isset($profiledata)) {{ $profiledata->street }} @endif" name="street" id="street" class="form-control">
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->street }} @endif" name="street" id="street" class="form-control">
 
      </div>
      </div>
@@ -86,7 +86,7 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="city"> City</label>
-         <input type="text" value="@if(isset($profiledata)) {{ $profiledata->city }} @endif" name="city" id="city" class="form-control">
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->city }} @endif" name="city" id="city" class="form-control">
 
      </div>
      </div>
@@ -94,14 +94,14 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="state"> State</label>
-         <input type="text" value="@if(isset($profiledata)) {{ $profiledata->state }} @endif" name="state" id="state" class="form-control">
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->state }} @endif" name="state" id="state" class="form-control">
      </div>
      </div>
      </div>
 
     <div class="form-group">
        <label for="bio"> Describe yourself</label>
-         <textarea name="bio" id="bio" cols="10" rows="10" class="form-control">@if(isset($profiledata)) {{ $profiledata->bio }} @endif </textarea>
+         <textarea name="bio" id="bio" cols="10" rows="10" class="form-control">@if(isset($userdata)) {{ $userdata->bio }} @endif </textarea>
     </div>
 
 

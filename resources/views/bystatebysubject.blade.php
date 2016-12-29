@@ -48,6 +48,10 @@
    <ul class="listbar-state">
    @endif
 
+   <?php if($k > 21){
+      break;
+   } ?>
+
 @endforeach
 @endif
 </ul>

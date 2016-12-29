@@ -15,7 +15,8 @@ class CourseController extends Controller
 
     public function __construct()
     {
-        
+      $this->middleware('DaPowerful');
+
     }
 
      public function index()

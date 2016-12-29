@@ -10,6 +10,11 @@ class ContactController extends Controller
 {
     //
 
+     public function __construct()
+    {
+       $this->middleWare('auth');
+    }
+
 
     public function index()
     {

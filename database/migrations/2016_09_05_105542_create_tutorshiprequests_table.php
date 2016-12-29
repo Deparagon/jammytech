@@ -16,7 +16,7 @@ class CreateTutorshiprequestsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('status')->default('Pending');
-            $table->string('feedback')->nullable();
+            $table->text('feedback')->nullable();
             $table->timestamps();
         });
     }

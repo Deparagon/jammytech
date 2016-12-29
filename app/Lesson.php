@@ -214,7 +214,7 @@ public static function getMyLessons($id_student)
    
 public static function getMyClasses($id_tutor)
 {
-   $myclasses = DB::table('lessons')->select(DB::raw('courses.name as coursename, courses.description as coursedescription, paymentstatus, firstname, lastname, start, end, lessons.status, lessons.id AS lesson_id'))->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_tutor')->where(['id_tutor' => $id_tutor])->get();
+   $myclasses = DB::table('lessons')->select(DB::raw('courses.name as coursename, courses.description as coursedescription, paymentstatus, lessons.id_student, firstname, lastname, start, end, lessons.status, lessons.id AS lesson_id'))->join('courses', 'courses.id', '=', 'lessons.id_course')->join('users', 'users.id', '=', 'lessons.id_tutor')->where(['id_tutor' => $id_tutor])->get();
 
   return $myclasses;
 
@@ -228,7 +228,10 @@ public static function emailBidders($lessonid)
 
      $course = Course::find($lesson->id_course);
 
-     $tutors = IcanTeach::where(['course_id' => $lesson->id_course]);
+     $tutors = IcanTeach::where(['course_id' => $lesson->id_course, 'status' =>'Approved'])->get();
+     //print_r($tutors);
+     //exit;
+
      if(count($tutors) > 0){
       foreach ($tutors as $tutor) {
           $tutorsdata = User::find($tutor->user_id);

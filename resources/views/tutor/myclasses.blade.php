@@ -62,10 +62,11 @@
   <tr> <th> SN </th> <th> Student </th> <th> Course/Subject</th> <th>Start</th><th> End Date</th> <th colspan="2">Status</th></tr>
 </thead>
 
+
 <tbody>
 @if(count($myclasses) >0)
 @foreach( $myclasses as $k =>$myclass)
-<tr> <td> {{ $k+1 }} </td> <td> {{ $myclass->firstname }} </td> <td> {{ $myclass->coursename }}</td>  <td> {{ $myclass->start }} </td> <td> {{ $myclass->end }}</td> <td> {{ $myclass->status }}</td> @if ($myclass->status =='Ongoing')<td> <a href="{{ url('/user/lessoncomplete/'.$myclass->lesson_id) }}" class="btn btn-success btn-block">  Lesson Complete  </a></td> @endif </tr> 
+<tr> <td> {{ $k+1 }} </td> <td> {{ DaUser::getUserNames($myclass->id_student )}} </td> <td> {{ $myclass->coursename }}</td>  <td> {{ $myclass->start }} </td> <td> {{ $myclass->end }}</td> <td> {{ $myclass->status }}</td> @if ($myclass->status =='Ongoing')<td> <a href="{{ url('/user/lessoncomplete/'.$myclass->lesson_id) }}" class="btn btn-success btn-block">  Lesson Complete  </a></td> @endif </tr> 
 
 @endforeach
   

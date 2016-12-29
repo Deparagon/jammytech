@@ -29,7 +29,7 @@ class Social extends Model
       if(is_object($soc)){
         $soc->status = 1;
         $soc->$sociallink = $sociallink;
-        $soc->detail = $detai;
+        $soc->detail = $detail;
         $soc->save();
         return true;
       }

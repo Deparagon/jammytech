@@ -204,32 +204,32 @@ img[class~=logo-img] { max-width: 200px !important;}
 <span style="font-size:16px;"><strong>
 <span style="color:#696969;">Student Address:
 </span></strong>
-</span> {{ $lesson.lessonstreet }} {{ $lesson.lessoncity }} {{ $lesson.lessonstate }} </p>
+</span> {{ $lesson->lessonstreet }} {{ $lesson->lessoncity }} {{ $lesson->lessonstate }} </p>
 <p style="text-align: left; margin-left: 40px;">
 <span style="font-size:16px;"><strong>
 <span style="color:#696969;">Duration:
 </span></strong>
-</span> {{ $lesson.duration }} </p>
+</span> {{ $lesson->duration }} Month(s) </p>
 <p style="text-align: left; margin-left: 40px;">
 <span style="font-size:16px;"><strong>
-<span style="color:#696969;">Days:
+<span style="color:#696969;">
 </span></strong>
 </span>  </p>
 <p style="text-align: left; margin-left: 40px;">
 <span style="font-size:16px;"><strong>
 <span style="color:#696969;">Preferred Gender:
 </span></strong>
-</span> {{ $lesson.lessongender }} </p>
+</span> {{ $lesson->tutorgender }} </p>
 <p style="text-align: left; margin-left: 40px;">
 <span style="font-size:16px;"><strong>
 <span style="color:#696969;">Lesson Budget:
 </span></strong>
-</span> {{ $lesson.budget }}</p>
+</span> {{ TTools::displayPrice($lesson->budget) }}</p>
 <p style="text-align: left; margin-left: 40px;">
 <span style="font-size:16px;"><strong>
 <span style="color:#696969;">Goal:&nbsp;
 </span></strong>
-</span>{{ $lesson.lessongoal }}</p>
+</span>{{ $lesson->lessongoal }}</p>
 <p style="text-align: left; margin-left: 40px;">
 <span style="color:#000080;"><em>We sent you this lesson because we think you are the best person for this tutorial.</em>
 </span></p><strong>
@@ -238,7 +238,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <tr>
 <td align="center" class="title-td" >
 <div style="text-align: left; margin-left: 40px;"><font color="#3291db" face="Montserrat, Tahoma">
-<span style="font-size: 27px;">Apply for this lesson
+<span style="font-size: 27px;"> <a href="{{url('/user/biddablelessons')}}">Apply for this lesson </a>
 </span></font>
 </div>
 <br>
@@ -261,62 +261,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </tr>
 </table> 
 <!-- end - ◆title_module_2s◆ -->
-<!-- start ◆divider_70px_height◆ -->
-<table width="650" align="center" border="0" cellpadding="0" cellspacing="0" class="divider wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
-<tr>
-<td height="70" class="small-img" style="font-size: 0px;line-height: 0px;border-collapse: collapse;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;">
-</td>
-</tr>
-</table> 
-<!-- end - ◆divider_70px_height◆ -->
-<!-- start ◆col2_module_4s◆ -->
-<table width="650" align="center" border="0" cellspacing="0" cellpadding="0" class="wrap wrapbg" style="border-collapse: collapse; width: 650px; margin: 0px auto; background-image: none; background-color: #ffffff;">
-<tr>
-<td align="center" class="module-td1" style="padding: 70px 0 0;">
-<table align="center" width="600" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
-<tr>
-<td>
-<!--start 1/2 column-->
-<table width="290" align="left" border="0" cellspacing="0" cellpadding="0" class="col2" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td><img  src="{{ url('/') }}/uploads/{{ $course->image_url }}" width="290" height="250" alt="image" class="img img290"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 290px;height: auto;max-width: 290px;">
-</td>
-</tr>
-</table>
-<!--end 1/2 column-->
-<!--start 2/2 column-->
-<table width="280" align="right" border="0" cellspacing="0" cellpadding="0" class="col2" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
-<tr>
-<td height="30">
-</td>
-</tr>
-<!--start title-->
-<tr>
-<td align="left" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">
-<br>
-</td>
-</tr>
-<tr>
-<td align="left" class="title-td" ><h3 class="h3 bold highlight" style="font-family: Montserrat, Tahoma; font-weight: 700; color: #3291db; font-size: 27px; line-height: 32px; margin: 0px 0px 8px !important;">Lesson Description
-<table align="left" width="90" border="0" cellspacing="0" cellpadding="0" style="font-size: 16px; color: #ffffff; font-family: 'Open Sans', Tahoma, Times, serif; font-weight: 400; border-collapse: collapse; border: none;">
-<tr>
-<td height="1" class="small-img line2" style="font-size: 0px;line-height: 0px;border-collapse: collapse;background-color: #252525;"><img  src="{{ url('/') }}/img/mail/spacer.gif" width="1" height="1">
-</td>
-</tr>
-</table></h3>
-</td>
-</tr>
-
-<tr>
-
-</table>
-<!--end 2/2 column-->
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table> 
+ 
 
 <!-- end - ◆title_module_4s◆ -->
 <!-- start ◆col2_module_8s◆ -->

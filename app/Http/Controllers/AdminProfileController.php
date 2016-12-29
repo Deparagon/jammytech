@@ -50,24 +50,24 @@ class AdminProfileController extends Controller
             }
         }
 
-        return view('admin.user.studentprofile', ['userdata' => $student, 'profiledata' => $student, 'day' => $day, 'year' => $year, 'month' => $month]);
+        return view('admin.user.studentprofile', ['userdata' => $student,  'day' => $day, 'year' => $year, 'month' => $month]);
     }
 
     public function tutoredit(User $tutor)
     {
-        $profiledata = $tutor;
+ 
 
         $month = '00';
         $year = '00';
         $day = '00';
-        if(TTools::obuObject($profiledata)){
-            if($profiledata->birthday !='0000-00-00'){
-                $day = date('d', strtotime($profiledata->birthday));
-                $month = date('m', strtotime($profiledata->birthday));
-                $year = date('Y', strtotime($profiledata->birthday));
+        if(TTools::obuObject($tutor)){
+            if($tutor->birthday !='0000-00-00'){
+                $day = date('d', strtotime($tutor->birthday));
+                $month = date('m', strtotime($tutor->birthday));
+                $year = date('Y', strtotime($tutor->birthday));
             }
         }
-        return view('admin.user.tutorprofile', ['userdata' => $tutor, 'profiledata' => $profiledata, 'day' => $day, 'year' => $year, 'month' => $month]);
+        return view('admin.user.tutorprofile', ['userdata' => $tutor, 'day' => $day, 'year' => $year, 'month' => $month]);
     }
 
 

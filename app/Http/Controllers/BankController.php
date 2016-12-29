@@ -13,6 +13,12 @@ class BankController extends Controller
 {
     //
 
+     public function __construct()
+    {
+       $this->middleWare('auth');
+    }
+
+
 
     public function showForm()
     {

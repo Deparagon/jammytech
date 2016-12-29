@@ -62,8 +62,8 @@
        <div class="form-group">
             <label for="gender">Gender</label>
             <select class="form-control" id="gender">
-               <option value="male" @if(isset($profiledata)) @if  ($profiledata->gender == 'male') selected @endif @endif> Male </option>
-               <option value="female"@if(isset($profiledata)) @if ($profiledata->gender == 'female') selected @endif @endif> Female </option>
+               <option value="male" @if(isset($userdata)) @if ($userdata->gender == 'male') selected @endif @endif> Male </option>
+               <option value="female"@if(isset($userdata)) @if ($userdata->gender == 'female') selected @endif @endif> Female </option>
             </select>
        </div>
 
@@ -87,18 +87,18 @@
                      <div class="sel-box-birth">
             <select class="form-control" name="month" id="month">
                <option> Month </option>
-               <option value="01" @if ( $month == 01) selected @endif> January </option>
-               <option value="02" @if ( $month == 02) selected @endif> February </option>
-               <option value="03" @if ( $month == 03) selected @endif> March </option>
-               <option value="04" @if ( $month == 04) selected @endif> April </option>
-               <option value="05" @if ( $month == 05) selected @endif> May </option>
-               <option value="06" @if ( $month == 06) selected @endif> June </option>
-               <option value="07" @if ( $month == 07) selected @endif> July </option>
-               <option value="08" @if ( $month == 08) selected @endif> August </option>
-               <option value="09" @if ( $month == 09) selected @endif> September </option>
-               <option value="10" @if ( $month == 10) selected @endif> October</option>
-               <option value="11" @if ( $month == 11) selected @endif> November </option>
-               <option value="12" @if ( $month == 12) selected @endif> December </option>
+               <option value="01" @if ( $month == '01') selected @endif> January </option>
+               <option value="02" @if ( $month == '02') selected @endif> February </option>
+               <option value="03" @if ( $month == '03') selected @endif> March </option>
+               <option value="04" @if ( $month == '04') selected @endif> April </option>
+               <option value="05" @if ( $month == '05') selected @endif> May </option>
+               <option value="06" @if ( $month == '06') selected @endif> June </option>
+               <option value="07" @if ( $month == '07') selected @endif> July </option>
+               <option value="08" @if ( $month == '08') selected @endif> August </option>
+               <option value="09" @if ( $month == '09') selected @endif> September </option>
+               <option value="10" @if ( $month == '10') selected @endif> October</option>
+               <option value="11" @if ( $month == '11') selected @endif> November </option>
+               <option value="12" @if ( $month == '12') selected @endif> December </option>
             </select>
              </div>
              </div>
@@ -125,7 +125,7 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="phone"> Phone</label>
-         <input type="tel" value="@if(isset($profiledata)) {{ $profiledata->phone }} @endif " name="phone" id="phone" class="form-control">
+         <input type="tel" value="@if(isset($userdata)) {{ $userdata->phone }} @endif " name="phone" id="phone" class="form-control">
 
      </div>
      </div>
@@ -133,7 +133,7 @@
       <div class="col-sm-6">
      <div class="form-group">
          <label for="street"> Street</label>
-         <input type="text" value="@if(isset($profiledata)) {{ $profiledata->street }} @endif" name="street" id="street" class="form-control">
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->street }} @endif" name="street" id="street" class="form-control">
 
      </div>
      </div>
@@ -142,7 +142,7 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="city"> City</label>
-         <input type="text" value="@if(isset($profiledata)) {{ $profiledata->city }} @endif" name="city" id="city" class="form-control">
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->city }} @endif" name="city" id="city" class="form-control">
 
      </div>
      </div>
@@ -150,14 +150,14 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="state"> State</label>
-         <input type="text" value="@if(isset($profiledata)) {{ $profiledata->state }} @endif" name="state" id="state" class="form-control">
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->state }} @endif" name="state" id="state" class="form-control">
      </div>
      </div>
      </div>
 
     <div class="form-group">
        <label for="bio"> Describe yourself</label>
-         <textarea name="bio" id="bio" class="form-control">@if(isset($profiledata)) {{ $profiledata->bio }} @endif </textarea>
+         <textarea name="bio" id="bio" class="form-control">@if(isset($userdata)) {{ $userdata->bio }} @endif </textarea>
     </div>
 
 

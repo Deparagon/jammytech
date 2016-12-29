@@ -23,6 +23,7 @@ class TutorClassController extends Controller
     }
     public function index()
     {
+        
 
         $myclasses = Lesson::getMyClasses(Auth::user()->id);
 

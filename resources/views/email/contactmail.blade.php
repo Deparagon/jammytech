@@ -529,7 +529,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 </tr>
 <tr>
-<td align="center"><img  src="{{ url('/') }}/images/email/icon-35-10.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px;height: auto;max-width: 35px;max-height: 35px;">
+<td align="center"><img  src="{{ url('/') }}/images/email/icon-35-10.png" width="35" height="35" alt="icon" class="icon35"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 35px; color:#fff; height: auto;max-width: 35px;max-height: 35px;">
 <br>11, Obafemi Awolowo Way,&nbsp;
 <br>Beside BestSay Shopping Mall,&nbsp;
 <br>Igbona, Osogbo, Osun State.
@@ -552,7 +552,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <td>
 <table border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse;">
 <tr>
-<td align="center" width="300" class="block">&nbsp;info@tutorago.com
+<td align="center" width="300" class="block" style="color:#fff">&nbsp;info@tutorago.com
 <table align="right" border="0" cellspacing="0" cellpadding="0" class="mid" style="border-collapse: collapse;border: none;mso-table-lspace: 0pt;mso-table-rspace: 0pt;">
 <tr>
 <td><img  src="{{ url('/') }}/images/email/icon-15-3.png" width="15" height="15" alt="icon" class="icon15"   style="border: 0;display: block;-ms-interpolation-mode: bicubic;width: 15px;height: auto;max-width: 15px;max-height: 15px;">
@@ -575,7 +575,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 </td>
 <td width="15">
 </td>
-<td class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #262424;font-size: 17px;line-height: 17px;"><a  href="#" class="white" style="color: #fff;text-decoration: none;outline: none;">www.tutorago.com</a>
+<td class="h5"  style="font-family: Montserrat,Tahoma;font-weight: 400;color: #fff;font-size: 17px;line-height: 17px;"><a  href="#" class="white" style="color: #fff;text-decoration: none;outline: none;">www.tutorago.com</a>
 </td>
 </tr>
 </table>
