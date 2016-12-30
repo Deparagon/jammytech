@@ -16,7 +16,7 @@ class PayoutController extends Controller
 
       public function __construct()
     {
-      $this->middleware('DaPowerful');
+      $this->middleware('auth');
 
     }
 
