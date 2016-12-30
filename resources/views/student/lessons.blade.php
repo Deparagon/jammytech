@@ -71,7 +71,7 @@
 @endforeach
 @else
 
-<tr> <td colspan="6"> No lesson found, <a href="{{ url('/user/newlesson') }}"> start a new lesson </a> </td></tr>
+<tr> <td colspan="6"> No lesson found, <a href="{{ url('/user/new-lesson') }}"> start a new lesson </a> </td></tr>
   
   @endif
 </tbody>
