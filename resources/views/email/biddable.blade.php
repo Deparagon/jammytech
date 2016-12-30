@@ -161,7 +161,7 @@ img[class~=logo-img] { max-width: 200px !important;}
 <table width="600" align="center" border="0" cellspacing="0" cellpadding="0" class="row" style="border-collapse: collapse;">
 <!--start title-->
 <tr>
-<td align="center" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">Hi {$tutor}!
+<td align="center" class="h3 b title-td"  style="font-family: 'Playfair Display'; font-weight: 400; color: #262424; font-size: 29px; line-height: 35px; font-style: italic;">Hi {{ $tutor }}!
 </td>
 </tr>
 <tr>
