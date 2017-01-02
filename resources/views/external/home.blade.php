@@ -101,7 +101,8 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
       </div>
 <hr class="fill">
     
-    </div>
+    </div>    
+    
      <div class="row">
       <div class="col-sm-12"> <h3 class="how-itworks"> HOW IT WORKS</h3> </div>
      </div>
@@ -134,6 +135,25 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
   </div>
 </section>
 
+<section class="become-tutor-bar">
+ <div class="row">
+   <div class="col-sm-8 col-sm-offset-2">
+      <p class="tutor-b"> Let get you an exceptional tutor within 24 hours or have your money back </p>
+    </div>
+ </div>
+<div class="row">
+    <div class="col-sm-4 col-sm-offset-4">
+             @if (Auth::guest())
+             <button data-toggle="modal" data-target="#regformlocatesmallpage" role="button" class="btn btn-lg btn-block btn-success" > Get A Home Tutor </button>
+             @else
+             <a href="{{ url('/user/new-lesson')}}" role="button" class="btn btn-lg btn-block btn-success" > Get A Home Tutor </a>
+             @endif
+
+    </div>
+
+</div>
+
+</section>
 
 <section class="display-tutors">
     <div class="container marketing">
