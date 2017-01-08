@@ -163,6 +163,16 @@ Dashboard | Tutorago Admin
               </div>
           
           </div>
+
+            <div class="panel panel-dbluebar">
+              <div class="panel-heading">
+                 <h4 class="panel-title"> Processing Fee </h4>
+              </div>
+              <div class="panel-body">
+             <p class="top-stat-p"> {{ TTools::showPrice( $processingfees ) }}</p>
+              </div>
+          
+          </div>
        
       
 

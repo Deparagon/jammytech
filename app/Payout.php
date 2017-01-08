@@ -26,7 +26,7 @@ class Payout extends Model
 
         public static function getPayouts()
     { 
-       return self::where(['wstatus' => 1])->with('user')->get();
+       return self::where(['wstatus' => 1])->with('user')->paginate(25);
 
     }
 

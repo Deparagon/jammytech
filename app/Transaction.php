@@ -13,6 +13,13 @@ class Transaction extends Model
     	return $this->belongsTo('App\User');
     }
 
+    
+    public static function countAll()
+    {
+        return self::count();
+    }
+
+
 
     public static function getBalace()
     {
@@ -36,6 +43,15 @@ class Transaction extends Model
      return $credit;
     }
 
+
+  public static function getProcessingCommission()
+    {
+       $credit = self::where(['user_id' =>1, 'transaction_type' =>'CreditProccessingFeeCommission'])->sum('credit');
+       
+     return $credit;
+    }
+
+
     public static function getMyReferralEarning($user_id)
     {
        $credit = self::where(['user_id' =>$user_id, 'transaction_type' =>'CreditReferralCommission'])->sum('credit');
@@ -53,6 +69,17 @@ class Transaction extends Model
         $t->transaction_type = 'CreditLessonCommission';
         $t->detail = $detail;
 
+        $t->save();
+    }
+
+    public static function payLessonProccessingFee($detail)
+    {
+        $t = new self();
+        $t->user_id = 1;
+        $t->credit = config('app.processingfee');
+        $t->debit = 0;
+        $t->transaction_type = 'CreditProccessingFeeCommission';
+        $t->detail = $detail;
         $t->save();
     }
 

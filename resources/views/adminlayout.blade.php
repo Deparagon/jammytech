@@ -159,6 +159,8 @@
       <ul class="list-group">
       <li class="list-group-item"> <a href="{{ url('/admin/payoutrequests') }}"> <i class="fa fa-th-money"> </i> Payout Requests  </a></li>
        <li class="list-group-item"> <a href="{{ url('/admin/payouts') }}"> <i class="fa fa-th-bank"> </i> Payouts </a></li>
+
+       <li class="list-group-item"> <a href="{{ url('/admin/transhistory') }}"> <i class="fa fa-th-bank"> </i> Transaction History </a></li>
           
       </ul> 
 

@@ -185,7 +185,7 @@ Route::get('/admin/payout/approve/{payout}', 'AdminPayoutController@markPayout')
 
 Route::get('/admin/payouts/', 'AdminPayoutController@payouts');
 
-
+Route::get('/admin/transhistory/', 'AdminPayoutController@transHistory');
 
 
 

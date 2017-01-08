@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Payout;
 use TTools;
+use App\Transaction;
 
 class AdminPayoutController extends Controller
 {
@@ -55,5 +56,14 @@ class AdminPayoutController extends Controller
 
    }
 
+
+   public function transHistory()
+   {
+     $alltrans = Transaction::with('user')->paginate(25);
+     $countall = Transaction::countAll();
+     $cumulative = Transaction::getBalace();        
+    return view('admin.transhistory', ['alltrans' => $alltrans, 'countall' =>$countall, 'cumulative' => $cumulative]);
+
+   }
 
 }

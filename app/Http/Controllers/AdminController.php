@@ -29,11 +29,11 @@ class AdminController extends Controller
         $categorycount = Category::count();
         $coursecount = Course::count();
         $admincommission = Transaction::getAdminCommission();
-
+        $processingfees = Transaction::getProcessingCommission();
         $courserequestcount = CourseRequest::where('status', 'Pending')->count();
         $students = User::where(['tutor' => 0, 'power' => 0])->orderBy('id', 'desc')->take(5)->get();
         $tutors = User::where(['tutor' => 1, 'power' => 0])->orderBy('id', 'desc')->take(5)->get();
 
-        return view('admin.dashboard', ['countusers' => $countusers, 'tutorcount' => $tutorcount, 'categorycount' => $categorycount, 'coursecount' => $coursecount, 'courserequestcount' => $courserequestcount, 'students' => $students, 'tutors' => $tutors, 'admincommission' => $admincommission, 'completedlesson'=>Lesson::countCompleted(), 'ongoinglesson' =>Lesson::countOngoing(), 'biddablelesson'=> Lesson::countBiddable(), 'tutorshiprequest'=>TutorshipRequest::countPendingRequest(), 'pendingcourses' => IcanTeach::countPending()]);
+        return view('admin.dashboard', ['countusers' => $countusers, 'tutorcount' => $tutorcount, 'categorycount' => $categorycount, 'coursecount' => $coursecount, 'courserequestcount' => $courserequestcount, 'students' => $students, 'tutors' => $tutors, 'admincommission' => $admincommission, 'completedlesson'=>Lesson::countCompleted(), 'ongoinglesson' =>Lesson::countOngoing(), 'biddablelesson'=> Lesson::countBiddable(), 'tutorshiprequest'=>TutorshipRequest::countPendingRequest(), 'pendingcourses' => IcanTeach::countPending(), 'processingfees' =>$processingfees]);
     }
 }

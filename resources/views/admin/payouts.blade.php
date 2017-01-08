@@ -72,7 +72,7 @@
 </section>
 
 <section class="all-trans">
-<div class="panel panel-blackbar">c
+<div class="panel panel-blackbar">
 <div class="panel-heading"> 
 <h4 class="panel-title"> payout Requests </h4>
 </div>
@@ -124,6 +124,11 @@
 
    </table>
 </div>
+
+<div class="panel-footer">
+   {{ $payouts->links() }}
+</div>
+
 </div>
 </section>
 

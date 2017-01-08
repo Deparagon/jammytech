@@ -11,6 +11,7 @@ use DB;
 use Mail;
 use App\IcanTeach;
 use App\Course;
+use App\Transaction;
 use App\Mail\BiddableEmail;
 use App\Mail\LessonSetOngoingEmail;
 
@@ -188,6 +189,9 @@ class Lesson extends Model
     public static function LessonProccessingFeePaid($lessonid)
     {
             $lesson  = self::find($lessonid);
+             $student = User::find($lesson->id_student);
+            $detail = 'Lesson processing fee paid by '.$student->firstname.' '.$student->lastname;
+            Transaction::payLessonProccessingFee($detail);
 
             if(TTools::obuObject($lesson)){
               $lesson->status = 'Biddable';
