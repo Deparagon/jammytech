@@ -82,16 +82,16 @@
         <th> Date</th> <th>Amount</th> <th> Charge</th> <th> By</th>  <th>Account Details</th> <th>Status</th> 
       </thead>
 <tbody>
-   @if (isset($payouts))
-   @if (count($payouts) >0)
+   @if(isset($payouts))
+   @if(count($payouts) > 0)
 
-   @foreach($payouts as $payout)
+   @foreach($payouts as $pay)
      <tr>
-     <td> {{ $payout->id }}</td>
-     <td> {{ $payout->created_at }} </td>  <td> {{ $payout->amount }} </td> <td>{{ $payout->charge }}</td> 
-     <td> {{ $payout->user->lastname }}  {{ $payout->user->firstname }}</td>
+     <td> {{ $pay->id }}</td>
+     <td> {{ $pay->created_at }} </td>  <td> {{ $pay->amount }} </td> <td>{{ $pay->charge }}</td> 
+     <td> {{ $pay->user->lastname }}  {{ $pay->user->firstname }}</td>
       <td> 
-<?php $bank = Bank::getUserBank($payout->user_id) ?>
+<?php $bank = Bank::getUserBank($pay->user_id) ?>
           @if (TTools::obuObject($bank))
       <table class="table tabl-striped">
 

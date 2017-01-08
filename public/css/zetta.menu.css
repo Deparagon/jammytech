@@ -101,7 +101,7 @@
   vertical-align: top;
   display: inline-block;
   float: left;
-  font-size: 14px;
+  font-size: 13px;
 }
 .zetta-menu1 > ul > li.zm-right-item {
   margin-right: 0;
@@ -111,9 +111,9 @@
 .zetta-menu1 > ul > li > a:visited {
   text-decoration: none;
   color: #ffffff;
-  padding: 0px 20px 0px 20px;
-  height: 50px;
-  line-height: 50px;
+  padding: 0px 10px 0px 10px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
 }
 .zetta-menu1 > ul > li:hover {
@@ -163,7 +163,7 @@
   display: none;
   z-index: 1;
   background: #354a5f;
-  width: 200px;
+  width: 180px;
 }
 .zetta-menu1 > ul > li > div:hover,
 .zetta-menu1 > ul > li > div > ul li > div:hover {
