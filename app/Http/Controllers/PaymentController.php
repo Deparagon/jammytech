@@ -34,6 +34,9 @@ class PaymentController extends Controller
 
            $invoice= Invoice::makeInvoice($amount, $lesson_id, 'ProcessingFee');
            $banks = Bank::getAdminBank();
+           //$les = Lesson::find($lesson_id);
+
+           //$student = User::find($lesson->id_student);
 
     	return view('student.payment_option', ['lesson' => $lesson_id, 'invoice' => $invoice, 'banks' => $banks]);
 
