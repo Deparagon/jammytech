@@ -63,7 +63,6 @@
                  </p>
                  <form method="POST" action="{{ url('/user/paystack') }}" accept-charset="UTF-8" class="form-horizontal" role="form">
                  {{ csrf_field() }}
-
             <input type="hidden" name="email" value="{{ Auth::user()->email }}"> 
             <input type="hidden" name="orderID" value="{{$invoice->id}}">
             <input type="hidden" name="amount" value="{{ ($invoice->amount * 100) }}">
