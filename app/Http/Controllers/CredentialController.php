@@ -44,7 +44,7 @@ class CredentialController extends Controller
         $edu->course = $request->course;
         $edu->degree = $request->degree;
         $edu->startdate = $request->startdate;
-        $edu->enddate = $request->enddate;
+        $edu->enddate = $request->enddate.' 00:00:00';
         $edu->save();
 
         return back()->with('createdmsg', 'Successfully saved education information');
