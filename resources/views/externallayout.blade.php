@@ -123,7 +123,7 @@
        </div>
 </div> <!-- /footer container -->
 <hr>
- @include('bystatebysubject')
+ // @include('bystatebysubject')
 
    <div class="row copyright-footer">
        <div class="col-sm-6 col-sm-offset-4">
