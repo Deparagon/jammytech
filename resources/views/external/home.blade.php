@@ -155,7 +155,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 
 </section>
 
-<!--
+
 <section class="display-tutors">
     <div class="container marketing">
      <div class="row">
@@ -164,7 +164,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
       <hr>
       </div>
     </div>
-       Three columns of text below the carousel 
+       <!--Three columns of text below the carousel -->
      
       @if (!empty($courses))
       @foreach ($courses as $key =>$course)   
@@ -192,7 +192,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 
 </div>
 </section> 
--->
+
 
     <div class="container marketing" id="aboutusbelow">
       <!-- START THE FEATURETTES -->
