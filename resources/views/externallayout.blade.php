@@ -114,7 +114,7 @@
 <p>info@tutorago.com </p>
 <p>+234 81 670 827 04 </p>
 <p><a href="http://facebook.com/tutorago" target="_blank"> <i class="fa fa-1x fa-facebook"> </i> Facebook</a> </p>
-<p><a href="http://instagram.com/tutorago" target="_blank"> <i class="fa fa-1x fa-empire"> </i> Instagram</a>
+<p><a href="http://instagram.com/tutorago" target="_blank"> <i class="fa fa-1x fa-instagram"> </i> Instagram</a>
 </p>
 <p><a href="http://twitter.com/tutorago" target="_blank"> <i class="fa fa-1x fa-twitter"> </i> Twitter</a>
 </p>
