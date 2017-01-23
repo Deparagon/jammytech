@@ -155,6 +155,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 
 </section>
 
+<!--
 <section class="display-tutors">
     <div class="container marketing">
      <div class="row">
@@ -190,7 +191,7 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 
 
 </div>
-</section>
+</section> -->
 
     <div class="container marketing" id="aboutusbelow">
       <!-- START THE FEATURETTES -->
