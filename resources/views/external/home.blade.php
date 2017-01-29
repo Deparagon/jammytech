@@ -156,22 +156,22 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
 </section>
 
 
-<-- <section class="display-tutors">
+<!-- <section class="display-tutors">
     <div class="container marketing">
      <div class="row">
       <div class="col-sm-12">
       <h3 class="how-itworks">REQUEST A SUBJECT FROM YOUR AREA.</h3>
       <hr>
       </div>
-    </div>
+    </div> -->
        <!--Three columns of text below the carousel -->
-     
+     <!--
       @if (!empty($courses))
       @foreach ($courses as $key =>$course)   
       @if($key ==0 || $key ==4) 
       <div class="row padded-top-f">
-      @endif
-
+      @endif -->
+      <!--
         <div class="col-lg-3">
          <a id="lessonstartsinglelinktostart" @if(Auth::guest()) data-toggle="modal" data-target="#regformlocatesmallpage" role="button"  @endif @if(Auth::user()) href="{{ url('/user/new-lesson/'.$course->id) }}" @endif >
           <div class="tutor-box">
@@ -179,17 +179,17 @@ Find Professional Private Home Tutors Near You | Welcome to Tutorago Nigeria
           <p class="titlebox">{{ $course->name }}</p>
           </div>
           </a>
-        </div><!-- /.col-lg-3 -->
-           @if( $key ==3) 
+        </div>--><!-- /.col-lg-3 -->
+           <!--@if( $key ==3) 
       </div>
       @endif
          @endforeach
          @endif
          
           
-      </div><!-- /.row -->
+      </div>--><!-- /.row -->
 
-
+<!--
 </div>
 </section> -->
 
