@@ -127,7 +127,7 @@
      <div class="col-sm-6">
      <div class="form-group">
          <label for="addresssearcher"> Enter your Address here</label>
-         <input type="text" id="autocomplete" onFocus="geolocate()" name="fulladdress" class="form-control">
+         <input type="text" id="autocomplete" onFocus="geolocate()" name="fulladdress" class="form-control" placeholder=" e.g 33, Isaac John Street, Yaba">
 
      </div>
      </div>
@@ -135,7 +135,7 @@
       <div class="col-sm-6">
      <div class="form-group">
          <label for="street"> Street  <span class="req"> * </span> </label>
-         <input type="text" id="route"  value="@if(isset($userdata)) {{ $userdata->street }} @endif" name="street"  class="form-control">
+         <input type="text" id="route"  value="@if(isset($userdata)) {{ $userdata->street }} @endif" name="street"  class="form-control" placeholder=" e.g 33, Isaac John Street">
 
      </div>
      </div>
@@ -143,8 +143,8 @@
      <div class="row">
      <div class="col-sm-6">
      <div class="form-group">
-         <label for="city"> City <span class="req"> * </span> </label>
-         <input type="text" value="@if(isset($userdata)) {{ $userdata->city }} @endif" name="city" id="locality" class="form-control">
+         <label for="city"> Area/Location <span class="req"> * </span> </label>
+         <input type="text" value="@if(isset($userdata)) {{ $userdata->city }} @endif" name="city" id="locality" class="form-control" placeholde="e.g Yaba">
 
 
      </div>
